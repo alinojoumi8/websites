@@ -1,0 +1,16 @@
+node_modules/
+.next/
+.astro/
+dist/
+build/
+out/
+.vercel/
+.turbo/
+.cache/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.idea/
+.vscode/
