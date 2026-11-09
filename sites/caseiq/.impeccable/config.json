@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "src/index.html"
+        ],
+        "createdAt": "2026-11-09T14:45:53.814Z",
+        "reason": "agent triage: false positive; rendered h1 is 40-68px against 17px body (over 2.3x), and build-time templates hide FAQ/service headings from the source scan"
+      }
+    ]
+  }
+}

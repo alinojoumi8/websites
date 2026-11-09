@@ -25,26 +25,26 @@
 <body>
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-gold focus:text-ink focus:p-3">Skip to content</a>
 
-<header class="sticky top-0 z-40 bg-obsidian/95 border-b border-line">
+<header class="sticky top-0 z-40 bg-obsidian border-b border-line">
   <nav aria-label="Main" class="mx-auto max-w-[1400px] px-5 lg:px-10 h-[72px] flex items-center gap-8">
     <a href="#top" class="font-display text-2xl text-ivory no-underline flex items-center gap-2" aria-label="CaseIQ home"><svg viewBox="0 0 22 26" class="w-[19px] h-[23px]" aria-hidden="true"><rect width="16" height="26" fill="#f1e7d0"/><rect x="16" y="5" width="6" height="9" fill="#e6b23a"/></svg>CaseIQ</a>
     <ul class="hidden lg:flex items-center gap-7 text-[.975rem] text-mist">
-      <li><a class="hover:text-gold" href="#how">How It Works</a></li>
       <li><a class="hover:text-gold" href="#services">Services</a></li>
+      <li><a class="hover:text-gold" href="#how">How It Works</a></li>
       <li><a class="hover:text-gold" href="#forensics">Forensics</a></li>
       <li><a class="hover:text-gold" href="#cost">Cost Comparison</a></li>
       <li><a class="hover:text-gold" href="#faq">FAQ</a></li>
     </ul>
-        <a href="#intake" class="btn btn-gold !py-2.5 hidden sm:inline-flex ml-auto">Book My Free 15-Minute Triage</a>
-    <button id="menuBtn" class="lg:hidden ml-auto sm:ml-0 p-2 text-ivory cursor-pointer" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">{{icon:menu|!w-7 !h-7}}</button>
+        <a href="#intake" class="btn btn-gold !py-2.5 hidden sm:inline-flex ml-auto">Request My Free 15-Minute Triage</a>
+    <button id="menuBtn" class="lg:hidden ml-auto sm:ml-0 inline-flex items-center justify-center min-w-11 min-h-11 text-ivory cursor-pointer" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">{{icon:menu|!w-7 !h-7}}</button>
   </nav>
   <ul id="mobileMenu" hidden class="lg:hidden border-t border-line bg-obsidian px-5 py-3 text-lg">
-    <li><a class="block py-2.5" href="#how">How It Works</a></li>
     <li><a class="block py-2.5" href="#services">Services</a></li>
+    <li><a class="block py-2.5" href="#how">How It Works</a></li>
     <li><a class="block py-2.5" href="#forensics">Forensics</a></li>
     <li><a class="block py-2.5" href="#cost">Cost Comparison</a></li>
     <li><a class="block py-2.5" href="#faq">FAQ</a></li>
-    <li class="pt-2 sm:hidden"><a class="btn btn-gold w-full" href="#intake">Book My Free 15-Minute Triage</a></li>
+    <li class="pt-2 sm:hidden"><a class="btn btn-gold w-full" href="#intake">Request My Free 15-Minute Triage</a></li>
   </ul>
 </header>
 
@@ -52,19 +52,29 @@
 <section id="top" class="mx-auto max-w-[1400px] px-5 lg:px-10 pt-9 lg:pt-11 pb-8">
   <h1 class="text-[2.5rem] sm:text-6xl lg:text-[max(3.5rem,min(4.6vw,4.25rem))] leading-[1.04]">Nobody cares about your case like you do. <span class="block text-gold">So we read every page.</span></h1>
   <div class="mt-6 lg:mt-7 grid lg:grid-cols-12 gap-6 items-end">
-    <p class="lg:col-span-7 text-lg lg:text-[1.2rem] text-mist max-w-[62ch]">Priced out of a lawyer, or paid one and still in the dark? CaseIQ reads your whole file, shows you what's there and what's missing<span class="hidden sm:inline">, and helps you prepare motions, factums and affidavits you can stand behind, anywhere in Canada. When the proof is in the money or the signature, we go after that too</span>.</p>
-    <div class="lg:col-span-5 flex flex-col sm:flex-row lg:justify-end gap-3">
-      <a href="#intake" class="btn btn-gold">Book My Free 15-Minute Triage</a>
-      <a href="#cost" class="btn btn-ghost whitespace-nowrap max-sm:!py-1.5 max-sm:!shadow-none max-sm:underline">Run the Cost Numbers</a>
+    <p class="lg:col-span-7 xl:col-span-6 text-lg lg:text-[1.2rem] text-mist max-w-[62ch]">Priced out of a lawyer, or paid one and still in the dark? CaseIQ reads your whole file, shows you what's there and what's missing<span class="hidden sm:inline">, and helps you prepare motions, factums and affidavits you can stand behind, anywhere in Canada. When the proof is in the money or the signature, we go after that too</span>.</p>
+    <div class="lg:col-span-5 xl:col-span-6">
+      <div class="flex flex-col sm:flex-row lg:justify-end gap-3">
+        <a href="#intake" class="btn btn-gold xl:whitespace-nowrap">Request My Free 15-Minute Triage</a>
+        <a href="#cost" class="btn btn-ghost whitespace-nowrap max-sm:!py-0 max-sm:min-h-11 max-sm:!shadow-none max-sm:underline">Compare Your Options</a>
+      </div>
+      <p class="mt-2 text-sm text-mist lg:text-right">Triage: 15 free minutes to sort out what's urgent and whether we can help.</p>
     </div>
   </div>
+
+  <figure class="film mt-6 lg:mt-8">
+    <video id="film" muted playsinline preload="none" width="1280" height="720" poster="media/hero-poster.webp" aria-label="Short silent film: loose blank pages tumble onto a dark desk, then settle into one straight row under a thin gold timeline.">
+      <source src="media/hero.mp4" type="video/mp4">
+    </video>
+    <button id="filmBtn" type="button" class="film-btn">Play film</button>
+  </figure>
 
   <div class="mt-5 sm:mt-8">
     <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 mb-3">
       <p class="inline-flex items-center gap-2 text-sm font-bold text-gold">Built for self-represented litigants</p>
       <div class="flex items-center gap-4">
         <p class="text-sm text-mist whitespace-nowrap">Sample file, invented for illustration</p>
-        <button id="sortBtn" class="inline-flex items-center gap-1.5 text-sm font-bold text-ivory underline underline-offset-4 decoration-gold cursor-pointer whitespace-nowrap" aria-controls="stage">{{icon:shuffle}}<span>Scatter the file</span></button>
+        <button id="sortBtn" class="min-h-11 inline-flex items-center gap-1.5 text-sm font-bold text-ivory underline underline-offset-4 decoration-gold cursor-pointer whitespace-nowrap" aria-controls="stage">{{icon:shuffle}}<span>Scatter the file</span></button>
       </div>
     </div>
     <div id="stage" class="stage" data-state="order" role="group" aria-label="Sample file: six documents arranged in date order, each with a finding">
@@ -84,7 +94,7 @@
     <li><strong class="block font-display font-normal text-xl">Every page, read</strong><span class="text-mist text-base">Not skimmed the night before</span></li>
     <li><strong class="block font-display font-normal text-xl">We've self-represented</strong><span class="text-mist text-base">We know what that week feels like</span></li>
     <li><strong class="block font-display font-normal text-xl">You stay in charge</strong><span class="text-mist text-base">You file it. You speak. You decide.</span></li>
-    <li><strong class="block font-display font-normal text-xl">Confidential</strong><span class="text-mist text-base">Shared only with those on your matter</span></li>
+    <li><strong class="block font-display font-normal text-xl">Confidential</strong><span class="text-mist text-base">Your file is shared only with those on your matter</span></li>
   </ul>
 </section>
 
@@ -107,7 +117,20 @@
         <div class="grid sm:grid-cols-2 gap-x-5 lg:gap-x-9 gap-y-1 py-5"><dt class="text-ink2">Decisions made about your life without you in the room.</dt><dd class="font-semibold">Your case, your call, with the facts in front of you.</dd></div>
       </dl>
     </div>
-    <div class="lg:col-span-12 pt-8 border-t border-ink/30 grid lg:grid-cols-12 gap-5 lg:gap-14"><h2 class="lg:col-span-5 text-3xl">What is CaseIQ? Litigation support for self-represented litigants in Canada</h2><p class="lg:col-span-7 max-w-[64ch] text-lg">CaseIQ is a Canadian litigation support service for people representing themselves in court. It combines full-file review, court document preparation under a licensee on its team, forensic accounting, handwriting and signature analysis, and procedural coaching. CaseIQ helps you prepare and present your own case. It is not a law firm.</p></div>
+    <div class="lg:col-span-12 pt-12 border-t border-ink/30 grid lg:grid-cols-12 gap-8 lg:gap-14 items-start">
+      <div class="lg:col-span-5">
+        <h2 class="text-[2.4rem] leading-[1.1] lg:text-[3.5rem]">Who reads your file</h2>
+        <p class="mt-6 max-w-[42ch] text-xl">Before you hand over your court file, you should know whose eyes are on it.</p>
+      </div>
+      <div class="lg:col-span-7 relative bg-ivory p-6 md:p-10 mt-6 lg:mt-0 shadow-[0_10px_24px_-8px_rgb(0_0_0/.35)]"><span class="xtab">Signed</span>
+        <p class="text-xl max-w-[56ch] font-semibold text-golddeep">[Founder's note, in their own words: a few true sentences about representing themselves and why CaseIQ exists.]</p>
+        <p class="mt-6 font-display text-2xl text-golddeep">[Founder's first name]</p>
+        <dl class="mt-8 pt-5 border-t border-ink/25">
+          <dt class="font-bold">Who drafts your court documents</dt>
+          <dd class="mt-1 font-semibold text-golddeep">[Licensee name, licence type and province]</dd>
+        </dl>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -124,46 +147,7 @@
       <li class="relative pt-8 lg:pr-12"><span class="absolute -top-[9px] left-0 w-4 h-4 rounded-full bg-gold" aria-hidden="true"></span><h3 class="text-3xl">We build it with you.</h3><p class="mt-3 text-[#d5e6df] max-w-[40ch]">We build the chronology, look for the proof and work with you on your factums, motions and affidavits until they say what you need said.</p><p class="mt-3 font-semibold text-emerald">You get a chronology, findings and drafts.</p></li>
       <li class="relative pt-8"><span class="absolute -top-[9px] left-0 w-4 h-4 rounded-full bg-gold" aria-hidden="true"></span><h3 class="text-3xl">You stand up ready.</h3><p class="mt-3 text-[#d5e6df] max-w-[40ch]">You walk in knowing your deadlines, your documents and your argument. You speak for yourself, and you've already rehearsed it.</p><p class="mt-3 font-semibold text-emerald">You get a deadline map and a rehearsal.</p></li>
     </ol>
-    <a href="#intake" class="btn btn-gold mt-14">Book My Free 15-Minute Triage</a>
-  </div>
-</section>
-
-<section id="cost" class="on-light bg-ivory text-ink">
-  <div class="mx-auto max-w-[1400px] px-5 lg:px-10 py-20 lg:py-28">
-    <h2 class="text-[2.4rem] leading-[1.1] lg:text-[3.5rem] max-w-[13em]">Three ways this goes. Choose the one you can live with.</h2>
-    <div class="mt-12 overflow-x-auto">
-      <table class="cmp w-full text-left border-collapse">
-        <caption class="sr-only">Comparison of hiring a law firm, going alone, and working with CaseIQ</caption>
-        <thead><tr class="align-bottom border-b-2 border-ink">
-          <td class="p-4 pl-0 w-[22%]"></td>
-          <th scope="col" class="p-4 font-display font-normal text-2xl">Traditional law firm</th>
-          <th scope="col" class="p-4 font-display font-normal text-2xl">Going completely alone</th>
-          <th scope="col" class="p-4 font-display font-normal text-2xl bg-obsidian text-ivory">CaseIQ</th>
-        </tr></thead>
-        <tbody class="[&_tr]:border-b [&_tr]:border-ink/20 [&_th]:font-semibold [&_th]:py-4 [&_th]:pr-4 [&_td]:p-4">
-          <tr><th scope="row">Typical cost</th><td data-l="Traditional law firm" class="tnum">$15,000–$50,000+<br><span class="text-ink2 text-base">our estimate; fees vary widely</span></td><td data-l="Going completely alone">Court fees only</td><td data-l="CaseIQ" class="bg-obsidian text-ivory">Scoped and quoted after triage</td></tr>
-          <tr><th scope="row">Who reads your whole file</th><td data-l="Traditional law firm">Depends on the firm and the budget</td><td data-l="Going completely alone">You, without training</td><td data-l="CaseIQ" class="bg-obsidian text-ivory">We do. Every page.</td></tr>
-          <tr><th scope="row">Procedural risk</th><td data-l="Traditional law firm">Low</td><td data-l="Going completely alone">High. Errors can get a case dismissed.</td><td data-l="CaseIQ" class="bg-obsidian text-ivory">Reduced, with rules and deadlines mapped</td></tr>
-          <tr><th scope="row">Forensic work</th><td data-l="Traditional law firm">Separate expert, billed extra</td><td data-l="Going completely alone">Rarely within reach</td><td data-l="CaseIQ" class="bg-obsidian text-ivory">Available through CaseIQ</td></tr>
-          <tr><th scope="row">Speaks for you in court</th><td data-l="Traditional law firm">Yes</td><td data-l="Going completely alone">No</td><td data-l="CaseIQ" class="bg-obsidian text-ivory">No. You do, prepared.</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <form id="calc" class="mt-16 grid lg:grid-cols-12 gap-10 bg-parchment p-6 md:p-10" onsubmit="return false" aria-label="Savings estimator">
-      <div class="lg:col-span-7 space-y-7">
-        <h3 class="text-3xl lg:text-4xl">Run your own numbers</h3>
-        <div><label for="rate" class="flex justify-between font-semibold"><span>Lawyer's hourly rate</span><output id="rateO" for="rate" class="tnum"></output></label><input id="rate" type="range" min="250" max="900" step="25" value="500"></div>
-        <div><label for="hours" class="flex justify-between font-semibold"><span>Hours your matter would take</span><output id="hoursO" for="hours" class="tnum"></output></label><input id="hours" type="range" min="20" max="200" step="5" value="60"></div>
-        <div><label for="share" class="flex justify-between font-semibold"><span>Assumed support cost, as a share of the firm's bill</span><output id="shareO" for="share" class="tnum"></output></label><input id="share" type="range" min="20" max="100" step="5" value="30"></div>
-      </div>
-      <div class="lg:col-span-5 lg:border-l lg:border-ink/25 lg:pl-10 flex flex-col justify-center"><p id="calcLive" class="sr-only" aria-live="polite"></p>
-        <p class="font-semibold">Estimated difference</p>
-        <p id="saved" class="font-display tnum text-6xl lg:text-7xl mt-1 text-emink"></p>
-        <p class="mt-3 tnum">Firm: <strong id="firm"></strong> &nbsp;·&nbsp; With support: <strong id="sup"></strong></p>
-        <p class="mt-4 text-ink2 text-base">An illustration from the assumptions above, not a quote or a promise. A firm also represents you in court. Support does not. Your actual cost is set after triage.</p>
-      </div>
-    </form>
+    <a href="#intake" class="btn btn-gold mt-14">Request My Free 15-Minute Triage</a>
   </div>
 </section>
 
@@ -174,12 +158,13 @@
     <div>
       <h3 class="text-3xl">Whose hand signed this?</h3>
       <div class="on-light mt-10 bg-ivory relative" id="sigBox"><span class="xtab">Exhibit A</span>
-        <svg viewBox="0 0 520 190" class="w-full block" role="img" aria-label="Sample known signature overlaid with a sample questioned signature">
+        <svg viewBox="0 0 520 190" class="w-full block" role="img" aria-label="Sample questioned signature and sample known signature, split by a movable line">
           <line x1="24" y1="150" x2="496" y2="150" stroke="#141a2a" stroke-opacity=".3"/>
-          <path d="M40 132C62 70 84 34 98 42c15 9-22 92-30 108 18-34 44-62 60-54 11 6-6 30 2 34 12 6 28-30 40-26 9 3-3 26 6 28 13 3 34-40 52-36 12 3-6 34 8 36 20 3 60-42 86-48 18-4 16 22 2 28-10 4-14-10-4-22 22-24 78-44 128-40" fill="none" stroke="#0b6048" stroke-width="3.2" stroke-linecap="round"/>
+          <g class="wipe-k"><path d="M40 132C62 70 84 34 98 42c15 9-22 92-30 108 18-34 44-62 60-54 11 6-6 30 2 34 12 6 28-30 40-26 9 3-3 26 6 28 13 3 34-40 52-36 12 3-6 34 8 36 20 3 60-42 86-48 18-4 16 22 2 28-10 4-14-10-4-22 22-24 78-44 128-40" fill="none" stroke="#0b6048" stroke-width="3.2" stroke-linecap="round"/></g>
           <g class="wipe" id="sigQ"><path d="M46 138C64 82 92 40 104 50c12 10-30 74-36 100 30-44 48-50 58-46 8 4-8 26 0 30 16 4 26-28 40-22 8 4-6 22 4 26 20 2 28-30 50-28 10 2-8 30 6 30 8 0 24-14 34-22m10-4c14-8 34-22 54-26 16-3 14 18 2 26-9 6-16-6-6-18 26-22 72-30 118-30" fill="none" stroke="#7a570a" stroke-width="3.2" stroke-linecap="round"/><circle cx="265" cy="116" r="15" fill="none" stroke="#9b1c1c" stroke-width="2"/></g>
-          
+                    <line id="sigLine" x1="390" x2="390" y1="12" y2="178" stroke="#141a2a" stroke-width="1.5" stroke-dasharray="4 4"/>
         </svg>
+        <div class="flex justify-between gap-4 px-4 pb-3 text-sm font-semibold"><span class="text-golddeep">Questioned signature</span><span class="text-emink">Known signature</span></div>
       </div>
       <label for="sig" class="mt-5 block font-semibold">Drag to compare the known signature with the questioned one</label>
       <input id="sig" type="range" min="0" max="100" value="75" style="--track:#c3cbdc;--thumb:#0b1220">
@@ -213,44 +198,98 @@
   </div>
 </section>
 
-<section id="faq" class="on-light bg-parchment text-ink">
-  <div class="mx-auto max-w-[1400px] px-5 lg:px-10 py-20 lg:py-28 grid lg:grid-cols-12 gap-10">
-    <div class="lg:col-span-4"><h2 class="text-[2.4rem] leading-[1.1] lg:text-[3.5rem]">What people ask at 2 a.m.</h2>
+<section id="cost" class="on-light bg-ivory text-ink">
+  <div class="mx-auto max-w-[1400px] px-5 lg:px-10 py-20 lg:py-28">
+    <h2 class="text-[2.4rem] leading-[1.1] lg:text-[3.5rem] max-w-[13em]">Three ways this goes. Choose the one you can live with.</h2>
+    <div class="mt-12 overflow-x-auto">
+      <table class="cmp w-full text-left border-collapse">
+        <caption class="sr-only">Comparison of hiring a law firm, going alone, and working with CaseIQ</caption>
+        <thead><tr class="align-bottom border-b-2 border-ink">
+          <td class="p-4 pl-0 w-[22%]"></td>
+          <th scope="col" class="p-4 font-display font-normal text-2xl">Traditional law firm</th>
+          <th scope="col" class="p-4 font-display font-normal text-2xl">Going completely alone</th>
+          <th scope="col" class="p-4 font-display font-normal text-2xl bg-obsidian text-ivory">CaseIQ</th>
+        </tr></thead>
+        <tbody class="[&_tr]:border-b [&_tr]:border-ink/20 [&_th]:font-semibold [&_th]:py-4 [&_th]:pr-4 [&_td]:p-4">
+          <tr><th scope="row">Typical cost</th><td data-l="Traditional law firm" class="tnum">$15,000–$50,000+<br><span class="text-ink2 text-base">our estimate; fees vary widely</span></td><td data-l="Going completely alone">Court fees only</td><td data-l="CaseIQ" class="bg-obsidian text-ivory">Scoped and quoted after triage</td></tr>
+          <tr><th scope="row">Who reads your whole file</th><td data-l="Traditional law firm">Depends on the firm and the budget</td><td data-l="Going completely alone">You, without training</td><td data-l="CaseIQ" class="bg-obsidian text-ivory">We do. Every page.</td></tr>
+          <tr><th scope="row">Procedural risk</th><td data-l="Traditional law firm">Low, if your file gets the attention it needs</td><td data-l="Going completely alone">High. Errors can get a case dismissed.</td><td data-l="CaseIQ" class="bg-obsidian text-ivory">Reduced, with rules and deadlines mapped</td></tr>
+          <tr><th scope="row">Forensic work</th><td data-l="Traditional law firm">Separate expert, billed extra</td><td data-l="Going completely alone">Rarely within reach</td><td data-l="CaseIQ" class="bg-obsidian text-ivory">Available through CaseIQ</td></tr>
+          <tr><th scope="row">Speaks for you in court</th><td data-l="Traditional law firm">Yes</td><td data-l="Going completely alone">No</td><td data-l="CaseIQ" class="bg-obsidian text-ivory">No. You do, prepared.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <form id="calc" class="mt-16 grid lg:grid-cols-12 gap-10 bg-parchment p-6 md:p-10" onsubmit="return false" aria-label="Cost estimator">
+      <div class="lg:col-span-7 space-y-7">
+        <h3 class="text-3xl lg:text-4xl">Run your own numbers</h3>
+        <div><label for="rate" class="flex justify-between font-semibold"><span>Lawyer's hourly rate</span><output id="rateO" for="rate" class="tnum"></output></label><input id="rate" type="range" min="250" max="900" step="25" value="500"></div>
+        <div><label for="hours" class="flex justify-between font-semibold"><span>Hours your matter would take</span><output id="hoursO" for="hours" class="tnum"></output></label><input id="hours" type="range" min="20" max="200" step="5" value="60"></div>
+        <div><label for="share" class="flex justify-between font-semibold"><span>If support cost this share of the firm's bill</span><output id="shareO" for="share" class="tnum"></output></label><input id="share" type="range" min="20" max="100" step="5" value="30"></div>
+      </div>
+      <div class="lg:col-span-5 lg:border-l lg:border-ink/25 lg:pl-10 flex flex-col justify-center"><p id="calcLive" class="sr-only" aria-live="polite"></p>
+        <p class="font-semibold">A firm, at these numbers</p>
+        <p id="firm" class="font-display tnum text-5xl lg:text-6xl mt-1 text-ink"></p>
+        <p class="mt-3 tnum">If support cost <span id="shareEcho"></span> of that: <strong id="sup"></strong>. Difference: <strong id="saved"></strong>.</p>
+        <p class="mt-4 text-ink2 text-base">An illustration from the assumptions above, not a quote or a promise. A firm also represents you in court. Support does not. Your actual cost is set after triage.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="faq" class="on-light bg-parchment text-ink border-t border-ink/15">
+  <div class="mx-auto max-w-[1400px] px-5 lg:px-10 py-20 lg:py-28 grid lg:grid-cols-12 lg:grid-rows-[auto_1fr] gap-10">
+    <h2 class="lg:col-span-4 lg:row-start-1 text-[2.4rem] leading-[1.1] lg:text-[3.5rem]">What people ask at 2 a.m.</h2>
+    <div class="lg:col-span-8 lg:col-start-5 lg:row-start-1 lg:row-span-2 border-t border-ink/25">{{faq}}</div>
+    <div class="lg:col-span-4 lg:col-start-1 lg:row-start-2">
+      <h2 class="text-2xl">What is CaseIQ?</h2>
+      <p class="mt-2 max-w-[44ch]">CaseIQ is a Canadian litigation support service for people representing themselves in court. It combines full-file review, court document preparation under a licensee on its team, forensic accounting, handwriting and signature analysis, and procedural coaching. CaseIQ helps you prepare and present your own case. It is not a law firm.</p>
       <h2 class="text-2xl mt-10">Where CaseIQ helps: Toronto, Ontario and across Canada</h2>
       <p class="mt-2 max-w-[44ch]">From our Toronto base, we support self-represented litigants in courts across Canada, including the Ontario Superior Court of Justice and Small Claims Court, the Supreme Court of British Columbia and the Court of King's Bench of Alberta. Rules and licensing differ by province, and Quebec differs most, so ask us first.</p>
       <p class="mt-6 font-bold">Sources worth reading</p>
-      <ul class="mt-1 space-y-1"><li><a class="underline" rel="noopener" href="https://www.ontario.ca/laws/regulation/900194">Ontario Rules of Civil Procedure, R.R.O. 1990, Reg. 194</a></li><li><a class="underline" rel="noopener" href="https://representingyourselfcanada.com/">National Self-Represented Litigants Project</a></li></ul>
-      <p class="mt-5 text-base text-ink2">Last reviewed <time datetime="2026-11-08">November 8, 2026</time></p></div>
-    <div class="lg:col-span-8 border-t border-ink/25">{{faq}}</div>
+      <ul class="mt-1"><li><a class="underline inline-block py-2.5 sm:py-1" rel="noopener" href="https://www.ontario.ca/laws/regulation/900194">Ontario Rules of Civil Procedure, R.R.O. 1990, Reg. 194</a></li><li><a class="underline inline-block py-2.5 sm:py-1" rel="noopener" href="https://representingyourselfcanada.com/">National Self-Represented Litigants Project</a></li></ul>
+      <p class="mt-5 text-base text-ink2">Last reviewed <time datetime="2026-11-09">November 9, 2026</time></p>
+    </div>
   </div>
 </section>
 
 <section id="intake" class="on-gold bg-gold text-ink">
   <div class="mx-auto max-w-[1400px] px-5 lg:px-10 py-20 lg:py-28 grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
     <div class="lg:col-span-6">
-      <h2 class="text-[2.4rem] leading-[1.1] lg:text-[4.25rem]">Your next deadline is already on the calendar.</h2>
-      <p class="mt-6 text-xl max-w-[42ch]">Tell us where you're stuck. In 15 free minutes we'll sort out what you're facing, what's urgent and whether we can help.</p>
+      <h2 class="text-[2.4rem] leading-[1.1] lg:text-[4.25rem]">You don't have to work out the next step alone.</h2>
+      <p class="mt-6 text-xl max-w-[42ch]">Tell us where you're stuck. The first 15 minutes are free, and you stay in charge of what happens after them.</p>
+      <h3 class="mt-10 text-2xl">In your 15 minutes</h3>
+      <ul class="mt-3 space-y-2 max-w-[48ch]">
+        <li class="flex gap-2">{{icon:circle-check|ico mt-1 text-ink}}You tell us where your case stands and what's due.</li>
+        <li class="flex gap-2">{{icon:circle-check|ico mt-1 text-ink}}We sort out what's urgent and what's missing.</li>
+        <li class="flex gap-2">{{icon:circle-check|ico mt-1 text-ink}}We tell you whether we can help. If we can't, we'll say so.</li>
+      </ul>
+      <p class="mt-8 pt-5 border-t border-ink/30 max-w-[48ch]"><strong>Deadline within 7 days?</strong> Put the date on the form, and don't wait on us: contact the court office now about asking for more time.</p>
+      <p class="mt-5 max-w-[48ch] font-semibold">Your file is read by [Founder's first name], with drafting under [Licensee name, licence type].</p>
     </div>
     <form id="intakeForm" novalidate class="on-light lg:col-span-6 bg-ivory p-6 md:p-9 space-y-5">
       <div class="grid sm:grid-cols-2 gap-5">
         <div><label for="name" class="font-semibold block mb-1">Your name</label><input id="name" name="name" class="field" autocomplete="name" required><p class="err hidden text-[#9b1c1c] text-base mt-1">Enter your name so we know who to ask for.</p></div>
         <div><label for="email" class="font-semibold block mb-1">Email</label><input id="email" name="email" type="email" class="field" autocomplete="email" required><p class="err hidden text-[#9b1c1c] text-base mt-1">Enter a valid email so we can reply.</p></div>
       </div>
-      <div class="grid sm:grid-cols-2 gap-5">
-        <div><label for="type" class="font-semibold block mb-1">Case type <span class="font-normal text-ink2">(optional)</span></label><select id="type" name="type" class="field"><option value="">Choose one</option><option>Family</option><option>Civil dispute</option><option>Estates</option><option>Employment</option><option>Fraud or financial</option><option>Other</option></select></div>
-        <div><label for="stage2" class="font-semibold block mb-1">Current stage <span class="font-normal text-ink2">(optional)</span></label><select id="stage2" name="stage" class="field"><option value="">Choose one</option><option>Not filed yet</option><option>Just served</option><option>Pleadings exchanged</option><option>Motion coming up</option><option>Trial or hearing scheduled</option><option>Appeal</option></select></div>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-5"><div><label for="prov" class="font-semibold block mb-1">Province or territory</label><select id="prov" name="province" class="field" required><option value="">Choose one</option><option>Ontario</option><option>British Columbia</option><option>Alberta</option><option>Quebec</option><option>Manitoba</option><option>Saskatchewan</option><option>Nova Scotia</option><option>New Brunswick</option><option>Newfoundland and Labrador</option><option>Prince Edward Island</option><option>Yukon</option><option>Northwest Territories</option><option>Nunavut</option></select><p class="err hidden text-[#9b1c1c] text-base mt-1">Choose where your case is. Court rules depend on it.</p></div><div><label for="due" class="font-semibold block mb-1">Next deadline, if you know it</label><input id="due" name="deadline" type="date" class="field"></div></div>
-      <div><label for="block" class="font-semibold block mb-1">Biggest bottleneck</label><textarea id="block" name="bottleneck" rows="3" class="field" placeholder="For example: motion due in three weeks and I don't know where to start" required></textarea><p class="err hidden text-[#9b1c1c] text-base mt-1">Tell us briefly what's holding you up.</p></div>
-      <button class="btn btn-ink w-full cursor-pointer" type="submit">Book My Free 15-Minute Triage {{icon:arrow-right}}</button>
-      <p class="text-base text-ink">We'll reply by email to set your 15 minutes.</p>
-      <p id="formMsg" role="status" class="text-base text-ink"></p>
-      <p class="text-base text-ink2">Submitting this does not create a lawyer-client relationship. Keep it general for now. Don't include confidential details until we've spoken.</p>
+      <div class="grid sm:grid-cols-2 gap-5 items-end"><div><label for="prov" class="font-semibold block mb-1">Province or territory</label><select id="prov" name="province" class="field" required><option value="">Choose one</option><option>Ontario</option><option>British Columbia</option><option>Alberta</option><option>Quebec</option><option>Manitoba</option><option>Saskatchewan</option><option>Nova Scotia</option><option>New Brunswick</option><option>Newfoundland and Labrador</option><option>Prince Edward Island</option><option>Yukon</option><option>Northwest Territories</option><option>Nunavut</option></select><p class="err hidden text-[#9b1c1c] text-base mt-1">Choose where your case is. Court rules depend on it.</p></div><div><label for="due" class="font-semibold block mb-1">Next deadline, if you know it</label><input id="due" name="deadline" type="date" class="field"></div></div>
+      <div><label for="block" class="font-semibold block mb-1">What's worrying you most?</label><p id="blockHint" class="text-base text-ink2 mb-2">A sentence is enough. Please leave out names and account details for now. We'll talk privately at triage.</p><textarea id="block" name="bottleneck" rows="3" class="field" placeholder="For example: motion due in three weeks and I don't know where to start" required aria-describedby="blockHint" data-hint="blockHint"></textarea><p class="err hidden text-[#9b1c1c] text-base mt-1">Tell us briefly what's worrying you.</p></div>
+      <details class="more"><summary class="flex items-center gap-2 min-h-11 font-semibold">{{icon:plus|ico chev text-golddeep}}Add a phone number, case type or stage <span class="font-normal text-ink2">(optional)</span></summary>
+        <div class="grid sm:grid-cols-2 gap-5 pt-3">
+          <div class="sm:col-span-2"><label for="phone" class="font-semibold block mb-1">Phone, if you'd rather we call</label><input id="phone" name="phone" type="tel" class="field" autocomplete="tel"></div>
+          <div><label for="type" class="font-semibold block mb-1">Case type</label><select id="type" name="type" class="field"><option value="">Choose one</option><option>Family</option><option>Civil dispute</option><option>Estates</option><option>Employment</option><option>Fraud or financial</option><option>Other</option></select></div>
+          <div><label for="stage2" class="font-semibold block mb-1">Current stage</label><select id="stage2" name="stage" class="field"><option value="">Choose one</option><option>Not sure</option><option>Not filed yet</option><option>Just served</option><option>Pleadings exchanged</option><option>Motion coming up</option><option>Trial or hearing scheduled</option><option>Appeal</option></select></div>
+        </div>
+      </details>
+      <button class="btn btn-ink w-full cursor-pointer" type="submit">Request My Free 15-Minute Triage {{icon:arrow-right}}</button>
+      <p id="formMsg" role="status" class="text-base text-ink font-semibold empty:hidden"></p>
+      <p class="text-base text-ink">We'll reply by email within <span class="font-semibold text-golddeep">[reply time you can keep]</span> to set your 15 minutes.</p>
+      <p class="text-base text-ink2">Submitting this does not create a lawyer-client relationship.</p>
     </form>
   </div>
 </section>
 </main>
-<div id="mbar" hidden class="sm:hidden fixed inset-x-0 bottom-0 z-30 bg-obsidian border-t border-line p-3"><a class="btn btn-gold w-full" href="#intake">Book My Free 15-Minute Triage</a></div>
+<div id="mbar" hidden class="sm:hidden fixed inset-x-0 bottom-0 z-30 bg-obsidian border-t border-line p-3"><a class="btn btn-gold w-full" href="#intake">Request My Free 15-Minute Triage</a></div>
 
 <footer class="border-t border-line">
   <div class="mx-auto max-w-[1400px] px-5 lg:px-10 py-12 grid lg:grid-cols-12 gap-8">
@@ -258,7 +297,7 @@
       <p class="font-display text-2xl">CaseIQ</p>
       <p class="text-mist mt-1">Support for self-represented litigants across Canada, from Toronto, Ontario.</p>
     </div>
-    <div class="lg:col-span-9 text-mist text-base max-w-[92ch]">
+    <div class="lg:col-span-9 text-mist text-base max-w-[68ch]">
       <p class="font-bold text-ivory">Important</p>
       <p class="mt-2">CaseIQ provides litigation support, legal information, document preparation assistance and forensic analysis. CaseIQ is not a law firm and does not provide formal legal representation. Where court documents are drafted, that work is done under a licensee on our team and only within what that licence permits in your province. Nothing on this page is legal advice, and no outcome is guaranteed. Sample documents and figures are invented for illustration.</p>
       <p class="mt-4 font-semibold text-gold">[Before launch: licensee name, licence type and number] · [Contact details] · [Privacy notice]</p>

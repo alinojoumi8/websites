@@ -1,23 +1,27 @@
 [
 {
-"q": "Where can I get help as a self-represented litigant in Canada?",
-"a": "Self-represented litigants can use court self-help centres, legal aid clinics, public legal education sites and paid support services. CaseIQ is a paid support service: we review your whole file, organize your evidence, help prepare your court documents and coach you on procedure, while you keep control of your case."
+"q": "What if my deadline is days away, or I've already missed it?",
+"a": "Act today. A missed court deadline can lead to your document being refused, costs against you, or your case being dismissed, and the rules differ by court and province. Contact the court office, ask the other side to consent to more time, and be ready to ask the court for an extension. Then put the date on our form, and we'll tell you at triage whether we can help in the time left."
+},
+{
+"q": "What happens in the free 15 minutes?",
+"a": "You tell us where your case stands and what's due. We sort out what's urgent, what's missing and whether we can help. If we can't, we'll say so. You don't need anything prepared, though your last court document and your next date are useful if you have them."
+},
+{
+"q": "What does CaseIQ cost, and how can I keep litigation costs down?",
+"a": "Triage is free. After it, we scope the work and quote it, and you agree the cost before anything starts. Most litigation cost is hours spent reading, organizing and drafting, so do what you can yourself and pay for targeted help on the rest: a limited-scope retainer from a lawyer, support like ours, or both. A complete file review and clean chronology prevent expensive mistakes and wasted court appearances."
+},
+{
+"q": "Is what I share with CaseIQ confidential?",
+"a": "Yes. We keep your file confidential and share it only with the people working on your matter. Legal privilege is a separate question. It depends on who is doing the work and why, and it does not automatically cover every support service, so ask us at triage before you send anything sensitive."
+},
+{
+"q": "Can CaseIQ guarantee I will win?",
+"a": "No, and you should be wary of anyone who says they can. Courts decide cases on the law and the evidence. What we can do is work to get your evidence complete and in order and your documents to the court's rules, so you walk into the hearing prepared."
 },
 {
 "q": "What is the difference between a lawyer, a paralegal and litigation support?",
-"a": "A lawyer can represent you in any court. A licensed paralegal can represent you only in the areas their province allows. Litigation support helps you prepare but does not speak for you in court. CaseIQ is litigation support, with drafting done under a licensee on our team, within that licence's limits."
-},
-{
-"q": "Who can help me draft a factum, motion or affidavit?",
-"a": "Lawyers and, within limits, licensed paralegals can draft court documents for you. CaseIQ offers motion, factum and affidavit assistance under a licensee on our team, plus templates and review. You read everything before it is filed, you swear your own affidavit, and each document is prepared to your court's rules and formats."
-},
-{
-"q": "How can I reduce litigation costs without giving up on my case?",
-"a": "Most litigation cost is hours spent reading, organizing and drafting. Do what you can yourself and pay for targeted help on the rest: a limited-scope retainer from a lawyer, support like ours, or both. A complete file review and clean chronology prevent expensive mistakes and wasted court appearances."
-},
-{
-"q": "What happens if I miss a court deadline?",
-"a": "A missed deadline can lead to your document being refused, costs against you, or your case being dismissed. Rules differ by court and province. Act right away: contact the court office, ask the other side to consent to more time, and be ready to ask the court for an extension."
+"a": "A lawyer can represent you in any court. A licensed paralegal can represent you only in the areas their province allows. Litigation support helps you prepare but does not speak for you in court. Lawyers and, within limits, licensed paralegals can draft court documents for you. CaseIQ is litigation support, and offers motion, factum and affidavit help under a licensee on our team, within that licence's limits. You read everything before it is filed, and you swear your own affidavit."
 },
 {
 "q": "How does forensic accounting help in a lawsuit?",
@@ -28,15 +32,11 @@
 "a": "An examiner compares the disputed signature to known samples, studying letter forms, pressure, slant, pen lifts and rhythm. Handwriting and signature verification for court depends on good original samples. If you need expert opinion evidence, the expert must meet your court's rules. In Ontario, Rule 4.1.01 of the Rules of Civil Procedure sets out the expert's duty to the court."
 },
 {
-"q": "Is what I share with CaseIQ confidential?",
-"a": "Yes. We keep your file confidential and share it only with the people working on your matter. Legal privilege is a separate question. It depends on who is doing the work and why, and it does not automatically cover every support service, so ask us at triage before you send anything sensitive."
-},
-{
 "q": "Do you help outside Ontario, or with pro se cases in the United States?",
 "a": "We support self-represented litigants across Canada, from a Toronto base. Court rules and licensing differ by province, so what we can draft may vary and we will confirm it at triage. We do not currently offer pro se support for United States courts. Tell us your province on the intake form."
 },
 {
-"q": "Can CaseIQ guarantee I will win?",
-"a": "No, and you should be wary of anyone who says they can. Courts decide cases on the law and the evidence. What we can do is work to get your evidence complete and in order and your documents to the court's rules, so you walk into the hearing prepared."
+"q": "Where can I get help as a self-represented litigant in Canada?",
+"a": "Self-represented litigants can use court self-help centres, legal aid clinics, public legal education sites and paid support services. CaseIQ is a paid support service: we review your whole file, organize your evidence, help prepare your court documents and coach you on procedure, while you keep control of your case."
 }
 ]

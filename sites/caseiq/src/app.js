@@ -23,12 +23,26 @@ if (!reduced) {
   new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { o.disconnect(); setTimeout(() => setStage('order'), 900); } }, { threshold: .25 }).observe(stage);
 }
 
+// Hero film: plays once in view unless the visitor prefers less motion or data
+const film = $('film'), filmBtn = $('filmBtn');
+const startFilm = () => film.play().catch(() => { filmBtn.textContent = 'Play film'; });
+film.onplay = () => { filmBtn.textContent = 'Pause film'; };
+film.onpause = () => { filmBtn.textContent = film.ended ? 'Watch again' : 'Play film'; };
+filmBtn.onclick = () => film.paused ? startFilm() : film.pause();
+if (!reduced && !navigator.connection?.saveData) {
+  new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { o.disconnect(); startFilm(); } }, { threshold: .4 }).observe(film);
+}
+
 // Service index: exactly one panel open
 const svcBtns = [...document.querySelectorAll('.svc')];
-svcBtns.forEach((b, i) => b.onclick = () => svcBtns.forEach((x, n) => {
-  x.setAttribute('aria-expanded', n === i);
-  $('p' + n).hidden = n !== i;
-}));
+svcBtns.forEach((b, i) => b.onclick = () => {
+  svcBtns.forEach((x, n) => {
+    x.setAttribute('aria-expanded', n === i);
+    $('p' + n).hidden = n !== i;
+  });
+  // On phones the panel opens below its row: bring the row to the top so the panel clears the bottom bar.
+  if (matchMedia('(max-width:767px)').matches) b.scrollIntoView({ block: 'start', behavior: reduced ? 'auto' : 'smooth' });
+});
 
 const openHash = () => { const m = location.hash.match(/^#p(\d)$/); if (m && svcBtns[m[1]]) svcBtns[m[1]].click(); };
 addEventListener('hashchange', openHash); openHash();
@@ -45,13 +59,14 @@ const calc = () => {
   $('rate').setAttribute('aria-valuetext', $('rateO').textContent);
   $('hours').setAttribute('aria-valuetext', $('hoursO').textContent);
   $('share').setAttribute('aria-valuetext', $('shareO').textContent);
-  return 'Estimated difference ' + money(firm - sup);
+  $('shareEcho').textContent = $('share').value + '%';
+  return 'A firm: about ' + money(firm) + '. Difference: about ' + money(firm - sup);
 };
 ['rate', 'hours', 'share'].forEach(id => { $(id).oninput = calc; $(id).onchange = () => { $('calcLive').textContent = calc(); }; });
 calc();
 
 // Signature comparison
-const sigWipe = () => { $('sigQ').style.setProperty('--w', $('sig').value + '%'); $('sig').setAttribute('aria-valuetext', $('sig').value + ' percent of the questioned signature shown'); };
+const sigWipe = () => { $('sigBox').style.setProperty('--w', $('sig').value + '%'); $('sigLine').setAttribute('x1', 5.2 * $('sig').value); $('sigLine').setAttribute('x2', 5.2 * $('sig').value); $('sig').setAttribute('aria-valuetext', $('sig').value + ' percent of the questioned signature shown'); };
 $('sig').oninput = sigWipe; sigWipe();
 
 // Intake form
@@ -63,7 +78,7 @@ form.addEventListener('submit', async e => {
     const bad = !f.checkValidity() || !f.value.trim();
     f.setAttribute('aria-invalid', bad);
     const err = f.parentElement.querySelector('.err');
-    err.id = f.id + '-err'; f.setAttribute('aria-describedby', err.id);
+    err.id = f.id + '-err'; f.setAttribute('aria-describedby', [f.dataset.hint, err.id].filter(Boolean).join(' '));
     err.classList.toggle('hidden', !bad);
     if (bad && !first) first = f;
   });
@@ -73,7 +88,7 @@ form.addEventListener('submit', async e => {
   try {
     const r = await fetch(INTAKE_ENDPOINT, { method: 'POST', body: new FormData(form) });
     if (!r.ok) throw 0;
-    form.reset(); msg.textContent = "Thanks. We've got it and will reply by email to book your triage.";
+    form.reset(); msg.textContent = "Thanks. We've got it and will reply by email to set up your triage.";
   } catch { msg.textContent = "That didn't go through. Check your connection and try again."; }
   btn.disabled = false;
 });

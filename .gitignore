@@ -2,6 +2,7 @@ node_modules/
 .next/
 .astro/
 dist/
+.herenow/
 build/
 out/
 .vercel/
