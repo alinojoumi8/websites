@@ -1,0 +1,366 @@
+---
+import Base from '../layouts/Base.astro';
+import Page from '../components/Page.astro';
+import Stamp from '../components/Stamp.astro';
+import Portrait from '../components/Portrait.astro';
+
+const tabs = [
+  { id: 'fo-1', label: 'Account', c: 'var(--green)', i: 'var(--black)' },
+  { id: 'fo-2', label: 'Staff', c: 'var(--gold)', i: 'var(--black)' },
+  { id: 'fo-3', label: 'Pontemesto', c: 'var(--pink)', i: 'var(--black)' },
+  { id: 'fo-4', label: 'Keywa', c: 'var(--cobalt)', i: 'var(--ivory)' },
+  { id: 'fo-5', label: 'Earlier', c: 'var(--manila)', i: 'var(--black)' },
+  { id: 'fo-6', label: 'Experiments', c: 'var(--carbon)', i: 'var(--ivory)' },
+  { id: 'fo-7', label: 'Open entry', c: 'var(--green)', i: 'var(--black)' },
+];
+
+const payroll = [
+  { ali: 'bulb', duty: 'Finds what is missing.', record: 'Interviewed specialists and found that organizations needed shared control of crypto.' },
+  { ali: 'clipboard', duty: 'Roadmaps and requirements.', record: 'Owned the Pontemesto roadmap and its onboarding requirements.' },
+  { ali: 'laptop', duty: 'Gateways and APIs.', record: 'Designed the gateway and APIs. Built components alongside developers.' },
+  { ali: 'shades', duty: 'Partners and contracts.', record: 'Selected processing partners. Structured the partnership and its contracts.' },
+  { ali: 'ladder', duty: 'Raising.', record: 'Raised CAD $3 million for Keywa.' },
+  { ali: 'megaphone', duty: 'Hiring and leading.', record: 'Recruited and led a 20-person team.' },
+  { ali: 'sleeping', duty: 'Custody.', record: 'Self-custody with multiple signing authorities. He sleeps because the keys are safe.' },
+];
+
+const signers = [0, 1, 2];
+const departments = ['Treasury', 'Operations', 'Compliance'];
+
+const arrow = '<svg class="arw" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M20 1l6 5-6 5" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
+---
+<Base
+  title="Ali Nojoumi. Product leader, payments and digital assets."
+  description="The account books of Ali Nojoumi: fintech co-founder, product leader for payment gateways, platform APIs and crypto custody. USD $80M+ processed at Pontemesto. Keywa acquired December 2024."
+>
+  <div id="intro" aria-hidden="true">
+    <canvas id="intro-marble"></canvas>
+    <div class="plate"><p>The account books of</p><p class="plate-name">Ali Nojoumi</p><p class="intro-skip">Press any key to skip</p></div>
+  </div>
+
+  <a class="skip" href="#fo-1">Skip to the first page</a>
+
+  <nav class="tabs" aria-label="Folio index">
+    <ol>
+      {tabs.map((t) => (
+        <li><a class="tab" href={`#${t.id}`} style={`--c:${t.c};--i:${t.i}`}>{t.label}</a></li>
+      ))}
+    </ol>
+    <button id="sound" class="sound" type="button" aria-pressed="false">Sound off</button>
+  </nav>
+
+  <main id="book" class="track">
+    <div class="stage">
+
+      <!-- Folio 1 -->
+      <section tabindex="-1" id="fo-1" class="spread stock-green" aria-labelledby="name">
+        <Page side="l">
+          <p class="head cell" style="--at:1"><b>Dr.</b><span>Fo. 1 Account of</span></p>
+          <h1 id="name" class="across name">Ali Nojoumi</h1>
+          <div class="across portrait">
+            <Portrait alt="Ali Nojoumi in a navy suit and black shirt, chin resting on his hand, looking at the camera." eager />
+            <div class="minis" aria-hidden="true">
+              <img src="/ali/laptop.webp" alt="" style="--x:3%;--y:35.4%;--w:26%" />
+              <img src="/ali/bulb.webp" alt="" style="--x:72%;--y:32%;--w:14%" />
+              <img src="/ali/megaphone.webp" alt="" style="--x:85%;--y:33%;--w:14.5%" />
+            </div>
+          </div>
+          <div class="rest">
+            <p class="role cell" style="--at:7" data-ink>Product leader. Payments and digital assets.</p>
+            <div class="cell" style="--at:8;--span:6">
+              <table class="tacct dr">
+                <thead><tr><th scope="col">What was missing</th></tr></thead>
+                <tbody>
+                  <tr><td><strong data-ink>Shared control of crypto.</strong><span data-ink>Organizations needed a way to sign together.</span></td></tr>
+                  <tr><td><strong data-ink>A way to get paid.</strong><span data-ink>Merchants were ready. Onboarding was not.</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <a class="post cell" href="#fo-7" style="--at:15;--span:2" set:html={`Post an entry ${arrow}`}></a>
+          </div>
+        </Page>
+        <Page side="r">
+          <p class="head cell" style="--at:1"><span>Ali Nojoumi</span><b>Cr.</b></p>
+          <p class="across name dup" aria-hidden="true">Ali Nojoumi</p>
+          <div class="across portrait dup" aria-hidden="true"><Portrait alt="" eager /></div>
+          <p class="role cell end" style="--at:7" data-ink>Toronto. Open to GTA, remote or relocation.</p>
+          <div class="cell" style="--at:8;--span:6">
+            <table class="tacct cr">
+              <thead><tr><th scope="col">What shipped</th></tr></thead>
+              <tbody>
+                <tr><td><strong data-ink>CAD 3,000,000 <a class="ref" href="#fo-4">Fo. 4</a></strong><span data-ink>Raised for Keywa. 20 people. Acquired Dec 2024.</span></td></tr>
+                <tr><td><strong data-ink>USD 80,000,000+ <a class="ref" href="#fo-3">Fo. 3</a></strong><span data-ink>Processed by Pontemesto, Mar to Oct 5, 2026.</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <blockquote class="jacket cell" style="--at:22;--span:3"><p data-ink>I build products when there is a real customer need but no clear path to delivery.</p></blockquote>
+          <Stamp name="posted" alt="Posted, October 5 2026" w={5.6} rot={-8} style="--sx:60%;--sy:13.9" />
+          <a class="corner" href="#fo-2" style="--next:var(--gold)" aria-label="Turn the page to the staff"><span>Turn the page</span></a>
+        </Page>
+      </section>
+
+      <!-- Folio 2 -->
+      <section tabindex="-1" id="fo-2" class="spread stock-gold" aria-labelledby="h-2">
+        <Page side="l">
+          <p class="head cell" style="--at:1"><b>Dr.</b><span>Fo. 2 Payroll</span></p>
+          <h2 id="h-2" class="title sm cell" style="--at:3;--span:6" data-ink>Staff on the<br />books: 7.<br />All named Ali.</h2>
+          <p class="lead cell" style="--at:10;--span:3" data-ink>Every job on the way to a live financial product. At Keywa I hired a team of 20 to do them better.</p>
+        </Page>
+        <Page side="r">
+          <p class="head cell" style="--at:1"><span>Hours: all</span><b>Cr.</b></p>
+          <div class="cell" style="--at:2;--span:23">
+            <table class="payroll">
+              <thead><tr><th scope="col">No.</th><th scope="col">Name</th><th scope="col">Duty</th></tr></thead>
+              <tbody>
+                {payroll.map((p, n) => (
+                  <tr data-ali={p.ali}>
+                    <td class="dt">{n + 1}</td>
+                    <td class="nm"><img class="mini" src={`/ali/${p.ali}.webp`} alt="" loading="lazy" />Ali</td>
+                    <td><strong data-ink>{p.duty}</strong><span data-ink>{p.record}</span></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <a class="corner" href="#fo-3" style="--next:var(--pink)" aria-label="Turn the page to Pontemesto"><span>Turn the page</span></a>
+        </Page>
+      </section>
+
+      <!-- Folio 3 -->
+      <section tabindex="-1" id="fo-3" class="spread stock-pink" aria-labelledby="h-3">
+        <Page side="l">
+          <p class="head cell" style="--at:1"><b>Dr.</b><span>Fo. 3 Pontemesto</span></p>
+          <h2 id="h-3" class="title sm cell" style="--at:2;--span:6" data-ink>Merchants were ready. We had no way to onboard them.</h2>
+          <p class="across figure" data-odo role="img" aria-label="More than 80 million US dollars processed">USD 80,000,000+</p>
+          <ol class="works cell" style="--at:16;--span:9">
+            <li data-ink>I researched the options, then set the roadmap and onboarding requirements.</li>
+            <li data-ink>I designed the gateway and the APIs for exchanges and liquidity providers.</li>
+            <li data-ink>I turned demand from high-risk merchants into a live payments offering.</li>
+            <li data-ink>I selected processing partners and structured the partnership and its contracts.</li>
+          </ol>
+        </Page>
+        <Page side="r">
+          <p class="head cell" style="--at:1"><span>Co-founder. 2026 to present. <a href="https://pontemesto.app" rel="noopener">pontemesto.app</a></span><b>Cr.</b></p>
+          <p class="lead cell" style="--at:2;--span:4" data-ink>A merchant payments platform I co-built. Payment-processing volume from March 2026 through October 5, 2026.</p>
+          <p class="across figure dup" data-odo aria-hidden="true">USD 80,000,000+</p>
+          <ol class="flow-text cell" style="--at:16"><li>Merchant</li><li>Gateway, with exchanges and liquidity providers</li><li>Processing partner</li><li>Settled</li></ol>
+          <figure class="flow cell" style="--at:16;--span:8">
+            <svg viewBox="0 0 600 288" role="img" aria-label="A payment moves from the merchant to the gateway, then to the processing partner, then settles. The gateway also connects to exchanges and liquidity providers. Simplified.">
+              <g class="rt">
+                <path d="M116 24H198V74" />
+                <path d="M282 100H386V148" />
+                <path d="M538 168H554V220" />
+                <path d="M282 90H292V42H304" />
+              </g>
+              <g class="nd">
+                <text x="0" y="34">Merchant</text>
+                <text x="164" y="106" class="b">Gateway</text>
+                <text x="312" y="52">Exchanges, liquidity</text>
+                <text x="322" y="178">Processing partner</text>
+                <text x="510" y="250" class="b">Settled</text>
+              </g>
+              <g class="slips">
+                <rect x="-9" y="-6" width="18" height="12"><animateMotion dur="3.6s" begin="0s" repeatCount="indefinite" path="M116 24H198V74M282 100H386V148M538 168H554V220" /></rect>
+                <rect x="-9" y="-6" width="18" height="12"><animateMotion dur="3.6s" begin="-1.2s" repeatCount="indefinite" path="M116 24H198V74M282 100H386V148M538 168H554V220" /></rect>
+                <rect x="-9" y="-6" width="18" height="12"><animateMotion dur="3.6s" begin="-2.4s" repeatCount="indefinite" path="M116 24H198V74M282 90H292V42H304" /></rect>
+              </g>
+            </svg>
+          </figure>
+          <Stamp name="live" alt="Live" w={4.4} rot={7} style="--sx:62%;--sy:5.2" />
+          <a class="corner" href="#fo-4" style="--next:var(--cobalt)" aria-label="Turn the page to Keywa"><span>Turn the page</span></a>
+        </Page>
+      </section>
+
+      <!-- Folio 4 -->
+      <section tabindex="-1" id="fo-4" class="spread stock-cobalt" aria-labelledby="h-4">
+        <Page side="l">
+          <p class="head cell" style="--at:1"><b>Dr.</b><span>Fo. 4 Keywa, formerly Tardigrade</span></p>
+          <h2 id="h-4" class="title sm cell" style="--at:2;--span:8" data-ink>Organizations needed shared control of their crypto.</h2>
+          <p class="cell" style="--at:11;--span:6" data-ink>I interviewed specialists, hired and led the team, and raised the money. We delivered self-custody with multiple signing authorities. Then we adapted it into a retail wallet. I directed the exchange and liquidity API design and built components myself.</p>
+          <div class="cell" style="--at:17;--span:7">
+            <table class="lines">
+              <tbody>
+                <tr><th scope="row">Team</th><td data-ink>20 people</td></tr>
+                <tr><th scope="row">Raised</th><td data-ink>CAD 3,000,000</td></tr>
+                <tr><th scope="row">Retail wallet</th><td data-ink>About 20,000 clients within weeks</td></tr>
+                <tr><th scope="row">Whitepaper</th><td data-ink>Co-authored. Two-layer signing.</td></tr>
+                <tr><th scope="row">December 2024</th><td data-ink>Keywa acquired. I sold my ownership.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </Page>
+        <Page side="r">
+          <p class="head cell" style="--at:1"><span>Co-founder. 2020 to 2024.</span><b>Cr.</b></p>
+          <div id="signing" class="signing cell" style="--at:2;--span:23">
+            <h3>Sign a withdrawal.</h3>
+            <p class="rule-line">Each department needs 2 of 3 signers. The wallet needs 2 of 3 departments.</p>
+            <div class="depts">
+              {departments.map((d, di) => (
+                <fieldset class="dept" data-dept={di}>
+                  <legend>{d}</legend>
+                  {signers.map((s) => (
+                    <button type="button" class="signer" data-d={di} data-s={s} aria-pressed="false" aria-label={`${d}, signer ${s + 1}`}><span class="who">Ali</span><span class="sig" aria-hidden="true">Ali</span></button>
+                  ))}
+                  <p class="dstate" data-state={di}>0 of 2</p>
+                </fieldset>
+              ))}
+            </div>
+            <p class="addr">Wallet <code id="addr">0x7a3f…c91e</code> <span id="addr-note">Sample address</span></p>
+            <div class="actions">
+              <button type="button" id="replace" class="act">Replace a signer</button>
+              <button type="button" id="clear" class="act">Clear</button>
+            </div>
+            <p id="sign-status" class="status" role="status" aria-live="polite">Waiting for 2 departments.</p>
+            <p class="fine">A simplified illustration of the whitepaper's idea. Each department reaches its own threshold, then the departments reach theirs. A signer can change without changing the wallet address.</p>
+            <Stamp id="released" cls="manual" name="released" alt="Released" w={7} rot={-11} style="--sx:18%;--sy:20.6" />
+          </div>
+          <a class="corner" href="#fo-5" style="--next:var(--manila)" aria-label="Turn the page to the earlier books"><span>Turn the page</span></a>
+        </Page>
+      </section>
+
+      <!-- Folio 5 -->
+      <section tabindex="-1" id="fo-5" class="spread stock-manila" aria-labelledby="h-5">
+        <Page side="l">
+          <p class="head cell" style="--at:1"><b>Dr.</b><span>Fo. 5 Earlier books</span></p>
+          <h2 id="h-5" class="title sm cell" style="--at:2;--span:4" data-ink>Opening balance, 1998.</h2>
+          <div class="cell" style="--at:7;--span:18">
+            <table class="earlier">
+              <tbody>
+                <tr><td class="dt">1998</td><td><strong data-ink>University of Mashhad, Iran.</strong><span data-ink>Bachelor of Computer Science.</span></td></tr>
+                <tr><td class="dt">NYIF</td><td><strong data-ink>New York Institute of Finance.</strong><span data-ink>Coursework in financial markets and algorithmic trading.</span></td></tr>
+                <tr><td class="dt">2018<br />2023</td><td><strong data-ink>CMOR Group Corporation. CEO.</strong><span data-ink>Founded and self-funded. Algorithmic trading applications for foreign-exchange and equity markets. An AI-powered news-trading system that analyzed market sentiment and automated responses to global news.</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </Page>
+        <Page side="r">
+          <p class="head cell" style="--at:1"><span>Concurrent ventures</span><b>Cr.</b></p>
+          <div class="cell" style="--at:3;--span:18">
+            <table class="earlier">
+              <tbody>
+                <tr><td class="dt">2018<br />2020</td><td><strong data-ink>Chainblock.app. Founder.</strong><span data-ink>A blockchain platform for digital-asset transactions, smart contracts and decentralized applications.</span></td></tr>
+                <tr><td class="dt">2020<br />2025</td><td><strong data-ink>MyInvestino.ir. Founder.</strong><span data-ink>A micro-investing platform with financial-institution integrations.</span></td></tr>
+                <tr><td class="dt">2020<br />2025</td><td><strong data-ink>Chante.app. Founder.</strong><span data-ink>A cryptocurrency wallet with localized onboarding and support.</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <Stamp name="closed" alt="Books closed" w={9.6} rot={-6} style="--sx:30%;--sy:21" />
+          <a class="corner" href="#fo-6" style="--next:var(--carbon)" aria-label="Turn the page to the experiments"><span>Turn the page</span></a>
+        </Page>
+      </section>
+
+      <!-- Folio 6 -->
+      <section tabindex="-1" id="fo-6" class="spread stock-carbon" aria-labelledby="h-6">
+        <Page side="l">
+          <p class="head cell" style="--at:1"><b>Dr.</b><span>Fo. 6 Experiments</span></p>
+          <h2 id="h-6" class="title sm cell" style="--at:2;--span:3" data-ink>Run a small economy.</h2>
+          <div id="economy" class="economy cell" style="--at:7;--span:18">
+            <table class="taccount">
+              <caption class="sr">Latest postings in a small simulated economy. Every payment appears once as a debit and once as a credit.</caption>
+              <colgroup><col class="c-name" /><col class="c-amt" /><col class="c-name" /><col class="c-amt" /></colgroup>
+              <thead>
+                <tr><th scope="col">Debit</th><th scope="col" class="n"><span class="sr">Amount</span></th><th scope="col" class="mid">Credit</th><th scope="col" class="n"><span class="sr">Amount</span></th></tr>
+              </thead>
+              <tbody id="e-rows"></tbody>
+              <tfoot>
+                <tr><td colspan="2" class="n">Total<b id="e-dr">0.00</b></td><td colspan="2" class="n mid">Total<b id="e-cr">0.00</b></td></tr>
+              </tfoot>
+            </table>
+            <p class="readout"><span>Refused <b id="e-rj">0</b></span><span>Rate <b id="e-rate">2%</b></span></p>
+            <div class="actions">
+              <button type="button" id="e-shock" class="act" aria-pressed="false">Raise rates</button>
+              <button type="button" id="e-replay" class="act">Replay</button>
+            </div>
+            <p id="e-status" class="status" role="status" aria-live="polite">Every payment posts twice. Struck lines were refused.</p>
+          </div>
+        </Page>
+        <Page side="r">
+          <p class="head cell" style="--at:1"><span>Open experiments</span><b>Cr.</b></p>
+          <div class="cell exps" style="--at:2;--span:22">
+            <article>
+              <h3 data-ink>Manyworld</h3>
+              <p data-ink>An open-source economic and society simulation. Agents act as households, businesses and banks. Transaction validation, double-entry accounting and replayable experiments. The left page is a toy written for this book, not the real engine.</p>
+              <p><a href="https://github.com/alinojoumi8/manyworld" rel="noopener">github.com/alinojoumi8/manyworld</a></p>
+            </article>
+            <article>
+              <h3 data-ink>TrialLens</h3>
+              <p data-ink>An open-source experimental legal-AI workspace for evidence review and courtroom rehearsal. Source-linked decision traces, evidence-use controls and saved audit records.</p>
+              <p><a href="https://github.com/alinojoumi8/triallens" rel="noopener">github.com/alinojoumi8/triallens</a></p>
+            </article>
+            <article>
+              <h3 data-ink>CrowdLens</h3>
+              <p data-ink>In development. Audience simulation on an open-source foundation, for possible reactions to launches, advertising and company news. Source-linked reports and saved human reviews.</p>
+              <p><a href="https://github.com/alinojoumi8/crowdlens" rel="noopener">github.com/alinojoumi8/crowdlens</a></p>
+            </article>
+          </div>
+          <a class="corner" href="#fo-7" style="--next:var(--green)" aria-label="Turn the page to the open entry"><span>Turn the page</span></a>
+        </Page>
+      </section>
+
+      <!-- Folio 7 -->
+      <section tabindex="-1" id="fo-7" class="spread stock-green" aria-labelledby="h-7">
+        <Page side="l">
+          <p class="head cell" style="--at:1"><b>Dr.</b><span>Fo. 7 Open entry</span></p>
+          <h2 id="h-7" class="title cell" style="--at:2;--span:9" data-ink>What is<br />missing on<br />your team?</h2>
+          <p class="lead cell" style="--at:12;--span:4" data-ink>I enjoy finding what is missing, assembling the right team and turning a hard problem into a working product.</p>
+          <div class="signoff cell" style="--at:21;--span:3">
+            <p>Prepared by A. Nojoumi</p>
+            <p>Checked by A. Nojoumi</p>
+            <p>Approved by A. Nojoumi</p>
+          </div>
+        </Page>
+        <Page side="r">
+          <p class="head cell" style="--at:1"><span>Next entry</span><b>Cr.</b></p>
+          <form id="entry" class="entry cell" style="--at:2;--span:8" action="mailto:alinojoumi8@gmail.com" method="get" novalidate>
+            <div class="row-labels" aria-hidden="true"><span>Date</span><span>Particulars</span></div>
+            <div class="row">
+              <span class="dt" id="entry-date">Today</span>
+              <label class="sr" for="entry-text">Write what is missing on your team</label>
+              <input id="entry-text" name="subject" type="text" autocomplete="off" maxlength="160" placeholder="Write it here" aria-describedby="entry-msg" />
+            </div>
+            <Stamp id="entry-stamp" cls="manual" name="entry" alt="Posted" w={4.8} rot={-6} />
+            <button type="submit" class="post" set:html={`Post this entry ${arrow}`}></button>
+            <p id="entry-msg" class="status" role="status" aria-live="polite">Posting opens an email to me with your words in it.</p>
+          </form>
+          <div class="cell" style="--at:11;--span:10">
+            <table class="lines">
+              <tbody>
+                <tr><th scope="row">Email</th><td><a href="mailto:alinojoumi8@gmail.com">alinojoumi8@gmail.com</a></td></tr>
+                <tr><th scope="row">LinkedIn</th><td><a href="https://www.linkedin.com/in/ali-nojoumi-93251842" rel="noopener">ali-nojoumi-93251842</a></td></tr>
+                <tr><th scope="row">GitHub</th><td><a href="https://github.com/alinojoumi8" rel="noopener">alinojoumi8</a></td></tr>
+                <tr><th scope="row">Based in</th><td>Toronto, Ontario</td></tr>
+                <tr><th scope="row">Open to</th><td>The GTA, remote, or relocation anywhere in Canada</td></tr>
+                <tr><th scope="row">Languages</th><td>English, Farsi</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="seal" lang="fa" dir="rtl" aria-label="Ali Nojoumi, written in Farsi">علی نجومی</p>
+          <div class="double cell" style="--at:23" aria-hidden="true"></div>
+          <a class="corner" href="#fo-8" style="--next:var(--vermilion)" aria-label="Turn to the back endpaper"><span>Close the book</span></a>
+        </Page>
+      </section>
+
+      <!-- Back endpaper -->
+      <section tabindex="-1" id="fo-8" class="spread endpaper" aria-label="Back endpaper">
+        <Page side="l"><div class="across marble" aria-hidden="true"></div></Page>
+        <Page side="r"><div class="across marble dup" aria-hidden="true"></div></Page>
+      </section>
+      <canvas id="comb" aria-hidden="true"></canvas>
+      <div id="colophon" class="colophon">
+        <div class="bookplate">
+          <p class="comb-hint"><strong>Drag across the paper to comb the ink.</strong></p>
+          <p class="comb-hint">No two copies match.</p>
+          <p class="plate-owner">Ali Nojoumi</p>
+          <p>His books. Set in Besley and Courier Prime.</p>
+          <p>© 2026. <a href="#fo-1">Back to the first page</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="staff" aria-hidden="true"></div>
+
+  <script>
+    import '../scripts/main.ts';
+  </script>
+</Base>

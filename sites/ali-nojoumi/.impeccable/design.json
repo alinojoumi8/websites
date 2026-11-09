@@ -1,0 +1,533 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T19:01:08Z",
+  "title": "Design System: Ali Nojoumi",
+  "extensions": {
+    "colorMeta": {
+      "stock-green": {
+        "role": "neutral",
+        "displayName": "Eye-Ease Green",
+        "canonical": "#cfe2c3",
+        "tonalRamp": [
+          "#080d05",
+          "#20281a",
+          "#3b4633",
+          "#58674e",
+          "#78886e",
+          "#9caa94",
+          "#c2cdbb",
+          "#e9f2e4"
+        ]
+      },
+      "stock-gold": {
+        "role": "neutral",
+        "displayName": "Goldenrod",
+        "canonical": "#f2bd3a",
+        "tonalRamp": [
+          "#110a00",
+          "#312200",
+          "#543e02",
+          "#7b5c03",
+          "#a47b03",
+          "#c69f46",
+          "#e5c582",
+          "#ffedc7"
+        ]
+      },
+      "stock-pink": {
+        "role": "neutral",
+        "displayName": "Flamingo",
+        "canonical": "#f6a6b2",
+        "tonalRamp": [
+          "#190307",
+          "#3c171f",
+          "#623039",
+          "#8b4b56",
+          "#b06c77",
+          "#ce929b",
+          "#ecbac1",
+          "#ffe8eb"
+        ]
+      },
+      "stock-cobalt": {
+        "role": "neutral",
+        "displayName": "Cobalt Stock",
+        "canonical": "#1c3fae",
+        "tonalRamp": [
+          "#01042d",
+          "#0a1e5a",
+          "#1d3a8a",
+          "#3258bf",
+          "#517be5",
+          "#7ba2fc",
+          "#b0c9ff",
+          "#e7effe"
+        ]
+      },
+      "stock-manila": {
+        "role": "neutral",
+        "displayName": "Manila",
+        "canonical": "#d8b683",
+        "tonalRamp": [
+          "#120900",
+          "#322206",
+          "#543e1a",
+          "#785c2f",
+          "#9a7d50",
+          "#baa17b",
+          "#dbc6a7",
+          "#fcecd5"
+        ]
+      },
+      "stock-carbon": {
+        "role": "neutral",
+        "displayName": "Carbon Paper",
+        "canonical": "#161412",
+        "tonalRamp": [
+          "#0c0b0a",
+          "#262523",
+          "#434240",
+          "#63615e",
+          "#84827f",
+          "#a7a4a2",
+          "#cac9c7",
+          "#efeeed"
+        ]
+      },
+      "ink-black": {
+        "role": "neutral",
+        "displayName": "Ledger Black",
+        "canonical": "#14120f",
+        "tonalRamp": [
+          "#0c0b0a",
+          "#262523",
+          "#43423f",
+          "#63615d",
+          "#84827e",
+          "#a7a5a1",
+          "#cbc9c6",
+          "#efeeec"
+        ]
+      },
+      "ink-ivory": {
+        "role": "neutral",
+        "displayName": "Ivory",
+        "canonical": "#f4f1e6",
+        "tonalRamp": [
+          "#0c0b08",
+          "#262520",
+          "#44423b",
+          "#646159",
+          "#858279",
+          "#a7a59d",
+          "#cbc9c3",
+          "#f0eee9"
+        ]
+      },
+      "register-red": {
+        "role": "primary",
+        "displayName": "Register Red",
+        "canonical": "#a3170f",
+        "tonalRamp": [
+          "#1f0000",
+          "#4d0101",
+          "#791810",
+          "#aa2f24",
+          "#d15446",
+          "#ed8273",
+          "#ffb3a7",
+          "#fee9e6"
+        ]
+      },
+      "oxide-red": {
+        "role": "secondary",
+        "displayName": "Oxide Red",
+        "canonical": "#7f1a0c",
+        "tonalRamp": [
+          "#1f0000",
+          "#450f08",
+          "#6f271c",
+          "#9c4031",
+          "#c36251",
+          "#df8b7c",
+          "#fbb5a8",
+          "#ffe9e4"
+        ]
+      },
+      "flamingo-red": {
+        "role": "secondary",
+        "displayName": "Flamingo Red",
+        "canonical": "#7a0f12",
+        "tonalRamp": [
+          "#1f0001",
+          "#460e0c",
+          "#702521",
+          "#9d3e38",
+          "#c46058",
+          "#e08a81",
+          "#fcb4ac",
+          "#fee9e6"
+        ]
+      },
+      "cobalt-ochre": {
+        "role": "secondary",
+        "displayName": "Cobalt Ochre",
+        "canonical": "#ffc531",
+        "tonalRamp": [
+          "#110a00",
+          "#312301",
+          "#543e01",
+          "#7b5c02",
+          "#a47b01",
+          "#c99e3b",
+          "#e7c57c",
+          "#ffedc8"
+        ]
+      },
+      "carbon-ember": {
+        "role": "secondary",
+        "displayName": "Carbon Ember",
+        "canonical": "#ff6a4d",
+        "tonalRamp": [
+          "#1e0100",
+          "#4a0700",
+          "#7b1400",
+          "#ae290d",
+          "#d65037",
+          "#f18069",
+          "#feb4a3",
+          "#fee9e5"
+        ]
+      },
+      "stamp-cobalt": {
+        "role": "tertiary",
+        "displayName": "Stamp Cobalt",
+        "canonical": "#1d3fa8",
+        "tonalRamp": [
+          "#01052b",
+          "#0b1e57",
+          "#1f3b87",
+          "#3459ba",
+          "#537ce1",
+          "#7da2f8",
+          "#b0c9fe",
+          "#e7effe"
+        ]
+      },
+      "carbon-focus": {
+        "role": "tertiary",
+        "displayName": "Carbon Focus",
+        "canonical": "#7aa2ff",
+        "tonalRamp": [
+          "#020726",
+          "#10214f",
+          "#253e7b",
+          "#3c5cab",
+          "#5c7fd1",
+          "#84a3ea",
+          "#b0c9fe",
+          "#e7efff"
+        ]
+      },
+      "marbling-vermilion": {
+        "role": "tertiary",
+        "displayName": "Marbling Vermilion",
+        "canonical": "#d8361f",
+        "tonalRamp": [
+          "#1e0000",
+          "#4b0500",
+          "#7e0d00",
+          "#b31d06",
+          "#db4933",
+          "#f67c66",
+          "#ffb3a5",
+          "#fee9e5"
+        ]
+      },
+      "bulb-ochre": {
+        "role": "tertiary",
+        "displayName": "Bulb Ochre",
+        "canonical": "#e8a317",
+        "tonalRamp": [
+          "#130900",
+          "#342100",
+          "#593b00",
+          "#815800",
+          "#ab7708",
+          "#ce9b45",
+          "#ecc282",
+          "#ffeccf"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name, set once across the gutter."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The largest folio statement."
+      },
+      "headline-sm": {
+        "displayName": "Headline Small",
+        "purpose": "The default folio statement."
+      },
+      "figure-display": {
+        "displayName": "Figure Display",
+        "purpose": "One monumental posted amount across a spread."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Sub-account headings."
+      },
+      "posting": {
+        "displayName": "Posting",
+        "purpose": "The struck line of a T-account entry, words or amounts."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running text, one row per line, lining numerals."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Running folio heads and printed column heads."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Dates, folio numbers, ledger amounts, threshold counts, list numbers."
+      },
+      "hand": {
+        "displayName": "Clerk's Hand",
+        "purpose": "What the clerk writes: T-account heads, signer marks, payroll names, sign-offs, entries, staff notes."
+      },
+      "tab": {
+        "displayName": "Tab",
+        "purpose": "Thumb-index tab labels."
+      },
+      "seal": {
+        "displayName": "Seal",
+        "purpose": "The name in Farsi, set once in Nastaliq to close Folio 7."
+      }
+    },
+    "shadows": [
+      {
+        "name": "leaf-edge",
+        "value": "0 -6px 14px rgba(0, 0, 0, .28), 0 -1px 0 rgba(255, 255, 255, .55)",
+        "purpose": "Stacked layout on phones, along the top of the sheet that rides over the pinned portrait."
+      },
+      {
+        "name": "thumb-tab",
+        "value": "-2px 1px 5px rgba(0, 0, 0, .3)",
+        "purpose": "Book layout tabs standing off the fore-edge."
+      },
+      {
+        "name": "thumb-tab-current",
+        "value": "-3px 2px 8px rgba(0, 0, 0, .42)",
+        "purpose": "The open folio's tab."
+      },
+      {
+        "name": "fore-edge",
+        "value": "inset -3px 0 6px rgba(0, 0, 0, .3)",
+        "purpose": "Rounds the marbled edge into the block; mirrored on the right page."
+      },
+      {
+        "name": "tab-current-stacked",
+        "value": "inset 0 -5px 0 currentColor",
+        "purpose": "Stacked tab strip: 5px underline in the tab's own ink."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default easing for buttons, tabs, signatures and ledger lines."
+      },
+      {
+        "name": "ink-line",
+        "value": "0.42s power2.out",
+        "purpose": "A line of text inks in from the left on the rules."
+      },
+      {
+        "name": "ink-row",
+        "value": "0.24s var(--ease-out)",
+        "purpose": "A new T-account row inks in."
+      },
+      {
+        "name": "signature",
+        "value": "0.32s var(--ease-out)",
+        "purpose": "A signature writes across its row."
+      },
+      {
+        "name": "stamp-drop",
+        "value": "0.2s power4.in, from scale 2.3",
+        "purpose": "A stamp lands, followed by a 2px page jolt."
+      },
+      {
+        "name": "posting-figures",
+        "value": "1s + 0.09s per digit, power3.out",
+        "purpose": "The monumental figure rolls up digit by digit."
+      },
+      {
+        "name": "cut-out-hop",
+        "value": "0.2s power3.out up, 0.32s power2.inOut down",
+        "purpose": "Tiny Alis hop between pages."
+      },
+      {
+        "name": "leaf-turn",
+        "value": "scroll-driven; tab jumps min(2.6s, 0.9s + 0.42s per folio), cubic ease-out",
+        "purpose": "Leaves turn around the gutter, folding whatever is printed across it."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stacked-sheets",
+        "value": "900px"
+      },
+      {
+        "name": "book",
+        "value": "(min-width: 1100px) and (min-height: 620px) and (min-aspect-ratio: 5/4), motion allowed"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Post Button",
+      "kind": "button",
+      "refersTo": "post-button",
+      "description": "The primary action: a solid accent block two rows tall, carrying the stock's paper colour.",
+      "html": "<a class=\"ds-post\" href=\"#\">Post an entry <svg class=\"ds-arw\" viewBox=\"0 0 28 12\" aria-hidden=\"true\"><path d=\"M0 6h26M20 1l6 5-6 5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg></a>",
+      "css": ".ds-post { display: inline-flex; align-items: center; justify-content: center; background: #a3170f; color: var(--green, #cfe2c3); font-family: var(--font-display, \"Besley Variable\", Georgia, serif); font-weight: 900; letter-spacing: -.01em; font-size: 21px; padding: 0 1em; height: calc(var(--row, 30px) * 2); text-decoration: none; width: max-content; transition: transform .18s cubic-bezier(0.16, 1, 0.3, 1), letter-spacing .25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-post:hover { letter-spacing: .02em; } .ds-post:active { transform: translateY(2px) scale(.985); } .ds-post:focus-visible { outline: 3px solid #1d3fa8; outline-offset: 3px; } .ds-arw { display: inline-block; width: 1.5em; height: .65em; margin-left: .35em; vertical-align: -.02em; }"
+    },
+    {
+      "name": "Ledger Action",
+      "kind": "button",
+      "refersTo": "ledger-action",
+      "description": "The secondary action: a word on a 2px underline, one row high.",
+      "html": "<button class=\"ds-act\" type=\"button\">Replace a signer</button>",
+      "css": ".ds-act { font-family: var(--font-display, \"Besley Variable\", Georgia, serif); font-size: 17px; font-weight: 800; color: #14120f; background: none; border: 0; border-bottom: 2px solid #14120f; cursor: pointer; padding: 0 .1em; height: calc(var(--row, 30px) - 2px); line-height: calc(var(--row, 30px) - 4px); transition: color .18s, border-color .18s; } .ds-act:hover { color: #a3170f; border-color: #a3170f; } .ds-act:focus-visible { outline: 3px solid #1d3fa8; outline-offset: 3px; } .ds-act:disabled { opacity: .45; cursor: default; }"
+    },
+    {
+      "name": "Entry Field",
+      "kind": "input",
+      "refersTo": "entry-field",
+      "description": "A boxless one-row field on the page's own rule, written in the clerk's hand.",
+      "html": "<div class=\"ds-entry\"><span class=\"ds-entry-dt\">Nov 9</span><input class=\"ds-entry-in\" type=\"text\" placeholder=\"Write it here\" aria-label=\"Entry\" /></div>",
+      "css": ".ds-entry { display: flex; gap: 1em; align-items: baseline; background: var(--green, #cfe2c3); padding: 8px; } .ds-entry-dt { font-family: var(--font-figure, \"Courier Prime\", \"Courier New\", monospace); font-size: 15px; min-width: 5.5em; color: #14120f; } .ds-entry-in { flex: 1; min-width: 0; height: var(--row, 30px); border: 0; background: transparent; font-family: var(--font-hand, \"Homemade Apple\", cursive); font-size: 17px; color: #a3170f; line-height: var(--row, 30px); padding: 0; } .ds-entry-in::placeholder { color: #a3170f; opacity: 1; } .ds-entry-in:focus-visible { outline: 3px solid #1d3fa8; outline-offset: 2px; }"
+    },
+    {
+      "name": "Thumb-Index Tabs",
+      "kind": "nav",
+      "refersTo": "thumb-tab",
+      "description": "The only index of the book: one tab per folio, filled with the stock it opens. Book layout form.",
+      "html": "<nav class=\"ds-tabs\" aria-label=\"Folio index\"><a class=\"ds-tab\" href=\"#\" style=\"--c:#cfe2c3;--i:#14120f\">Account</a><a class=\"ds-tab\" href=\"#\" aria-current=\"true\" style=\"--c:#f2bd3a;--i:#14120f\">Staff</a><a class=\"ds-tab\" href=\"#\" style=\"--c:#1c3fae;--i:#f4f1e6\">Keywa</a><a class=\"ds-tab\" href=\"#\" style=\"--c:#161412;--i:#f4f1e6\">Experiments</a></nav>",
+      "css": ".ds-tabs { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; } .ds-tab { display: block; writing-mode: vertical-rl; background: var(--c); color: var(--i); font-family: var(--font-display, \"Besley Variable\", Georgia, serif); font-weight: 800; font-size: 13px; line-height: 1; text-decoration: none; padding: 12px 9px; border-radius: 7px 0 0 7px; box-shadow: -2px 1px 5px rgba(0, 0, 0, .3); transform: translateX(4px); transition: transform .22s cubic-bezier(0.16, 1, 0.3, 1), padding .22s cubic-bezier(0.16, 1, 0.3, 1); } .ds-tab:hover { transform: translateX(0); } .ds-tab[aria-current=\"true\"] { transform: translateX(0); padding-inline: 15px; box-shadow: -3px 2px 8px rgba(0, 0, 0, .42); } .ds-tab:focus-visible { outline: 3px solid #1d3fa8; outline-offset: 3px; }"
+    },
+    {
+      "name": "Working T-Account",
+      "kind": "custom",
+      "refersTo": "t-account",
+      "description": "Debit and credit on single ruled rows, a centre bar, totals under a double rule; refused lines stay, struck through.",
+      "html": "<table class=\"ds-ta\"><thead><tr><th>Debit</th><th class=\"n\"></th><th class=\"m\">Credit</th><th class=\"n\"></th></tr></thead><tbody><tr><td>Firm 4</td><td class=\"n\">14.75</td><td class=\"m\">House 18</td><td class=\"n\">14.75</td></tr><tr class=\"x\"><td>House 21</td><td class=\"n\">20.60</td><td class=\"m\">Firm 6</td><td class=\"n\">20.60</td></tr></tbody><tfoot><tr><td colspan=\"2\" class=\"n\">Total 14.75</td><td colspan=\"2\" class=\"n m\">Total 14.75</td></tr></tfoot></table>",
+      "css": ".ds-ta { border-collapse: collapse; width: 100%; font-family: var(--font-figure, \"Courier Prime\", \"Courier New\", monospace); font-size: 16px; color: #14120f; background: var(--green, #cfe2c3); table-layout: fixed; } .ds-ta th, .ds-ta td { height: var(--row, 30px); line-height: var(--row, 30px); padding: 0 .8em 0 0; text-align: left; white-space: nowrap; } .ds-ta thead th { font-family: var(--font-display, \"Besley Variable\", Georgia, serif); font-weight: 800; border-bottom: 2px solid #14120f; } .ds-ta .n { text-align: right; } .ds-ta .m { border-left: 2px solid #14120f; padding-left: .8em; } .ds-ta tfoot td { border-top: 4px double #14120f; font-weight: 700; } .ds-ta .x td { color: #a3170f; text-decoration: line-through; }"
+    },
+    {
+      "name": "Bookplate",
+      "kind": "card",
+      "refersTo": "bookplate",
+      "description": "The colophon plate: green stock with a 4px double Register Red rule, pasted flat with no shadow.",
+      "html": "<div class=\"ds-plate\"><p class=\"ds-plate-o\">Ali Nojoumi</p><p>His books. Set in Besley and Courier Prime.</p></div>",
+      "css": ".ds-plate { background: var(--green, #cfe2c3); color: #14120f; border: 4px double #a3170f; padding: calc(var(--row, 30px) * .5) 1.2em; line-height: var(--row, 30px); font-family: var(--font-display, \"Besley Variable\", Georgia, serif); font-size: 17px; } .ds-plate p { margin: 0; } .ds-plate-o { font-weight: 900; font-size: 1.9em; letter-spacing: -.025em; line-height: calc(var(--row, 30px) * 1.5); }"
+    },
+    {
+      "name": "Rubber Stamp",
+      "kind": "custom",
+      "refersTo": "stamp",
+      "description": "A raster impression with its ink baked in, row-measured, rotated, at 92% opacity. Never a CSS or SVG effect.",
+      "html": "<div class=\"ds-stamp\"><img src=\"/stamps/posted.webp\" alt=\"Posted, October 5 2026\" width=\"480\" height=\"195\" /></div>",
+      "css": ".ds-stamp { width: calc(var(--row, 30px) * 5.6); transform: rotate(-8deg); opacity: .92; } .ds-stamp img { display: block; width: 100%; height: auto; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Double-Entry Book",
+    "overview": "One open account book, hinged on a centre gutter, kept by a clerk who posts everything twice. The left page carries what was missing in red and the right page carries what shipped in black. Coloured form stock, ruled feint, column rules, rubber stamps and marbled edges are the whole material vocabulary, and each of them is doing a job a real ledger would give it.\n\nThe system is loud in colour and strict in measure. Stock is saturated and changes with every folio, Besley Black runs at poster scale, and photographic cut-outs of Ali stand on the rules like paper puppets. Against that, every line of text sits on one ruled row and state is carried by ink: a posted entry gets heavier, a refused line is struck through, an approval is stamped. Nothing is erased; corrections are struck and stay on the page.\n\nTwo layouts express the same book. The book layout fills the viewport with a 25-row spread and turns real leaves on scroll, while the stacked layout gives phones, narrow or short windows, reduced motion and no-script visitors the complete content as a continuous run of ruled sheets.",
+    "keyCharacteristics": [
+      "One form stock per folio, with ink and accent re-bound to each stock.",
+      "A single ruled row height as the unit of measure.",
+      "Besley Black display, Besley text on the rules, Courier Prime for posted figures, one clerk's hand.",
+      "Depth comes from paper physics: gutter crease, leaf turn, fore-edge, never a raised panel.",
+      "State lives in the ink and the stamp, not in badges or chips."
+    ],
+    "rules": [
+      {
+        "name": "The One Stock Per Folio Rule",
+        "body": "A folio is one form stock from edge to edge, both pages. Change stock only by turning to a new folio. Green may return to close the book; no other stock repeats.",
+        "section": "colors"
+      },
+      {
+        "name": "The Rebound Ink Rule",
+        "body": "Ink, accent, feint and column rule are set per stock as a group. Never carry one stock's accent onto another.",
+        "section": "colors"
+      },
+      {
+        "name": "The Debit And Credit Rule",
+        "body": "Accent ink means the debit side: what was missing, what was refused, what is still to be signed. Black or ivory ink means what shipped.",
+        "section": "colors"
+      },
+      {
+        "name": "The On The Rule Rule",
+        "body": "Running text has a line-height of exactly one row, so baselines sit on the feint. Never set body text on a free line-height.",
+        "section": "typography"
+      },
+      {
+        "name": "The Clerk's Hand Rule",
+        "body": "Homemade Apple is what the clerk writes by hand: the \"what was missing\" and \"what shipped\" T-account heads, signer marks, the payroll names, the sign-off lines, whatever a visitor types into the entry, and the staff's notes. Printed table heads stay in Besley. Never use the hand for running text or an action.",
+        "section": "typography"
+      },
+      {
+        "name": "The Figures Are Posted Rule",
+        "body": "Amounts in a working ledger are set in Courier Prime. Besley carries an amount only when it is a headline fact: a T-account posting or the one monumental figure on a spread.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Row Rule",
+        "body": "Every element is measured against the ruled row: widths and offsets of stamps, heights of actions and fields, tab insets, corners, margins. In the book layout this is literal, and offsets may be fractions of a row. In the stacked layout gaps and controls use whole or half rows, and only viewport-sized display type leaves the rules.",
+        "section": "layout"
+      },
+      {
+        "name": "The Only Map Rule",
+        "body": "The thumb-index tabs are the only index of the book, one tab per folio in strict order, coloured with the stock they open. Page corners only turn to the next leaf, and an inline folio reference only cites its entry. Never add a second navigation, menu or table of contents.",
+        "section": "layout"
+      },
+      {
+        "name": "The Leaf Edge Rule",
+        "body": "In the stacked layout a cast shadow exists only where a sheet physically passes over a photograph. Sheets that follow one another on paper cast nothing.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Pasted Not Floating Rule",
+        "body": "A plate is pasted to the page: flat, bordered, shadowless. No element becomes a floating card.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do give each folio one form stock and bind its ink, accent, feint and column rule together.",
+      "Do measure stamps, controls, margins and offsets in rows.",
+      "Do post data to T-accounts and ruled line ledgers on the rows.",
+      "Do use the clerk's hand for what a person writes on the form, and Besley for what is printed on it.",
+      "Do show state in the ink: heavier when posted, struck through when refused, stamped when approved.",
+      "Do keep every correction visible; the book is append-only.",
+      "Do make ink texture and paper texture from raster images, as the stamps, grain and marbling already are.",
+      "Do keep the complete content available in the stacked layout for phones, reduced motion and no script."
+    ],
+    "donts": [
+      "Don't imitate stamp ink with CSS filters, SVG filters or blend modes.",
+      "Don't add floating cards, raised panels, pills, chips, icon tiles or badges.",
+      "Don't add a second map of the book beside the thumb-index tabs.",
+      "Don't put a cast shadow on stacked sheets unless a sheet is passing over a photograph.",
+      "Don't repeat a stock on the next folio, or mix two stocks in one folio.",
+      "Don't round anything except the outer corners of a thumb tab.",
+      "Don't set running text off the row."
+    ]
+  }
+}

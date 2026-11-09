@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+import besley from '@fontsource-variable/besley/files/besley-latin-wght-normal.woff2?url';
+
+interface Props { title: string; description: string }
+const { title, description } = Astro.props;
+const abs = (p: string) => (Astro.site ? new URL(p, Astro.site).href : p);
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Ali Nojoumi',
+  jobTitle: 'Product leader, payments and digital asset platforms',
+  address: { '@type': 'PostalAddress', addressLocality: 'Toronto', addressRegion: 'Ontario', addressCountry: 'CA' },
+  email: 'mailto:alinojoumi8@gmail.com',
+  sameAs: ['https://www.linkedin.com/in/ali-nojoumi-93251842', 'https://github.com/alinojoumi8'],
+  knowsLanguage: ['English', 'Farsi'],
+};
+const boot = `(function(){var d=document.documentElement,m=function(q){return window.matchMedia(q).matches},r=m('(prefers-reduced-motion: reduce)'),b=m('(min-width:1100px) and (min-height:620px) and (min-aspect-ratio:5/4)');d.classList.add('js');if(b&&!r){d.classList.add('book');if(location.hash){window.__fo=location.hash;history.replaceState(null,'',location.pathname+location.search)}}if(r)d.classList.add('still');var o=false;try{o=sessionStorage.getItem('opened')==='1'}catch(e){}if(r||o||!b||location.hash||window.__fo${import.meta.env.DEV ? "||location.search.indexOf('capture')>-1" : ''})d.classList.add('no-intro');setTimeout(function(){if(!d.classList.contains('running'))d.classList.remove('book')},5000)})();`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#cfe2c3" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {Astro.site && <link rel="canonical" href={abs('/')} />}
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={abs('/og.jpg')} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ali Nojoumi printed across an open green account book, with tiny copies of him working on the ruled lines." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" href={besley} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" as="image" type="image/avif" imagesrcset="/portrait/ali-994.avif 994w, /portrait/ali-1648.avif 1648w, /portrait/ali-2841.avif 2841w" imagesizes="(min-width: 1100px) 80vw, 118vw" fetchpriority="high" />
+    <script is:inline set:html={boot}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(person)}></script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

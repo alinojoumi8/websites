@@ -1,0 +1,25 @@
+---
+const SIZES = {
+  posted: [480, 195],
+  entry: [480, 169],
+  live: [480, 195],
+  closed: [480, 127],
+  released: [480, 158],
+} as const;
+
+interface Props {
+  name: keyof typeof SIZES;
+  alt: string;
+  /** width in ruled rows */
+  w: number;
+  rot?: number;
+  id?: string;
+  style?: string;
+  cls?: string;
+}
+const { name, alt, w, rot = -8, id, style = '', cls = '' } = Astro.props;
+const [iw, ih] = SIZES[name];
+---
+<div class={`stamp ${cls}`} data-stamp id={id} style={`--rot:${rot}deg;--sw:${w};${style}`}>
+  <img src={`/stamps/${name}.webp`} alt={alt} width={iw} height={ih} loading="lazy" decoding="async" />
+</div>

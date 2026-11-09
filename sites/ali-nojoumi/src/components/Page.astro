@@ -1,0 +1,11 @@
+---
+interface Props { side: 'l' | 'r' }
+const { side } = Astro.props;
+---
+<div class={`page ${side}`}>
+  <i class="edge" aria-hidden="true"></i>
+  <div class="furn" aria-hidden="true"></div>
+  <div class="page-in"><slot /></div>
+  <i class="shade" aria-hidden="true"></i>
+  <i class="cast" aria-hidden="true"></i>
+</div>

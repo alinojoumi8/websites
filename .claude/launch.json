@@ -12,6 +12,32 @@
         "sites/caseiq/dist"
       ],
       "port": 4173
+    },
+    {
+      "name": "ali-nojoumi",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--prefix",
+        "sites/ali-nojoumi",
+        "--",
+        "--port",
+        "4322"
+      ],
+      "port": 4322
+    },
+    {
+      "name": "ali-nojoumi-dist",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4323",
+        "--directory",
+        "sites/ali-nojoumi/dist"
+      ],
+      "port": 4323
     }
   ]
 }
