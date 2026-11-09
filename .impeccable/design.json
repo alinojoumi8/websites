@@ -1,0 +1,498 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T16:02:12Z",
+  "title": "Design System: CaseIQ",
+  "extensions": {
+    "colorMeta": {
+      "obsidian": {
+        "role": "neutral",
+        "displayName": "Obsidian Desk",
+        "canonical": "#0b1220",
+        "tonalRamp": [
+          "oklch(15% 0.029 263.4)",
+          "oklch(26% 0.031 263.4)",
+          "oklch(37% 0.031 263.4)",
+          "oklch(48% 0.031 263.4)",
+          "oklch(59% 0.031 263.4)",
+          "oklch(71% 0.031 263.4)",
+          "oklch(83% 0.031 263.4)",
+          "oklch(95% 0.010 263.4)"
+        ]
+      },
+      "navy": {
+        "role": "neutral",
+        "displayName": "Navy Folder",
+        "canonical": "#121c33",
+        "tonalRamp": [
+          "oklch(15% 0.035 265.1)",
+          "oklch(26% 0.047 265.1)",
+          "oklch(37% 0.047 265.1)",
+          "oklch(48% 0.047 265.1)",
+          "oklch(59% 0.047 265.1)",
+          "oklch(71% 0.047 265.1)",
+          "oklch(83% 0.040 265.1)",
+          "oklch(95% 0.012 265.1)"
+        ]
+      },
+      "navy2": {
+        "role": "neutral",
+        "displayName": "Raised Navy",
+        "canonical": "#1d2c4d",
+        "tonalRamp": [
+          "oklch(15% 0.037 264.4)",
+          "oklch(26% 0.064 264.4)",
+          "oklch(37% 0.064 264.4)",
+          "oklch(48% 0.064 264.4)",
+          "oklch(59% 0.064 264.4)",
+          "oklch(71% 0.064 264.4)",
+          "oklch(83% 0.042 264.4)",
+          "oklch(95% 0.012 264.4)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Desk Rule",
+        "canonical": "#2f3f63",
+        "tonalRamp": [
+          "oklch(15% 0.030 265.1)",
+          "oklch(26% 0.053 265.1)",
+          "oklch(37% 0.066 265.1)",
+          "oklch(48% 0.066 265.1)",
+          "oklch(59% 0.066 265.1)",
+          "oklch(71% 0.059 265.1)",
+          "oklch(83% 0.035 265.1)",
+          "oklch(95% 0.010 265.1)"
+        ]
+      },
+      "parchment": {
+        "role": "neutral",
+        "displayName": "Parchment",
+        "canonical": "#f1e7d0",
+        "tonalRamp": [
+          "oklch(15% 0.032 87.3)",
+          "oklch(26% 0.032 87.3)",
+          "oklch(37% 0.032 87.3)",
+          "oklch(48% 0.032 87.3)",
+          "oklch(59% 0.032 87.3)",
+          "oklch(71% 0.032 87.3)",
+          "oklch(83% 0.032 87.3)",
+          "oklch(95% 0.015 87.3)"
+        ]
+      },
+      "ivory": {
+        "role": "neutral",
+        "displayName": "Ivory",
+        "canonical": "#fbf6ea",
+        "tonalRamp": [
+          "oklch(15% 0.017 88.0)",
+          "oklch(26% 0.017 88.0)",
+          "oklch(37% 0.017 88.0)",
+          "oklch(48% 0.017 88.0)",
+          "oklch(59% 0.017 88.0)",
+          "oklch(71% 0.017 88.0)",
+          "oklch(83% 0.017 88.0)",
+          "oklch(95% 0.008 88.0)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Record Ink",
+        "canonical": "#141a2a",
+        "tonalRamp": [
+          "oklch(15% 0.026 267.9)",
+          "oklch(26% 0.033 267.9)",
+          "oklch(37% 0.033 267.9)",
+          "oklch(48% 0.033 267.9)",
+          "oklch(59% 0.033 267.9)",
+          "oklch(71% 0.033 267.9)",
+          "oklch(83% 0.029 267.9)",
+          "oklch(95% 0.009 267.9)"
+        ]
+      },
+      "ink2": {
+        "role": "neutral",
+        "displayName": "Faded Ink",
+        "canonical": "#4a4f5c",
+        "tonalRamp": [
+          "oklch(15% 0.009 268.8)",
+          "oklch(26% 0.016 268.8)",
+          "oklch(37% 0.022 268.8)",
+          "oklch(48% 0.022 268.8)",
+          "oklch(59% 0.022 268.8)",
+          "oklch(71% 0.018 268.8)",
+          "oklch(83% 0.010 268.8)",
+          "oklch(95% 0.003 268.8)"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Desk Mist",
+        "canonical": "#c3cbdc",
+        "tonalRamp": [
+          "oklch(15% 0.025 265.6)",
+          "oklch(26% 0.025 265.6)",
+          "oklch(37% 0.025 265.6)",
+          "oklch(48% 0.025 265.6)",
+          "oklch(59% 0.025 265.6)",
+          "oklch(71% 0.025 265.6)",
+          "oklch(83% 0.025 265.6)",
+          "oklch(95% 0.009 265.6)"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Binder Gold",
+        "canonical": "#e6b23a",
+        "tonalRamp": [
+          "oklch(15% 0.118 84.1)",
+          "oklch(26% 0.143 84.1)",
+          "oklch(37% 0.143 84.1)",
+          "oklch(48% 0.143 84.1)",
+          "oklch(59% 0.143 84.1)",
+          "oklch(71% 0.143 84.1)",
+          "oklch(83% 0.134 84.1)",
+          "oklch(95% 0.039 84.1)"
+        ]
+      },
+      "gold-lift": {
+        "role": "primary",
+        "displayName": "Lifted Gold",
+        "canonical": "#f4c75a",
+        "tonalRamp": [
+          "oklch(15% 0.136 86.6)",
+          "oklch(26% 0.136 86.6)",
+          "oklch(37% 0.136 86.6)",
+          "oklch(48% 0.136 86.6)",
+          "oklch(59% 0.136 86.6)",
+          "oklch(71% 0.136 86.6)",
+          "oklch(83% 0.136 86.6)",
+          "oklch(95% 0.052 86.6)"
+        ]
+      },
+      "golddeep": {
+        "role": "primary",
+        "displayName": "Aged Gold Ink",
+        "canonical": "#7a570a",
+        "tonalRamp": [
+          "oklch(15% 0.034 80.2)",
+          "oklch(26% 0.060 80.2)",
+          "oklch(37% 0.085 80.2)",
+          "oklch(48% 0.096 80.2)",
+          "oklch(59% 0.094 80.2)",
+          "oklch(71% 0.066 80.2)",
+          "oklch(83% 0.039 80.2)",
+          "oklch(95% 0.011 80.2)"
+        ]
+      },
+      "emerald": {
+        "role": "secondary",
+        "displayName": "Verification Emerald",
+        "canonical": "#3ccf9d",
+        "tonalRamp": [
+          "oklch(15% 0.105 165.6)",
+          "oklch(26% 0.143 165.6)",
+          "oklch(37% 0.143 165.6)",
+          "oklch(48% 0.143 165.6)",
+          "oklch(59% 0.143 165.6)",
+          "oklch(71% 0.143 165.6)",
+          "oklch(83% 0.119 165.6)",
+          "oklch(95% 0.035 165.6)"
+        ]
+      },
+      "emdeep": {
+        "role": "secondary",
+        "displayName": "Deep Emerald Field",
+        "canonical": "#0c3a2e",
+        "tonalRamp": [
+          "oklch(15% 0.029 171.7)",
+          "oklch(26% 0.051 171.7)",
+          "oklch(37% 0.053 171.7)",
+          "oklch(48% 0.053 171.7)",
+          "oklch(59% 0.053 171.7)",
+          "oklch(71% 0.053 171.7)",
+          "oklch(83% 0.033 171.7)",
+          "oklch(95% 0.010 171.7)"
+        ]
+      },
+      "emink": {
+        "role": "secondary",
+        "displayName": "Emerald Ink",
+        "canonical": "#0b6048",
+        "tonalRamp": [
+          "oklch(15% 0.034 167.6)",
+          "oklch(26% 0.058 167.6)",
+          "oklch(37% 0.083 167.6)",
+          "oklch(48% 0.085 167.6)",
+          "oklch(59% 0.085 167.6)",
+          "oklch(71% 0.065 167.6)",
+          "oklch(83% 0.038 167.6)",
+          "oklch(95% 0.011 167.6)"
+        ]
+      },
+      "emerald-mist": {
+        "role": "secondary",
+        "displayName": "Emerald Mist",
+        "canonical": "#d5e6df",
+        "tonalRamp": [
+          "oklch(15% 0.020 169.3)",
+          "oklch(26% 0.020 169.3)",
+          "oklch(37% 0.020 169.3)",
+          "oklch(48% 0.020 169.3)",
+          "oklch(59% 0.020 169.3)",
+          "oklch(71% 0.020 169.3)",
+          "oklch(83% 0.020 169.3)",
+          "oklch(95% 0.010 169.3)"
+        ]
+      },
+      "discrepancy-red": {
+        "role": "tertiary",
+        "displayName": "Discrepancy Red",
+        "canonical": "#9b1c1c",
+        "tonalRamp": [
+          "oklch(15% 0.063 26.8)",
+          "oklch(26% 0.108 26.8)",
+          "oklch(37% 0.154 26.8)",
+          "oklch(48% 0.162 26.8)",
+          "oklch(59% 0.162 26.8)",
+          "oklch(71% 0.121 26.8)",
+          "oklch(83% 0.071 26.8)",
+          "oklch(95% 0.021 26.8)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The single page headline."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section statements."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Stage names, forensic questions, the estimator heading."
+      },
+      "service-title": {
+        "displayName": "Service Title",
+        "purpose": "Service rows and comparison column headings."
+      },
+      "exhibit-title": {
+        "displayName": "Exhibit Title",
+        "purpose": "The quoted or described content of a slip."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "The estimator result, tabular."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Opening paragraphs."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading text."
+      },
+      "note": {
+        "displayName": "Note",
+        "purpose": "Disclaimers, secondary lines, form help and errors."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Buttons."
+      },
+      "finding": {
+        "displayName": "Finding",
+        "purpose": "The verified conclusion at the foot of a slip."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Slip dates and exhibit tabs."
+      }
+    },
+    "shadows": [
+      {
+        "name": "paper-on-desk",
+        "value": "0 10px 24px -8px rgb(0 0 0 / .65)",
+        "purpose": "Exhibit slips on the dark desk; the only drop shadow."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-settle",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "The system curve for slips, rail, button lift and disclosure."
+      },
+      {
+        "name": "duration-state",
+        "value": "200ms",
+        "purpose": "Hover and colour state changes."
+      },
+      {
+        "name": "duration-disclosure",
+        "value": "250ms",
+        "purpose": "Disclosure plus rotation."
+      },
+      {
+        "name": "duration-rail",
+        "value": "900ms",
+        "purpose": "The gold rail drawing in."
+      },
+      {
+        "name": "duration-sort",
+        "value": "950ms",
+        "purpose": "Slips settling into date order."
+      },
+      {
+        "name": "stagger-sort",
+        "value": "55ms",
+        "purpose": "Per-slip delay during the sort."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "service-index",
+        "value": "768px"
+      },
+      {
+        "name": "stage-axis",
+        "value": "900px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Gold Button",
+      "kind": "button",
+      "refersTo": "button-gold",
+      "description": "The primary action on dark grounds.",
+      "html": "<a class=\"ds-btn-gold\" href=\"#\">Book My Free 15-Minute Triage</a>",
+      "css": ".ds-btn-gold{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:var(--font-sans);font-size:1.0625rem;font-weight:700;line-height:1.2;padding:.95rem 1.4rem;border:0;border-radius:3px;cursor:pointer;text-decoration:none;transition:background .2s,color .2s,transform .2s cubic-bezier(.16,1,.3,1);background:var(--color-gold);color:var(--color-ink);} .ds-btn-gold:hover{transform:translateY(-2px);background:#f4c75a;} .ds-btn-gold:active{transform:none} .ds-btn-gold:focus-visible{outline:3px solid var(--color-emerald);outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "The secondary action on dark grounds.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Run the Cost Numbers</a>",
+      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:var(--font-sans);font-size:1.0625rem;font-weight:700;line-height:1.2;padding:.95rem 1.4rem;border:0;border-radius:3px;cursor:pointer;text-decoration:none;transition:background .2s,color .2s,transform .2s cubic-bezier(.16,1,.3,1);background:transparent;box-shadow:inset 0 0 0 1.5px var(--color-mist);color:var(--color-ivory);} .ds-btn-ghost:hover{transform:translateY(-2px);background:var(--color-ivory);color:var(--color-ink);} .ds-btn-ghost:active{transform:none} .ds-btn-ghost:focus-visible{outline:3px solid var(--color-emerald);outline-offset:3px}"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Submit on paper.",
+      "html": "<button class=\"ds-btn-ink\" type=\"button\">Book My Free 15-Minute Triage</button>",
+      "css": ".ds-btn-ink{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:var(--font-sans);font-size:1.0625rem;font-weight:700;line-height:1.2;padding:.95rem 1.4rem;border:0;border-radius:3px;cursor:pointer;text-decoration:none;transition:background .2s,color .2s,transform .2s cubic-bezier(.16,1,.3,1);background:var(--color-ink);color:var(--color-ivory);} .ds-btn-ink:hover{transform:translateY(-2px);background:var(--color-navy2);} .ds-btn-ink:active{transform:none} .ds-btn-ink:focus-visible{outline:3px solid var(--color-emink);outline-offset:3px}"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Text entry on an ivory form sheet.",
+      "html": "<input class=\"ds-field\" placeholder=\"For example: motion due in three weeks\" aria-label=\"Biggest bottleneck\">",
+      "css": ".ds-field{width:100%;background:var(--color-ivory);color:var(--color-ink);border:1.5px solid var(--color-ink);border-radius:3px;padding:.75rem .85rem;font-family:var(--font-sans);font-size:1rem;caret-color:var(--color-golddeep)} .ds-field::placeholder{color:#5c5f69} .ds-field:focus-visible{outline:3px solid var(--color-emink);outline-offset:3px} .ds-field[aria-invalid=true]{border-color:#9b1c1c;box-shadow:inset 0 0 0 1px #9b1c1c}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Sticky obsidian bar with wordmark and sentence-case links.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Sample\"><a class=\"ds-mark\" href=\"#\"><svg viewBox=\"0 0 22 26\" width=\"19\" height=\"23\" aria-hidden=\"true\"><rect width=\"16\" height=\"26\" fill=\"#f1e7d0\"/><rect x=\"16\" y=\"5\" width=\"6\" height=\"9\" fill=\"#e6b23a\"/></svg>CaseIQ</a><a class=\"ds-link\" href=\"#\">How It Works</a><a class=\"ds-link\" href=\"#\">Services</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:1.75rem;height:72px;padding:0 20px;background:rgb(11 18 32/.95);border-bottom:1px solid var(--color-line)} .ds-mark{display:flex;align-items:center;gap:.5rem;font-family:var(--font-display);font-size:1.5rem;color:var(--color-ivory);text-decoration:none} .ds-link{font-family:var(--font-sans);font-size:.975rem;color:var(--color-mist);text-decoration:none} .ds-link:hover{color:var(--color-gold)} .ds-link:focus-visible,.ds-mark:focus-visible{outline:3px solid var(--color-emerald);outline-offset:3px}"
+    },
+    {
+      "name": "Exhibit Slip",
+      "kind": "card",
+      "refersTo": "exhibit-slip",
+      "description": "A dated paper exhibit hung from the gold rail, with its finding.",
+      "html": "<div class=\"ds-desk\"><div class=\"ds-rail\"></div><article class=\"ds-slip\"><time class=\"ds-time\">3 Mar 2023</time><span class=\"ds-ty\">Email</span><p class=\"ds-ttl\">“I'll have it all back to you by June.”</p><p class=\"ds-find\"><svg class=\"ds-ico\" aria-hidden=\"true\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" > <circle cx=\"12\" cy=\"12\" r=\"10\" /> <path d=\"m16 9-5.5 5.5L8 12\" /> </svg>Admits the debt.</p></article></div>",
+      "css": ".ds-desk{position:relative;background:var(--color-obsidian);padding:34px 16px 16px;width:240px} .ds-rail{position:absolute;left:0;right:0;top:14px;height:2px;background:var(--color-gold)} .ds-slip{position:relative;display:flex;flex-direction:column;height:184px;background:var(--color-ivory);color:var(--color-ink);padding:.75rem .8rem .8rem;border-radius:2px;box-shadow:0 10px 24px -8px rgb(0 0 0/.65);font-family:var(--font-sans)} .ds-slip::before{content:'';position:absolute;left:.8rem;top:-27px;width:10px;height:10px;border-radius:50%;background:var(--color-gold);box-shadow:0 0 0 4px var(--color-obsidian)} .ds-slip::after{content:'';position:absolute;left:calc(.8rem + 4px);top:-17px;width:2px;height:17px;background:var(--color-gold)} .ds-time{font-weight:700;font-size:.8125rem;color:var(--color-golddeep)} .ds-ty{font-size:.8125rem;color:var(--color-ink2)} .ds-ttl{font-family:var(--font-display);font-size:1.14rem;line-height:1.18;margin:.4rem 0 0} .ds-find{margin:auto 0 0;display:flex;gap:.35rem;font-size:.875rem;line-height:1.3;font-weight:600;color:var(--color-emink)} .ds-ico{width:1.15em;height:1.15em;flex:none}"
+    },
+    {
+      "name": "Exhibit Tab",
+      "kind": "chip",
+      "refersTo": "exhibit-tab",
+      "description": "Gold binder tab naming an exhibit.",
+      "html": "<div class=\"ds-paper\"><span class=\"ds-xtab\">Exhibit A</span></div>",
+      "css": ".ds-paper{position:relative;margin-top:26px;height:72px;width:280px;background:var(--color-ivory)} .ds-xtab{position:absolute;right:14px;top:-26px;height:26px;padding:0 .75rem;display:flex;align-items:center;background:var(--color-gold);color:var(--color-ink);font-family:var(--font-sans);font-size:.8125rem;font-weight:700;border-radius:3px 3px 0 0}"
+    },
+    {
+      "name": "Service Index",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "One-open master and detail of services.",
+      "html": "<div class=\"ds-svc\"><button class=\"ds-row ds-open\" type=\"button\" aria-expanded=\"true\">Case storytelling and strategy</button><button class=\"ds-row\" type=\"button\" aria-expanded=\"false\">Court document drafting</button><button class=\"ds-row\" type=\"button\" aria-expanded=\"false\">Forensic accounting</button></div>",
+      "css": ".ds-svc{display:grid;gap:3px;width:340px} .ds-row{position:relative;text-align:left;border:0;background:var(--color-navy);color:var(--color-ivory);padding:1.05rem 1.25rem;font-family:var(--font-display);font-size:1.5rem;line-height:1.25;cursor:pointer;transition:background .2s,color .2s} .ds-row:hover:not(.ds-open){background:var(--color-navy2)} .ds-row:focus-visible{outline:3px solid var(--color-emerald);outline-offset:3px} .ds-open{background:var(--color-parchment);color:var(--color-ink)} .ds-open:focus-visible{outline-color:var(--color-emink)} .ds-open::after{content:'';position:absolute;right:0;top:50%;translate:0 -50%;width:9px;height:60%;background:var(--color-golddeep)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Bound Court Record",
+    "overview": "Every surface is part of one litigant's file laid out on a dark desk. Obsidian-navy is the desk; parchment and ivory are the paper; gold is the binding hardware of tabs, pins and the chronology rail; emerald is the mark of something verified. The system's central gesture is disorder becoming date order, so structure is shown as an act of attention to the file.\n\nDensity is that of a working document: full-bleed fields of a single ground, a wide 1400px sheet, generous section breaks, and tight, tabular detail inside the exhibits. The type pairs a heavy-contrast editorial serif with a plain grotesque that stays legible for a tired reader on an old phone. The system is scoped to the CaseIQ site at `sites/caseiq/`; other sites in this workspace need their own record.\n\nThe world rejects the law-firm template: no skyline hero, no scales of justice, no row of boxed service cards.",
+    "keyCharacteristics": [
+      "Full-bleed single-ground fields in obsidian, parchment, ivory, deep emerald and gold.",
+      "Paper objects are the only things that cast a shadow.",
+      "Gold binds and acts; emerald verifies; red marks a discrepancy.",
+      "Gloock at one weight for every heading and figure; Hanken Grotesk for everything read.",
+      "Near-square corners, hairline rules, and round pins on a gold rail.",
+      "Motion is a single long settle, always fully disabled under reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The Ink-Swap Rule",
+        "body": "Bright accents stay on dark grounds. On paper, gold becomes Aged Gold Ink and emerald becomes Emerald Ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Discrepancy Rule",
+        "body": "Red appears only where something fails to match or fails to validate. It is never decoration or emphasis.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ground-Matched Focus Rule",
+        "body": "Focus is a 3px outline offset 3px: emerald on dark, Emerald Ink on light, Record Ink on gold.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Weight Rule",
+        "body": "Gloock is set at 400 only, with -0.012em tracking on page headings. Hierarchy comes from size and colour.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Labels, tabs and buttons stay in sentence or title case at normal tracking.",
+        "section": "typography"
+      },
+      {
+        "name": "The Only Paper Lifts Rule",
+        "body": "A drop shadow means a physical sheet resting on the desk. Panels, sections, buttons and forms stay flat.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do set every major section as one full-bleed ground and change the ground between neighbouring fields; a slim ruled band may continue the field above it.",
+      "Do use gold for action and binding hardware, and emerald only for verified results.",
+      "Do swap to Aged Gold Ink and Emerald Ink on paper.",
+      "Do keep drop shadows on loose paper, using the Paper on desk value.",
+      "Do caption illustrative exhibits as invented.",
+      "Do use tabular numerals in dates, money and exhibit tables.",
+      "Do end every motion at a legible, ordered state and honour reduced motion."
+    ],
+    "donts": [
+      "Don't use skyline photography, scales of justice or a row of boxed, equal service cards.",
+      "Don't set Binder Gold or Verification Emerald as text on parchment or ivory.",
+      "Don't use Discrepancy Red for emphasis or decoration.",
+      "Don't set Gloock bold or use it for running text.",
+      "Don't round rectangles beyond 3px; circles are for pins, nodes and thumbs.",
+      "Don't rotate exhibits outside the scattered state.",
+      "Don't show more than one service panel open."
+    ]
+  }
+}
