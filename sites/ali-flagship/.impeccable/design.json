@@ -1,0 +1,448 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-10T04:41:55+00:00",
+  "title": "Design System: Ali Nojoumi Flagship",
+  "extensions": {
+    "colorMeta": {
+      "plate": {
+        "role": "neutral",
+        "displayName": "Plate Black",
+        "canonical": "oklch(14.8% 0.015 257)",
+        "tonalRamp": [
+          "#090b0e",
+          "#212428",
+          "#3f4348",
+          "#5f646b",
+          "#81878f",
+          "#a6abb3",
+          "#c9ced5",
+          "#ebeff4"
+        ]
+      },
+      "plate-2": {
+        "role": "neutral",
+        "displayName": "Plate Black 2",
+        "canonical": "oklch(18.0% 0.023 257)",
+        "tonalRamp": [
+          "#080b10",
+          "#20242b",
+          "#3d434c",
+          "#5c646f",
+          "#7e8794",
+          "#a3abb7",
+          "#c7ced8",
+          "#e9eff8"
+        ]
+      },
+      "navy": {
+        "role": "neutral",
+        "displayName": "Navy (reserved, unused in build)",
+        "canonical": "oklch(22.1% 0.037 259)",
+        "tonalRamp": [
+          "#070b12",
+          "#1e242e",
+          "#3a4351",
+          "#586476",
+          "#79879c",
+          "#9facbf",
+          "#c4cfdf",
+          "#e6effd"
+        ]
+      },
+      "bone": {
+        "role": "neutral",
+        "displayName": "Bone",
+        "canonical": "oklch(92.6% 0.023 87)",
+        "tonalRamp": [
+          "#0d0b07",
+          "#27241d",
+          "#464239",
+          "#686357",
+          "#8c8677",
+          "#b0aa9e",
+          "#d2cdc3",
+          "#f2eee5"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "oklch(76.1% 0.033 253)",
+        "tonalRamp": [
+          "#070c11",
+          "#1e252d",
+          "#3a434f",
+          "#586574",
+          "#798899",
+          "#9facbc",
+          "#c4cfdc",
+          "#e6f0fb"
+        ]
+      },
+      "copper": {
+        "role": "primary",
+        "displayName": "Plate Copper",
+        "canonical": "oklch(66.2% 0.133 57)",
+        "tonalRamp": [
+          "#1b0400",
+          "#3c1900",
+          "#663300",
+          "#944f0c",
+          "#c06f2b",
+          "#df9864",
+          "#fcbf93",
+          "#fdeade"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Foil Gold",
+        "canonical": "oklch(81.5% 0.119 79)",
+        "tonalRamp": [
+          "#150800",
+          "#322000",
+          "#593c02",
+          "#835b01",
+          "#ac7d24",
+          "#cca361",
+          "#ebc891",
+          "#feeccf"
+        ]
+      },
+      "emerald": {
+        "role": "primary",
+        "displayName": "Mint Emerald",
+        "canonical": "oklch(61.9% 0.118 169)",
+        "tonalRamp": [
+          "#001008",
+          "#012c1f",
+          "#004f3b",
+          "#067559",
+          "#259c7a",
+          "#67bfa0",
+          "#98dfc4",
+          "#c4fee7"
+        ]
+      },
+      "emerald-deep": {
+        "role": "neutral",
+        "displayName": "Emerald Deep (reserved, unused in build)",
+        "canonical": "oklch(31.4% 0.054 172)",
+        "tonalRamp": [
+          "#020e0a",
+          "#132922",
+          "#2c4940",
+          "#466c60",
+          "#659182",
+          "#8fb4a8",
+          "#b6d6cb",
+          "#dbf6ec"
+        ]
+      },
+      "teal": {
+        "role": "tertiary",
+        "displayName": "Deep Teal",
+        "canonical": "oklch(51.1% 0.086 221)",
+        "tonalRamp": [
+          "#000e15",
+          "#002935",
+          "#114a5a",
+          "#286d82",
+          "#4592aa",
+          "#77b5cb",
+          "#a4d7e9",
+          "#d8f4fe"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Section headings, the name and the figures. Weight 900, width 125, uppercase. Hero name runs min(17.7vw, 29svh); figures run clamp(5.5rem, 25vw, 23rem)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The single statement paragraph, sentence case, held to 17ch."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Practice plate headings, register entries, the signature line. Uppercase, width 122."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Role line and one-sentence project summaries."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraphs at 1rem to 1.15rem, 30ch to 52ch. Weight 500 to 600 on floods."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Navigation links, uppercase. Pill hints use the size in sentence case."
+      },
+      "serial": {
+        "displayName": "Serial",
+        "purpose": "Martian Mono for serial numbers, dates and sources only. Uppercase, tabular figures."
+      }
+    },
+    "shadows": [
+      {
+        "name": "print-pass-copper",
+        "value": "1px solid #cf7b36 outline behind the frame at translate(-7px, -6px); transform: none on hover",
+        "purpose": "First out-of-register pass on every framed object. Not a box-shadow."
+      },
+      {
+        "name": "print-pass-emerald",
+        "value": "1px solid #1d9c79 outline behind the frame at translate(7px, 6px); transform: none on hover",
+        "purpose": "Second out-of-register pass on every framed object. Not a box-shadow."
+      },
+      {
+        "name": "plate-hairline",
+        "value": "inset 0 0 0 1px rgb(163 179 198 / 0.24)",
+        "purpose": "Edge of a practice plate. The only box-shadow in the build; zero blur."
+      },
+      {
+        "name": "inner-rule",
+        "value": "1px solid rgb(237 230 214 / 0.32) inset 11px (0.14 alpha on practice plates)",
+        "purpose": "Vignette border inside frames."
+      },
+      {
+        "name": "register-entrance",
+        "value": "-0.075em 0 0 rgba(207,123,54,0.95), 0.075em 0 0 rgba(29,156,121,0.95) fading to zero",
+        "purpose": "Transient text-shadow on headings as they land. Never a resting state."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The single easing for entrances, hovers and print-pass registration."
+      },
+      {
+        "name": "rise-in",
+        "value": "translateY(112%) to 0, 1s, staggered 0.045s per character or 0.06s per word",
+        "purpose": "Masked line rise. CSS keyframes on the first screen, Framer Motion once on entry below it."
+      },
+      {
+        "name": "window-in",
+        "value": "clip-path inset reveal, 1.5s, 0.3s delay",
+        "purpose": "The portrait window unrolls from the bottom."
+      },
+      {
+        "name": "register-snap",
+        "value": "transform 0.7s ease-out-expo",
+        "purpose": "Print passes return to register on hover."
+      },
+      {
+        "name": "foil-rule-draw",
+        "value": "scaleX(0) to scaleX(1), 0.7s, origin left",
+        "purpose": "Foil hairline across the top of a hovered row."
+      },
+      {
+        "name": "link-line",
+        "value": "scaleX(0.32) to scaleX(1), 0.5s",
+        "purpose": "Link underline."
+      },
+      {
+        "name": "counter",
+        "value": "2s (2.6s above 1000), ease-out-expo",
+        "purpose": "Figures count up once on entry; final value is always in the markup."
+      },
+      {
+        "name": "magnetic",
+        "value": "0.32 of pointer offset; spring stiffness 190, damping 14, mass 0.5",
+        "purpose": "Main actions drift toward a mouse pointer."
+      },
+      {
+        "name": "cursor-ring",
+        "value": "14px idle, 46px over links, 78px labelled; spring stiffness 420, damping 34",
+        "purpose": "Follows a fine pointer only."
+      },
+      {
+        "name": "seal-spin",
+        "value": "rotate 360deg, 70s linear infinite",
+        "purpose": "Guilloche rosette."
+      },
+      {
+        "name": "microtext-thread",
+        "value": "translateX(-100%), 60s linear infinite",
+        "purpose": "Running microtext rule."
+      },
+      {
+        "name": "lenis",
+        "value": "lerp 0.105",
+        "purpose": "Smooth scroll, off under reduced motion."
+      },
+      {
+        "name": "series-pin",
+        "value": "GSAP ScrollTrigger at (min-width: 1024px) and (min-height: 620px) and (prefers-reduced-motion: no-preference)",
+        "purpose": "Pins the project series and moves it sideways; stacked column otherwise."
+      },
+      {
+        "name": "foil-gradient",
+        "value": "linear-gradient(100deg, #8a4a1e 0%, #cf7b36 14%, #ecb964 30%, #f6dfa0 38%, #8fd3a0 50%, #1d9c79 64%, #1b7189 82%, #123f55 100%) at 320% width, position driven by --mx",
+        "purpose": "The optically variable foil for hairline rules and the progress bar."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "All keyframes, Lenis, pinning, scrubbing and the live WebGL loop stand down; content is complete and still."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "3xl",
+        "value": "112rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Foil Button",
+      "kind": "button",
+      "refersTo": "button-foil",
+      "description": "Primary action on dark ground. Bone pill; foil sheen fades in on hover and focus. The build uses the foil texture image; this snippet stands in the foil gradient.",
+      "html": "<a class=\"ds-btn-foil\" href=\"#\"><span>Start a conversation</span><svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><path d=\"M5 19 19 5M8 5h11v11\"/></svg></a>",
+      "css": ".ds-btn-foil { position: relative; overflow: hidden; isolation: isolate; display: inline-flex; align-items: center; gap: 12px; padding: 16px 24px 16px 28px; border-radius: 9999px; background: var(--color-bone); color: var(--color-plate); font-family: var(--font-sans); font-size: 1.02rem; font-weight: 700; text-decoration: none; } .ds-btn-foil::before { content: ''; position: absolute; inset: 0; z-index: -1; background-image: linear-gradient(100deg, #8a4a1e 0%, var(--color-copper) 14%, var(--color-gold) 30%, #f6dfa0 38%, #8fd3a0 50%, var(--color-emerald) 64%, var(--color-teal) 82%, #123f55 100%); background-size: 320% 100%; background-position: 35% 0; opacity: 0; transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-foil:hover::before, .ds-btn-foil:focus-visible::before { opacity: 1; } .ds-btn-foil svg { font-size: 1.15em; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-foil:hover svg { transform: rotate(45deg); } .ds-btn-foil:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 4px; }"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Action on an emerald or copper flood. Plate pill that inverts to bone on hover.",
+      "html": "<div class=\"ds-flood-chip\"><a class=\"ds-btn-ink\" href=\"#\"><span>Write to Ali</span><svg viewBox=\"0 0 24 24\" width=\"1em\" height=\"1em\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><path d=\"M5 19 19 5M8 5h11v11\"/></svg></a></div>",
+      "css": ".ds-flood-chip { background: var(--color-copper); padding: 32px; } .ds-btn-ink { display: inline-flex; align-items: center; gap: 12px; padding: 20px 28px 20px 32px; border-radius: 9999px; background: var(--color-plate); color: var(--color-bone); font-family: var(--font-sans); font-size: 1.2rem; font-weight: 700; text-decoration: none; transition: background-color 0.3s, color 0.3s; } .ds-btn-ink:hover { background: var(--color-bone); color: var(--color-plate); } .ds-btn-ink svg { font-size: 1.15em; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-ink:hover svg { transform: rotate(45deg); } .ds-btn-ink:focus-visible { outline: 2px solid var(--color-plate); outline-offset: 4px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Small secondary control on dark ground.",
+      "html": "<button class=\"ds-btn-ghost\" type=\"button\">Show the watermark</button>",
+      "css": ".ds-btn-ghost { padding: 8px 16px; border-radius: 9999px; border: 1px solid rgb(237 230 214 / 0.4); background: transparent; color: var(--color-bone); font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: background-color 0.3s, color 0.3s, border-color 0.3s; } .ds-btn-ghost:hover { border-color: var(--color-bone); background: var(--color-bone); color: var(--color-plate); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 4px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Fixed bar: wide black wordmark and three label links whose underline rests at a third and draws full on hover.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main\"><a class=\"ds-nav-mark\" href=\"#\">Ali Nojoumi</a><ul><li><a class=\"ds-nav-link\" href=\"#\">Work</a></li><li><a class=\"ds-nav-link\" href=\"#\">Record</a></li><li><a class=\"ds-nav-link\" href=\"#\">Contact</a></li></ul></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 5vw; background: var(--color-plate); color: var(--color-bone); font-family: var(--font-sans); } .ds-nav ul { display: flex; gap: 32px; list-style: none; margin: 0; padding: 0; } .ds-nav-mark { font-size: 0.95rem; font-weight: 900; font-stretch: 125%; text-transform: uppercase; letter-spacing: -0.01em; color: inherit; text-decoration: none; } .ds-nav-link { position: relative; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: inherit; text-decoration: none; } .ds-nav-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: -0.18em; height: 1px; background: currentColor; transform-origin: left; transform: scaleX(0.32); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-link:hover::after, .ds-nav-link:focus-visible::after { transform: scaleX(1); } .ds-nav-link:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 4px; }"
+    },
+    {
+      "name": "Note Frame with Print Passes",
+      "kind": "card",
+      "refersTo": "practice-plate",
+      "description": "The framed object: 3px corners, inner rule, copper and emerald hairlines out of register that snap true on hover. No shadow.",
+      "html": "<div class=\"ds-note\"><article class=\"ds-plate\"><h3>Gateways and APIs</h3><p>I designed the payment gateway and the APIs for exchanges and liquidity providers.</p></article></div>",
+      "css": ".ds-note { position: relative; isolation: isolate; border-radius: 3px; margin: 12px; max-width: 26rem; } .ds-note::before, .ds-note::after { content: ''; position: absolute; inset: 0; border: 1px solid; border-radius: inherit; pointer-events: none; z-index: -1; transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); } .ds-note::before { border-color: var(--color-copper); transform: translate(-7px, -6px); } .ds-note::after { border-color: var(--color-emerald); transform: translate(7px, 6px); } .ds-note:hover::before, .ds-note:hover::after { transform: none; } .ds-plate { position: relative; overflow: hidden; border-radius: 3px; min-height: 19rem; display: flex; flex-direction: column; justify-content: space-between; padding: 48px; background: var(--color-plate-2); color: var(--color-bone); box-shadow: inset 0 0 0 1px rgb(163 179 198 / 0.24); font-family: var(--font-sans); } .ds-plate::before { content: ''; position: absolute; inset: 11px; border: 1px solid rgb(237 230 214 / 0.14); pointer-events: none; } .ds-plate h3 { margin: 0; max-width: 13ch; font-size: clamp(1.75rem, 3vw, 3.1rem); font-weight: 900; font-stretch: 122%; text-transform: uppercase; line-height: 0.92; letter-spacing: -0.025em; } .ds-plate p { margin: 48px 0 0; max-width: 46ch; font-size: 1.05rem; line-height: 1.55; }"
+    },
+    {
+      "name": "Engraved Display",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "Billboard type filled with two single-ink line gratings and a 1px stroke. Used for the name and the figures only.",
+      "html": "<p class=\"ds-engraved\">$80M</p>",
+      "css": ".ds-engraved { --ink: var(--color-bone); --pitch: 4px; margin: 0; padding: 0.16em 24px; background-color: var(--color-plate); font-family: var(--font-sans); font-size: 7rem; font-weight: 900; font-stretch: 125%; text-transform: uppercase; letter-spacing: -0.025em; line-height: 0.86; color: var(--ink); } @supports ((-webkit-background-clip: text) or (background-clip: text)) { .ds-engraved { background-color: transparent; background-image: repeating-linear-gradient(0deg, var(--ink) 0 calc(var(--pitch) * 0.6), transparent calc(var(--pitch) * 0.6) var(--pitch)), repeating-linear-gradient(0deg, var(--ink) 0 calc(var(--pitch) * 0.62), transparent calc(var(--pitch) * 0.62) calc(var(--pitch) * 1.0625)); background-position: 0 0, 0 30px; -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-stroke: 1px var(--ink); } }"
+    },
+    {
+      "name": "Row of Record",
+      "kind": "custom",
+      "refersTo": "serial-tag",
+      "description": "Ruled list row: mono year range, wide black title, note. A foil rule draws across the top on hover.",
+      "html": "<div class=\"ds-row\"><span class=\"ds-row-foil\" aria-hidden=\"true\"></span><span class=\"ds-serial\">2020 to 2024</span><h3>Keywa</h3><p>Self-custody with multiple signing authorities.</p></div>",
+      "css": ".ds-row { position: relative; display: grid; grid-template-columns: 9rem 1fr 1fr; align-items: baseline; gap: 24px; padding: 28px 0; border-top: 1px solid rgb(237 230 214 / 0.15); background: var(--color-plate); color: var(--color-bone); font-family: var(--font-sans); } .ds-row-foil { position: absolute; left: 0; right: 0; top: -1px; height: 1px; background-image: linear-gradient(100deg, #8a4a1e 0%, var(--color-copper) 14%, var(--color-gold) 30%, #f6dfa0 38%, #8fd3a0 50%, var(--color-emerald) 64%, var(--color-teal) 82%, #123f55 100%); background-size: 320% 100%; background-position: 35% 0; transform-origin: left; transform: scaleX(0); transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); } .ds-row:hover .ds-row-foil { transform: scaleX(1); } .ds-serial { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; font-variant-numeric: tabular-nums; color: var(--color-mist); } .ds-row h3 { margin: 0; font-size: clamp(1.8rem, 3.4vw, 3.5rem); font-weight: 900; font-stretch: 122%; text-transform: uppercase; line-height: 1; letter-spacing: -0.025em; transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); } .ds-row:hover h3 { transform: translateX(12px); } .ds-row p { margin: 0; max-width: 46ch; color: var(--color-mist); line-height: 1.55; }"
+    },
+    {
+      "name": "Emerald Flood",
+      "kind": "custom",
+      "refersTo": "flood-emerald",
+      "description": "A whole section in one ink. Plate text, plate rules, mono source line under the figure.",
+      "html": "<section class=\"ds-flood\"><h2>Denominations</h2><div class=\"ds-flood-row\"><p>Raised to build organizational custody.</p><span>Source: resume · Keywa · 2020 to 2024</span></div></section>",
+      "css": ".ds-flood { padding: 64px 5vw; background: var(--color-emerald); color: var(--color-plate); font-family: var(--font-sans); } .ds-flood h2 { margin: 0; font-size: clamp(2.6rem, 7.4vw, 7.6rem); font-weight: 900; font-stretch: 125%; text-transform: uppercase; letter-spacing: -0.025em; line-height: 0.86; } .ds-flood-row { margin-top: 48px; padding: 24px 0; border-top: 1px solid rgb(7 11 17 / 0.35); } .ds-flood-row p { margin: 0; max-width: 38ch; font-weight: 500; line-height: 1.55; } .ds-flood-row span { display: block; margin-top: 16px; font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Plate Room",
+    "overview": "The page is the room in a mint where a plate is engraved and a note is issued. The ground is plate-black navy with a live guilloche of hairlines turning behind everything. Ink is bone. One optically variable foil runs copper to emerald, and the pointer is the lamp that tilts it. Two sections are flooded edge to edge, one emerald and one copper, the way a banknote gives a whole panel to a single ink.\n\nScale is the main instrument. A 6px microtext rule and a billboard-wide name share one viewport, and nothing in between competes with them. Type is a wide black grotesque set in capitals, with the largest settings filled by engraving lines instead of solid ink. Density is low: one idea per screen, long vertical intervals, text columns held to roughly 30 to 52 characters.\n\nDepth is a printing matter and never a lighting one. Frames carry two hairline passes printed out of register that snap true under the pointer. Nothing floats on a blurred shadow. Every pointer effect is an enrichment: the page is complete with no hover, no script, no WebGL and reduced motion.",
+    "keyCharacteristics": [
+      "Plate-black ground, bone ink, one copper-to-emerald foil.",
+      "Achromatic text everywhere; colour lives in metal, floods and print passes.",
+      "Wide weight-900 capitals at width 125, engraved-line fill at the largest sizes.",
+      "Mono reserved for serials, dates and sources.",
+      "Square 3px frames with an inner rule; pills only for actions and the portrait window.",
+      "Two out-of-register hairline outlines instead of shadows.",
+      "The pointer is a lamp; nothing depends on it."
+    ],
+    "rules": [
+      {
+        "name": "The Achromatic Ink Rule",
+        "body": "Text is bone, mist, or plate ink on a flood. No word is ever set in copper, gold, emerald or teal.",
+        "section": "colors"
+      },
+      {
+        "name": "The Metal, Flood, Pass Rule",
+        "body": "Colour appears in exactly three places: the foil (1px hairline rules, the progress bar, the foil stripe and button sheen), the emerald and copper section floods, and the two print-pass outlines. If colour shows up anywhere else, it is wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Whole Section Rule",
+        "body": "A flood owns its section from edge to edge, switches all text and dividers to plate ink, and turns the navigation bar and focus ring to plate ink while it is under them. A flood is never a card, a badge or a stripe.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Axes Rule",
+        "body": "Hierarchy is made by weight and width together. Width steps observed: 100 body, 108 statement, 112 lead, 118 to 122 titles, 125 display. Do not introduce a second sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The Numbering Machine Rule",
+        "body": "Mono carries serials, dates and sources. It never sets a heading, a button, a paragraph, or a label that sits above a heading to name the section.",
+        "section": "typography"
+      },
+      {
+        "name": "The Engraved Fill Rule",
+        "body": "The largest display settings (the name, the figures) are filled with two single-ink line gratings of slightly different pitch (4px and 4.25px) with a 1px stroke in the same ink. They beat into bands and the pointer rolls the bands. One ink per setting, never a colour gradient, with a solid-ink fallback where text clipping or forced colours apply. Do not use it below billboard scale.",
+        "section": "typography"
+      },
+      {
+        "name": "The Print Pass Rule",
+        "body": "A frame is lifted by two hairlines out of register and by nothing else. Offsets stay at 7px by 6px. The passes register on hover; they do not grow, blur or glow.",
+        "section": "elevation"
+      },
+      {
+        "name": "The No Soft Shadow Rule",
+        "body": "If a surface seems to need a drop shadow, it needs a rule, a pass, or a different ground instead.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep every word bone, mist or plate ink. Check the Achromatic Ink Rule before adding any text colour.",
+      "Do lift frames with the two print passes (copper up-left, emerald down-right, 7px by 6px) and let them register on hover.",
+      "Do set headings in weight 900 at width 125, uppercase, line-height 0.86, and let them run wide.",
+      "Do use Martian Mono for serials, dates and sources, at 0.6875rem with 0.12em tracking.",
+      "Do give a flood the whole section and switch text, rules, navigation and focus ring to plate ink inside it.",
+      "Do drive foil and engraved bands from `--mx` and `--my`, with a sensible resting value when no pointer exists.",
+      "Do keep all content present with no hover, no script, no WebGL and reduced motion.",
+      "Do limit text blocks by character count (30ch to 52ch) instead of a container width."
+    ],
+    "donts": [
+      "Don't set text in copper, gold, emerald or teal, or fill type with the foil gradient. The engraved fill is one ink.",
+      "Don't add blurred drop shadows or outer glows to lift a surface.",
+      "Don't use a flood colour for a card, badge, tag or button.",
+      "Don't use mono for headings, buttons or paragraphs, or as a small label above a heading.",
+      "Don't round frames beyond 3px or introduce a mid-size radius; shapes are square frames and full pills.",
+      "Don't extend the pointer lamp to new card grids; it belongs to the practice plates and the portrait windows.",
+      "Don't add a second sans or a serif; the width axis does that job.",
+      "Don't let any figure appear without its scope and date in a serial line beneath it."
+    ]
+  }
+}

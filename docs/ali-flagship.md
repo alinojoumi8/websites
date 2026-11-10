@@ -1,0 +1,10 @@
+# Site brief: ali-flagship
+
+- **Goal:** a flagship, award-level portfolio for Ali Nojoumi. It must make a fintech hiring manager or founder want a conversation. Success is an email or a LinkedIn visit.
+- **Audience:** hiring managers, recruiters and founders in payments and digital assets. Also design-literate visitors who judge craft.
+- **Pages / sections:** one page. Plate (hero: name, engraved portrait window, role line). Statement. Four figures on the record. Hold it to the light (portrait spread with the tiny Alis). From a need to a live product (four practice proofs). Issued so far (five projects, sideways on desktop). The full register (six ventures). This note needs a second signature (contact).
+- **Style / mood:** a banknote printing plate at night. Plate-black navy, engraved guilloche hairlines, bone ink, one foil that shifts copper to emerald, emerald and copper colour floods. Mona Sans (wide, heavy) for display and text, Martian Mono for serial numbers. It must look nothing like the ledger site in `sites/ali-nojoumi`.
+- **Content:** resume and cover letter dated October 2026, plus two photos, all supplied by Ali. Krea makes the 3D art: hero plate, plate texture, foil texture and one image per project. `scripts/engrave.mjs` cuts the engraved hero portrait from Ali's own photo. Raw files live in `sites/ali-flagship/raw` (git-ignored); `scripts/images.mjs` rebuilds the shipped files. Facts live in `sites/ali-flagship/PRODUCT.md`.
+- **Never on the site:** the same hidden items as the first portfolio, and no resume PDF. The repo is public, so these notes do not spell them out. Ask Ali for the exact list.
+- **Features:** React island in Astro, Tailwind CSS, Framer Motion, GSAP. WebGL guilloche background that follows the pointer. Split-text entrances, number counters, magnetic buttons, lamp glow on cards, a lamp that reveals the tiny Alis, pinned horizontal project scroll. Full layout for phones, reduced motion and no JavaScript.
+- **Hosting / domain:** undecided. Build with `SITE_URL=https://<domain> npm run build` so the canonical link and the share image are absolute.

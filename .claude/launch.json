@@ -38,6 +38,32 @@
         "sites/ali-nojoumi/dist"
       ],
       "port": 4323
+    },
+    {
+      "name": "ali-flagship",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--prefix",
+        "sites/ali-flagship",
+        "--",
+        "--port",
+        "4331"
+      ],
+      "port": 4331
+    },
+    {
+      "name": "ali-flagship-dist",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4332",
+        "--directory",
+        "sites/ali-flagship/dist"
+      ],
+      "port": 4332
     }
   ]
 }

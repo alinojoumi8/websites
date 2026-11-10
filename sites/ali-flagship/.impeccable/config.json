@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "src/styles/global.css"
+        ],
+        "createdAt": "2026-11-10T03:42:40.904Z",
+        "reason": "agent decided: the fill is two single-colour line gratings (intaglio engraving) that moire with the pointer; it is the direction contract's own-world type treatment, not a colour gradient"
+      }
+    ]
+  }
+}

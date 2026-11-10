@@ -1,0 +1,560 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/mona-sans/wdth.css';
+@import '@fontsource-variable/martian-mono/wdth.css';
+@import 'lenis/dist/lenis.css';
+
+@theme {
+  --color-plate: #070b11;
+  --color-plate-2: #0b121c;
+  --color-navy: #101b2c;
+  --color-bone: #ede6d6;
+  --color-mist: #a3b3c6;
+  --color-copper: #cf7b36;
+  --color-gold: #ecb964;
+  --color-emerald: #1d9c79;
+  --color-emerald-deep: #0a3a2e;
+  --color-teal: #1b7189;
+
+  --font-sans: 'Mona Sans Variable', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Martian Mono Variable', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --breakpoint-3xl: 112rem;
+}
+
+@layer base {
+  html {
+    background: var(--color-plate);
+    color: var(--color-bone);
+    color-scheme: dark;
+    scrollbar-color: #2a3a52 var(--color-plate);
+    scrollbar-width: thin;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    font-family: var(--font-sans);
+    font-stretch: 100%;
+    font-weight: 400;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-plate);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+  .on-flood :focus-visible {
+    outline-color: var(--color-plate);
+  }
+  a {
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+/* ---------- type voices ---------- */
+
+.display {
+  font-family: var(--font-sans);
+  font-weight: 900;
+  font-stretch: 125%;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  line-height: 0.86;
+}
+
+.serial {
+  font-family: var(--font-mono);
+  font-stretch: 100%;
+  font-weight: 400;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+
+/* Security microprint. A rule made of tiny repeated words. Decorative. */
+.microtext {
+  font-family: var(--font-mono);
+  font-size: 6px;
+  line-height: 1;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  user-select: none;
+  opacity: 0.55;
+}
+.microtext::before,
+.microtext::after {
+  content: attr(data-text);
+  display: inline-block;
+  padding-right: 1.5em;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .microtext.run::before,
+  .microtext.run::after {
+    animation: thread 60s linear infinite;
+  }
+}
+@keyframes thread {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ---------- engraved fill: two level line gratings of different pitch. They beat into bands, and the pointer rolls the bands. ---------- */
+
+.engraved {
+  --ink: var(--color-bone);
+  --pitch: 4px;
+  color: var(--ink);
+  /* room for commas and descenders, which the text clip would cut */
+  padding-block: 0.16em;
+  margin-block: -0.16em;
+}
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .engraved {
+    background-image:
+      repeating-linear-gradient(0deg, var(--ink) 0 calc(var(--pitch) * 0.6), transparent calc(var(--pitch) * 0.6) var(--pitch)),
+      repeating-linear-gradient(0deg, var(--ink) 0 calc(var(--pitch) * 0.62), transparent calc(var(--pitch) * 0.62) calc(var(--pitch) * 1.0625));
+    background-position:
+      0 0,
+      0 calc(var(--mx, 0.5) * 34px + var(--my, 0.5) * 26px);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--ink);
+  }
+}
+@media (forced-colors: active) {
+  .engraved {
+    background: none;
+    color: CanvasText;
+    -webkit-text-stroke: 0;
+  }
+}
+
+/* ---------- optically variable foil: copper to emerald, driven by the pointer ---------- */
+
+.foil {
+  background-image: linear-gradient(
+    100deg,
+    #8a4a1e 0%,
+    var(--color-copper) 14%,
+    var(--color-gold) 30%,
+    #f6dfa0 38%,
+    #8fd3a0 50%,
+    var(--color-emerald) 64%,
+    var(--color-teal) 82%,
+    #123f55 100%
+  );
+  background-size: 320% 100%;
+  background-position: calc(var(--mx, 0.35) * 100%) 0;
+}
+
+.foil-rule {
+  height: 1px;
+  width: 100%;
+}
+
+/* ---------- film grain over photos and art ---------- */
+
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/art/grain.webp') 0 0 / 128px 128px;
+  mix-blend-mode: overlay;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Fine intaglio hatch laid over a photo, like an engraved portrait. */
+.hatch::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: repeating-linear-gradient(-38deg, rgb(7 11 17 / 0.3) 0 1px, transparent 1px 4px);
+  mix-blend-mode: multiply;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 52%, #000 100%);
+  mask-image: linear-gradient(to bottom, transparent 52%, #000 100%);
+  pointer-events: none;
+}
+
+/* ---------- print passes: two hairline outlines that sit out of register and snap true under the pointer ---------- */
+
+.note {
+  position: relative;
+  isolation: isolate;
+  border-radius: 3px;
+}
+.note::before,
+.note::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+  transition: transform 0.7s var(--ease-out-expo);
+}
+.note::before {
+  border-color: var(--color-copper);
+  transform: translate(-7px, -6px);
+}
+.note::after {
+  border-color: var(--color-emerald);
+  transform: translate(7px, 6px);
+}
+@media (hover: hover) {
+  .note:hover::before,
+  .note:hover::after {
+    transform: none;
+  }
+}
+
+/* A note frame: square corners and an inner rule, like the border of a banknote vignette. */
+.note-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.note-frame::before {
+  content: '';
+  position: absolute;
+  inset: 11px;
+  border: 1px solid rgb(237 230 214 / 0.32);
+  pointer-events: none;
+  z-index: 3;
+}
+.note-corner {
+  position: absolute;
+  z-index: 4;
+  font-weight: 900;
+  font-stretch: 125%;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--color-bone);
+  pointer-events: none;
+}
+
+/* The clear rim of the polymer window. */
+.polymer {
+  padding: 7px;
+  background: linear-gradient(140deg, rgb(237 230 214 / 0.5), rgb(237 230 214 / 0.07) 36%, rgb(159 176 196 / 0.14) 64%, rgb(237 230 214 / 0.36));
+}
+
+/* Foil as a material: a Krea render of the foil itself. The pointer slides it from copper to emerald. */
+.foil-tex {
+  background-image: image-set(url('/art/foil-320.avif') type('image/avif'), url('/art/foil-320.webp') type('image/webp'));
+  background-size: auto 240%;
+  background-position: 50% calc(var(--mx, 0.4) * 100%);
+}
+
+.btn-foil {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-foil::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: image-set(url('/art/foil-320.avif') type('image/avif'), url('/art/foil-320.webp') type('image/webp'));
+  background-size: 100% auto;
+  background-position: 50% calc(var(--mx, 0.4) * 100%);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-out-expo);
+}
+.btn-foil:hover::before,
+.btn-foil:focus-visible::before {
+  opacity: 1;
+}
+
+/* ---------- proofs: the practice plates. A lamp follows the pointer. ---------- */
+
+.plate-card {
+  --gx: 50%;
+  --gy: 0%;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--color-plate-2);
+  box-shadow: inset 0 0 0 1px rgb(163 179 198 / 0.24);
+}
+.plate-card::before {
+  content: '';
+  position: absolute;
+  inset: 11px;
+  border: 1px solid rgb(237 230 214 / 0.14);
+  pointer-events: none;
+}
+.plate-card .plate-tex {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: image-set(url('/art/plate-800.avif') type('image/avif'), url('/art/plate-800.webp') type('image/webp')) center / cover;
+  opacity: 0.3;
+  filter: saturate(0.7);
+}
+.plate-card .plate-lamp {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: image-set(url('/art/plate-800.avif') type('image/avif'), url('/art/plate-800.webp') type('image/webp')) center / cover;
+  opacity: 0;
+  filter: brightness(1.45) saturate(1.2);
+  -webkit-mask-image: radial-gradient(circle 250px at var(--gx) var(--gy), #000 0%, transparent 100%);
+  mask-image: radial-gradient(circle 250px at var(--gx) var(--gy), #000 0%, transparent 100%);
+  transition: opacity 0.6s var(--ease-out-expo);
+}
+.plate-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: radial-gradient(circle 240px at var(--gx) var(--gy), var(--color-gold), var(--color-emerald) 45%, transparent 100%);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+  opacity: 0;
+  transition: opacity 0.6s var(--ease-out-expo);
+  pointer-events: none;
+}
+.plate-card:hover .plate-lamp,
+.plate-card:focus-within .plate-lamp {
+  opacity: 0.5;
+}
+.plate-card:hover::after,
+.plate-card:focus-within::after {
+  opacity: 1;
+}
+.plate-copy {
+  color: #d3d8de;
+}
+
+/* ---------- colour floods ---------- */
+
+.flood-emerald {
+  background-color: var(--color-emerald);
+  color: var(--color-plate);
+}
+.flood-copper {
+  background-color: var(--color-copper);
+  color: var(--color-plate);
+}
+.flood-tex {
+  position: absolute;
+  inset: 0;
+  background: image-set(url('/art/plate-1200.avif') type('image/avif'), url('/art/plate-1200.webp') type('image/webp')) center / cover;
+  mix-blend-mode: soft-light;
+  opacity: 0.5;
+  filter: grayscale(1) contrast(1.4);
+  pointer-events: none;
+}
+
+/* ---------- series: stacked by default, a pinned row when the script takes over ---------- */
+
+.series-track {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 10vw, 7rem);
+}
+.series.is-row {
+  height: 100svh;
+  overflow: hidden;
+}
+.series.is-row .series-track {
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  height: 100%;
+  width: max-content;
+  will-change: transform;
+}
+.series.is-row .series-panel {
+  width: min(86vw, 1500px);
+  height: 100%;
+  flex: none;
+}
+.series.is-row .series-intro {
+  width: min(64vw, 1000px);
+  height: 100%;
+  flex: none;
+}
+.series.is-row .series-body {
+  flex: 1 1 0;
+  min-height: 0;
+  max-height: 64svh;
+}
+.series-fig {
+  aspect-ratio: 4 / 5;
+}
+.series.is-row .series-fig {
+  aspect-ratio: auto;
+  height: 100%;
+}
+.hint-fine {
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hint-fine {
+    display: inline;
+  }
+  .hint-coarse {
+    display: none;
+  }
+}
+.series-progress,
+.row-hint {
+  display: none;
+}
+.series.is-row .row-hint {
+  display: flex;
+}
+.series.is-row .series-progress {
+  display: block;
+}
+
+/* ---------- links ---------- */
+
+.link-line {
+  position: relative;
+  text-decoration: none;
+}
+.link-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.18em;
+  height: 1px;
+  background: currentColor;
+  transform-origin: left;
+  transition: transform 0.5s var(--ease-out-expo);
+}
+@media (hover: hover) {
+  .link-line::after {
+    transform: scaleX(0.32);
+  }
+  .link-line:hover::after,
+  .link-line:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
+
+
+
+/* ---------- hero ---------- */
+
+.hero-art {
+  -webkit-mask-image: linear-gradient(to right, transparent 4%, #000 46%), linear-gradient(to bottom, transparent 0%, #000 24%, #000 52%, transparent 96%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent 4%, #000 46%), linear-gradient(to bottom, transparent 0%, #000 24%, #000 52%, transparent 96%);
+  mask-composite: intersect;
+}
+.hero-art-drift {
+  transform: translate3d(calc((var(--mx, 0.5) - 0.5) * -34px), calc((var(--my, 0.5) - 0.5) * -22px), 0) scale(1.04);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .seal-spin {
+    animation: seal 70s linear infinite;
+  }
+}
+@keyframes seal {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Without WebGL the plate is a still picture of the same engraving. */
+.no-gl body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: image-set(url('/art/plate-1200.avif') type('image/avif'), url('/art/plate-1200.webp') type('image/webp')) center / cover;
+  opacity: 0.13;
+  pointer-events: none;
+}
+
+/* A soft shade under the bar, so its links stay readable over art, photos and colour floods. */
+.nav-shade::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 -2.5rem 0;
+  background: linear-gradient(to bottom, var(--shade, #070b11) 30%, transparent);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ---------- first-screen entrance, in CSS so it never waits for scripts ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise-in {
+    animation: rise-in 1s var(--ease-out-expo) both;
+    animation-delay: calc(var(--d, 0s) + var(--i, 0) * var(--s, 0.05s));
+  }
+  .fade-up {
+    animation: fade-up 1s var(--ease-out-expo) both;
+    animation-delay: var(--d, 0s);
+  }
+  .window-in {
+    animation: window-in 1.5s var(--ease-out-expo) 0.3s both;
+  }
+  .art-in {
+    animation: art-in 2.2s var(--ease-out-expo) 0.1s both;
+  }
+}
+@keyframes rise-in {
+  from {
+    transform: translateY(112%);
+  }
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+@keyframes window-in {
+  from {
+    clip-path: inset(100% 0 0 0 round 999px);
+  }
+  to {
+    /* wider than the box, so the offset print passes stay in view */
+    clip-path: inset(-24px -24px -24px -24px round 999px);
+  }
+}
+@keyframes art-in {
+  from {
+    opacity: 0;
+  }
+}
+}
