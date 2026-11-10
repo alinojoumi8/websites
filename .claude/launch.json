@@ -64,6 +64,32 @@
         "sites/ali-flagship/dist"
       ],
       "port": 4332
+    },
+    {
+      "name": "ali-modelshop",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--prefix",
+        "sites/ali-modelshop",
+        "--",
+        "--port",
+        "4341"
+      ],
+      "port": 4341
+    },
+    {
+      "name": "ali-modelshop-dist",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4342",
+        "--directory",
+        "sites/ali-modelshop/dist"
+      ],
+      "port": 4342
     }
   ]
 }
