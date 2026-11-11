@@ -1,0 +1,748 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #f4eee0;
+  --color-paper-2: #ebe3d0;
+  --color-ink: #1c2b3a;
+  --color-ink-soft: #44566a;
+  --color-route: #b8402a;
+  --color-sea: #c9deda;
+  --color-sea-ink: #35616a;
+  --color-relief: #b59b6b;
+  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-sans: 'Public Sans Variable', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+  background: var(--color-paper);
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+::selection {
+  background: var(--color-route);
+  color: var(--color-paper);
+}
+a {
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+:focus-visible {
+  outline: 2px solid var(--color-route);
+  outline-offset: 3px;
+}
+.wrap {
+  width: min(100% - 2.5rem, 76rem);
+  margin-inline: auto;
+}
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 50;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  padding: 0.5rem 0.9rem;
+}
+.skip:focus {
+  top: 1rem;
+}
+
+/* ---------- small type ---------- */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.label-route {
+  color: var(--color-route);
+}
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.02;
+}
+.water {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-sea-ink);
+}
+.lede {
+  color: var(--color-ink-soft);
+  max-width: 62ch;
+}
+
+/* ---------- header ---------- */
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: color-mix(in srgb, var(--color-paper) 92%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-ink);
+}
+.top nav a {
+  text-decoration: none;
+  padding: 0.75rem 0.1rem;
+  display: inline-block;
+}
+.top nav a:hover {
+  color: var(--color-route);
+}
+
+/* ---------- cover ---------- */
+.cover {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-ink);
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/art/terrain-1600.webp') 62% 38% / 150% auto no-repeat;
+  opacity: 0.5;
+  mask-image: linear-gradient(100deg, transparent 22%, #000 78%);
+  -webkit-mask-image: linear-gradient(100deg, transparent 22%, #000 78%);
+}
+.cover > * {
+  position: relative;
+}
+.cover h1 {
+  font-size: clamp(3.4rem, 9.5vw, 8rem);
+}
+.cover h1 em {
+  display: block;
+  font-weight: 400;
+  font-size: 0.3em;
+  letter-spacing: 0;
+  line-height: 1.25;
+  margin-top: 0.9rem;
+  color: var(--color-ink-soft);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.25rem;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid var(--color-ink);
+  transition: background 0.2s, color 0.2s;
+}
+.btn:hover {
+  background: var(--color-route);
+  border-color: var(--color-route);
+}
+.btn-line {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+.btn-line:hover {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border-color: var(--color-ink);
+}
+.inset {
+  position: relative;
+  width: min(100%, 27rem);
+  aspect-ratio: 1;
+  margin-inline: auto;
+}
+.inset img {
+  position: absolute;
+  inset: 11%;
+  width: 78%;
+  height: 78%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border-radius: 50%;
+  border: 2px solid var(--color-ink);
+  background: var(--color-ink);
+}
+.inset svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- spot heights ---------- */
+.heights {
+  border-bottom: 1px solid var(--color-ink);
+  background: var(--color-paper-2);
+}
+.heights dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.heights .h {
+  padding: 1.6rem 1.25rem 1.5rem 0;
+}
+.heights .h + .h {
+  border-left: 1px solid color-mix(in srgb, var(--color-ink) 25%, transparent);
+  padding-left: 1.25rem;
+}
+@media (max-width: 34rem) {
+  .heights .h + .h {
+    border-left: 0;
+    border-top: 1px solid color-mix(in srgb, var(--color-ink) 25%, transparent);
+    padding-left: 0;
+  }
+}
+.heights dd.n {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.heights dd.n::before {
+  content: '▲';
+  color: var(--color-route);
+  font-size: 0.5em;
+  vertical-align: 0.35em;
+  margin-right: 0.45em;
+}
+
+/* ---------- sections ---------- */
+.sec {
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+}
+.sec h2 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  margin: 0.6rem 0 1rem;
+}
+.rule {
+  border: 0;
+  border-top: 1px solid var(--color-ink);
+}
+
+/* ---------- the chart ---------- */
+.chart-scroll {
+  overflow-x: auto;
+  margin-top: 2rem;
+  border: 1px solid var(--color-ink);
+  padding: 6px;
+  background: var(--color-paper);
+  box-shadow: 0 0 0 5px var(--color-paper), 0 0 0 6px var(--color-ink);
+  margin-inline: 6px;
+}
+.chart {
+  position: relative;
+  min-width: 54rem;
+  aspect-ratio: 1600 / 1000;
+  border: 1px solid var(--color-ink);
+  background: var(--color-sea);
+}
+.chart img,
+.chart svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.chart svg text {
+  paint-order: stroke;
+  stroke-linejoin: round;
+}
+.chart .grat {
+  stroke: var(--color-ink);
+  stroke-opacity: 0.13;
+  stroke-width: 1;
+}
+.chart .ref {
+  font: 500 15px var(--font-mono);
+  fill: var(--color-ink-soft);
+  stroke: var(--color-sea);
+  stroke-width: 5px;
+}
+.chart .sea-name {
+  font: italic 400 30px var(--font-display);
+  fill: var(--color-sea-ink);
+  letter-spacing: 0.22em;
+}
+.chart .sea-name.sm {
+  font-size: 21px;
+  letter-spacing: 0.12em;
+}
+.chart .land-name {
+  font: 600 15px var(--font-sans);
+  letter-spacing: 0.42em;
+  fill: #6b5631;
+  text-transform: uppercase;
+}
+.chart .route {
+  fill: none;
+  stroke: var(--color-route);
+  stroke-width: 4;
+  stroke-dasharray: 14 9;
+  stroke-linecap: round;
+}
+.chart .track {
+  fill: none;
+  stroke: var(--color-ink);
+  stroke-width: 2.5;
+  stroke-dasharray: 2 8;
+  stroke-linecap: round;
+}
+.chart .reveal {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 12;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+.js .chart .reveal {
+  stroke-dashoffset: 1;
+}
+.js .chart.in .reveal {
+  transition: stroke-dashoffset 3.2s cubic-bezier(0.45, 0, 0.2, 1) 0.2s;
+  stroke-dashoffset: 0;
+}
+.js .chart .stop {
+  opacity: 0;
+  transition: opacity 0.5s;
+  transition-delay: calc(0.3s + var(--i) * 0.52s);
+}
+.js .chart.in .stop {
+  opacity: 1;
+}
+.chart .stop a {
+  cursor: pointer;
+}
+.chart .stop .dot {
+  fill: var(--color-paper);
+  stroke: var(--color-ink);
+  stroke-width: 3;
+  transition: fill 0.2s;
+}
+.chart .stop .ring {
+  fill: none;
+  stroke: var(--color-ink);
+  stroke-width: 1.5;
+}
+.chart .stop a:hover .dot,
+.chart .stop a:focus-visible .dot {
+  fill: var(--color-route);
+}
+.chart .stop a:focus-visible {
+  outline: none;
+}
+.chart .stop a:focus-visible .focus {
+  stroke: var(--color-route);
+  stroke-width: 3;
+}
+.chart .stop .focus {
+  fill: transparent;
+  stroke: transparent;
+}
+.chart .stop .nm {
+  font: 600 23px var(--font-display);
+  fill: var(--color-ink);
+  stroke: var(--color-paper);
+  stroke-width: 6px;
+}
+.chart .stop .dt {
+  font: 500 14.5px var(--font-mono);
+  fill: var(--color-ink);
+  stroke: var(--color-paper);
+  stroke-width: 5px;
+  letter-spacing: 0.04em;
+}
+.chart .stop .num {
+  font: 500 13px var(--font-mono);
+  fill: var(--color-ink);
+}
+.chart .stop a:hover .num,
+.chart .stop a:focus-visible .num {
+  fill: var(--color-paper);
+}
+.chart .here {
+  fill: none;
+  stroke: var(--color-route);
+  stroke-width: 2.5;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .chart .here {
+    animation: ping 2.6s ease-out infinite;
+  }
+}
+@keyframes ping {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+.chart .here-tag {
+  font: 500 13px var(--font-mono);
+  letter-spacing: 0.12em;
+  fill: var(--color-route);
+  stroke: var(--color-paper);
+  stroke-width: 5px;
+}
+.chart .station {
+  fill: var(--color-ink);
+}
+.chart .st-name {
+  font: 500 14.5px var(--font-mono);
+  fill: var(--color-ink);
+  stroke: var(--color-sea);
+  stroke-width: 5px;
+}
+.chart .card {
+  fill: var(--color-paper);
+  stroke: var(--color-ink);
+}
+.chart .card-t {
+  font: 600 25px var(--font-display);
+  fill: var(--color-ink);
+}
+.chart .card-s {
+  font: 500 13px var(--font-mono);
+  letter-spacing: 0.1em;
+  fill: var(--color-ink-soft);
+}
+.chart .key {
+  font: 400 14.5px var(--font-sans);
+  fill: var(--color-ink);
+}
+.hint {
+  display: none;
+}
+@media (max-width: 58rem) {
+  .hint {
+    display: block;
+  }
+}
+
+/* route log */
+.log {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 0;
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--color-ink);
+  counter-reset: stop;
+}
+.log li {
+  counter-increment: stop;
+  padding: 1.1rem 1.25rem 1.2rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-ink) 25%, transparent);
+}
+.log li::before {
+  content: counter(stop, decimal-leading-zero);
+  font: 500 0.75rem var(--font-mono);
+  color: var(--color-route);
+  letter-spacing: 0.1em;
+}
+.log a {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: block;
+}
+.log a:hover {
+  color: var(--color-route);
+  text-decoration: underline;
+}
+
+/* ---------- plates ---------- */
+.plate {
+  border: 1px solid var(--color-ink);
+  background: color-mix(in srgb, var(--color-paper) 60%, #fff);
+  margin-top: 2.5rem;
+  scroll-margin-top: 5rem;
+}
+.plate-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: stretch;
+  border-bottom: 1px solid var(--color-ink);
+}
+.plate-head > div:first-child {
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+.plate h3 {
+  font-size: clamp(2rem, 4.6vw, 3.4rem);
+  margin: 0.4rem 0 0.5rem;
+}
+.thumb {
+  width: clamp(7rem, 16vw, 11rem);
+  background-color: var(--color-sea);
+  background-image: url('/art/terrain-1600.webp');
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 7rem;
+}
+.thumb::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  margin: -7px;
+  border-radius: 50%;
+  background: var(--color-route);
+  box-shadow: 0 0 0 3px var(--color-paper), 0 0 0 4.5px var(--color-ink);
+}
+.plate-body {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+}
+@media (max-width: 52rem) {
+  .plate-body {
+    grid-template-columns: 1fr;
+  }
+}
+.plate-body > * {
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+.plate-body > * + * {
+  border-left: 1px solid color-mix(in srgb, var(--color-ink) 25%, transparent);
+}
+@media (max-width: 52rem) {
+  .plate-body > * + * {
+    border-left: 0;
+    border-top: 1px solid color-mix(in srgb, var(--color-ink) 25%, transparent);
+  }
+}
+.gap-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  line-height: 1.35;
+  margin-top: 0.5rem;
+}
+.outcome {
+  margin-top: 1.75rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--color-ink);
+  background: var(--color-paper);
+  position: relative;
+}
+.outcome p {
+  margin-top: 0.35rem;
+}
+.way {
+  list-style: none;
+  counter-reset: way;
+  position: relative;
+  margin-top: 1rem;
+}
+.way::before {
+  content: '';
+  position: absolute;
+  left: 0.92rem;
+  top: 0.6rem;
+  bottom: 1.4rem;
+  border-left: 2px dashed var(--color-route);
+}
+.way li {
+  counter-increment: way;
+  position: relative;
+  padding: 0 0 1.15rem 3rem;
+}
+.way li::before {
+  content: counter(way);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-ink);
+  background: var(--color-paper);
+  display: grid;
+  place-items: center;
+  font: 500 0.8rem var(--font-mono);
+}
+.way strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.way span {
+  color: var(--color-ink-soft);
+}
+.minor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.minor > div {
+  padding: clamp(1.1rem, 2.4vw, 1.75rem);
+  border-top: 1px solid color-mix(in srgb, var(--color-ink) 25%, transparent);
+}
+@media (min-width: 52rem) {
+  .minor > div + div {
+    border-left: 1px solid color-mix(in srgb, var(--color-ink) 25%, transparent);
+  }
+}
+
+/* ---------- field stations ---------- */
+.lab {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+.lab .lede {
+  color: #c5cfd8;
+}
+.lab .label-route {
+  color: #f0a48f;
+}
+.stations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.stations article {
+  border: 1px solid color-mix(in srgb, var(--color-paper) 45%, transparent);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.stations h3 {
+  font-size: 1.9rem;
+}
+.stations h3::before {
+  content: '▲';
+  font-size: 0.5em;
+  color: #f0a48f;
+  vertical-align: 0.4em;
+  margin-right: 0.5em;
+}
+.stations p.t {
+  color: #d5dce3;
+  flex: 1;
+}
+.stations a {
+  font: 500 0.85rem var(--font-mono);
+  color: var(--color-paper);
+  word-break: break-all;
+}
+.stations a:hover {
+  color: #f0a48f;
+}
+.lab :focus-visible {
+  outline-color: #f0a48f;
+}
+
+/* ---------- gazetteer ---------- */
+.pills {
+  display: none;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+}
+.has-js .pills {
+  display: flex;
+}
+.pills button {
+  font: 500 0.8rem var(--font-mono);
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--color-ink);
+  background: transparent;
+  color: var(--color-ink);
+  cursor: pointer;
+  min-height: 2.5rem;
+}
+.pills button:hover {
+  background: var(--color-paper-2);
+}
+.pills button[aria-pressed='true'] {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+.gaz {
+  margin-top: 1.75rem;
+  border-top: 1px solid var(--color-ink);
+}
+.gaz li {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-ink) 25%, transparent);
+}
+.gaz li[hidden] {
+  display: none;
+}
+@media (max-width: 34rem) {
+  .gaz li {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}
+.gaz .at {
+  font: 500 0.78rem var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-route);
+  padding-top: 0.25rem;
+}
+.facts dt {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+.facts dd {
+  color: var(--color-ink-soft);
+  margin-bottom: 1rem;
+}
+
+/* ---------- home port ---------- */
+.port {
+  border-top: 1px solid var(--color-ink);
+  background: var(--color-sea);
+  position: relative;
+  overflow: hidden;
+}
+.port .mail {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 5.4vw, 4rem);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--color-route);
+}
+.port .mail:hover {
+  color: var(--color-route);
+}
+.port .lede {
+  color: var(--color-ink);
+}
+footer {
+  border-top: 1px solid var(--color-ink);
+  color: var(--color-ink-soft);
+}

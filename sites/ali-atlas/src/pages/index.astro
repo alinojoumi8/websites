@@ -1,0 +1,593 @@
+---
+import '@fontsource-variable/fraunces';
+import '@fontsource-variable/fraunces/wght-italic.css';
+import '@fontsource-variable/public-sans';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
+import '../styles/global.css';
+import {
+  site,
+  figures,
+  pontemesto,
+  keywa,
+  cmor,
+  ventures,
+  lab,
+  skills,
+  proofs,
+  education,
+  languages,
+} from '../lib/content';
+import { MAP, stops, stations, smooth } from '../lib/geo.js';
+
+const title = 'Ali Nojoumi · An atlas of the work · Payments, digital assets, applied AI';
+const description =
+  'Fintech co-founder in Toronto, drawn as a map. Payment gateways, platform APIs and organizational crypto custody. More than USD $80 million processed at Pontemesto in 2026.';
+const canonical = Astro.site ? new URL('/', Astro.site).href : undefined;
+const ogImage = Astro.site ? new URL('/og.jpg', Astro.site).href : '/og.jpg';
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  jobTitle: 'Product leader, payments and digital asset platforms',
+  email: `mailto:${site.email}`,
+  address: { '@type': 'PostalAddress', addressLocality: 'Toronto', addressRegion: 'ON', addressCountry: 'CA' },
+  sameAs: [site.linkedin, site.github],
+  knowsLanguage: ['en', 'fa'],
+};
+
+const nav = [
+  { href: '#chart', label: 'Chart' },
+  { href: '#plates', label: 'Plates' },
+  { href: '#lab', label: 'Stations' },
+  { href: '#fit', label: 'Index' },
+  { href: '#contact', label: 'Contact' },
+];
+
+const fmt = (n: number) => n.toLocaleString('en-US');
+
+/* ----- the chart ----- */
+const route = smooth(stops);
+const last = stops[stops.length - 1];
+const track = smooth([last, { x: 1420, y: 640 }, stations[1]], 0.9);
+const cols = 'ABCDEFGH'.split('');
+const rows = [1, 2, 3, 4, 5];
+const logLine: Record<string, string> = {
+  chainblock: 'A blockchain platform for digital-asset transactions and smart contracts. The first digital-asset build.',
+  cmor: 'Algorithmic trading for FX and equity markets, with an AI news-trading system. Founded and self-funded.',
+  keywa: 'Organizational self-custody with multiple signing authorities. A 20-person team. Acquired December 2024.',
+  chante: 'A cryptocurrency wallet with localized onboarding and support.',
+  myinvestino: 'A micro-investing platform with financial-institution integrations.',
+  pontemesto: 'A merchant payments platform. More than USD $80 million processed from March to October 5, 2026.',
+};
+
+/* ----- plates ----- */
+const thumb = (x: number, y: number, span = 420) =>
+  `background-size:${((MAP.w / span) * 100).toFixed(0)}% auto;background-position:${(((x - span / 2) / (MAP.w - span)) * 100).toFixed(1)}% ${(((y - span / 2) / (MAP.h - span)) * 100).toFixed(1)}%`;
+const at = (id: string) => stops.find((s) => s.id === id)!;
+const plates = [
+  { n: 'I', ref: 'G2', data: pontemesto, aka: undefined as string | undefined, note: undefined as string | undefined, extra: undefined as string | undefined, pos: at('pontemesto') },
+  { n: 'II', ref: 'E2', data: keywa, aka: keywa.aka, note: keywa.note, extra: keywa.paper, pos: at('keywa') },
+  { n: 'III', ref: 'C3', data: cmor, aka: undefined, note: undefined, extra: undefined, pos: at('cmor') },
+];
+
+/* compass ring ticks around the portrait */
+const ticks = Array.from({ length: 72 }, (_, i) => i * 5);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f4eee0" />
+    <meta name="color-scheme" content="light" />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A drawn map of islands with a title card that reads: Ali Nojoumi, an atlas of the work." />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
+    <script is:inline>
+      // "has-js": scripts run. "js": motion is welcome, so the route may start hidden.
+      (function () {
+        var d = document.documentElement;
+        d.classList.add('has-js');
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window)
+          d.classList.add('js');
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="top">
+      <div class="wrap flex items-center justify-between gap-4">
+        <a href="#top" class="label no-underline py-3" aria-label="Ali Nojoumi, top of page">A. Nojoumi <span class="label-route">· Atlas</span></a>
+        <nav aria-label="Sections" class="label flex gap-4 sm:gap-7 overflow-x-auto">
+          {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============ Cover ============ -->
+      <section class="cover" id="top">
+        <div class="wrap grid items-center gap-10 py-14 md:py-20 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
+          <div>
+            <p class="label label-route">An atlas of the work · Surveyed 2018 to 2026</p>
+            <h1 class="display mt-5">
+              Ali Nojoumi
+              <em>Product leader. {site.fields.join(', ')}.</em>
+            </h1>
+            <p class="mt-7 max-w-[34ch] font-[family-name:var(--font-display)] text-[clamp(1.3rem,2.4vw,1.75rem)] leading-snug">
+              “{site.line}”
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="btn" href={`mailto:${site.email}`}>Email Ali <span aria-hidden="true">→</span></a>
+              <a class="btn btn-line" href={site.linkedin} rel="noopener">LinkedIn</a>
+              <a class="btn btn-line" href="#chart">Open the chart</a>
+            </div>
+            <p class="label mt-8 text-[color:var(--color-ink-soft)]">
+              Home port: {site.location} · 43.65°N 79.38°W
+            </p>
+          </div>
+          <div class="inset">
+            <picture>
+              <source type="image/avif" srcset="/art/ali-800.avif 800w, /art/ali-1312.avif 1312w" sizes="(min-width: 768px) 26rem, 80vw" />
+              <img
+                src="/art/ali-800.webp"
+                srcset="/art/ali-800.webp 800w, /art/ali-1312.webp 1312w"
+                sizes="(min-width: 768px) 26rem, 80vw"
+                width="800"
+                height="731"
+                alt="Ali Nojoumi in a navy jacket, chin resting on his hand, looking at the camera."
+                fetchpriority="high"
+              />
+            </picture>
+            <svg viewBox="0 0 400 400" aria-hidden="true">
+              <circle cx="200" cy="200" r="196" fill="none" stroke="#1c2b3a" stroke-width="1" />
+              <circle cx="200" cy="200" r="170" fill="none" stroke="#1c2b3a" stroke-width="1" />
+              {
+                ticks.map((a) => (
+                  <line
+                    x1="200"
+                    y1={a % 45 === 0 ? 5 : a % 15 === 0 ? 12 : 18}
+                    x2="200"
+                    y2="29"
+                    stroke={a === 0 ? '#b8402a' : '#1c2b3a'}
+                    stroke-width={a % 45 === 0 ? 2.5 : 1}
+                    transform={`rotate(${a} 200 200)`}
+                  />
+                ))
+              }
+              <path d="M200 0 207 16H193Z" fill="#b8402a" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Spot heights ============ -->
+      <section class="heights" aria-labelledby="heights-h">
+        <div class="wrap">
+          <h2 id="heights-h" class="sr-only">Four figures</h2>
+          <dl>
+            {
+              figures.map((f) => (
+                <div class="h">
+                  <dd class="n">
+                    {f.prefix}
+                    {fmt(f.value)}
+                    {f.suffix}
+                  </dd>
+                  <dt class="mt-2 font-semibold leading-snug">{f.label}</dt>
+                  <dd class="label mt-2 text-[color:var(--color-ink-soft)] normal-case tracking-normal">{f.scope}</dd>
+                </div>
+              ))
+            }
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============ The chart ============ -->
+      <section class="sec" id="chart" aria-labelledby="chart-h">
+        <div class="wrap">
+          <p class="label label-route">Sheet 1 · The route</p>
+          <h2 id="chart-h" class="display">Six ventures, one route.</h2>
+          <p class="lede">
+            Each stop is a company Ali founded or co-founded, in founding order. Every one began the same way: a real
+            need, and no clear path to it. Select a stop to open its plate. The terrain is invented. The dates and the
+            facts are real.
+          </p>
+          <p class="hint label mt-4 text-[color:var(--color-ink-soft)]">Slide the map sideways to see all of it →</p>
+        </div>
+        <div class="wrap">
+          <div class="chart-scroll" tabindex="0" role="group" aria-label="Map of the ventures. Scrolls sideways on small screens.">
+            <div class="chart" id="the-chart">
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="/art/terrain-1000.avif 1000w, /art/terrain-1600.avif 1600w, /art/terrain-2400.avif 2400w"
+                  sizes="(min-width: 80rem) 74rem, (min-width: 58rem) 94vw, 54rem"
+                />
+                <img
+                  src="/art/terrain-1600.webp"
+                  srcset="/art/terrain-1000.webp 1000w, /art/terrain-1600.webp 1600w, /art/terrain-2400.webp 2400w"
+                  sizes="(min-width: 80rem) 74rem, (min-width: 58rem) 94vw, 54rem"
+                  width="1600"
+                  height="1000"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+              <svg viewBox={`0 0 ${MAP.w} ${MAP.h}`} role="img" aria-labelledby="map-t map-d">
+                <title id="map-t">A drawn chart of Ali Nojoumi’s ventures</title>
+                <desc id="map-d">
+                  A red route joins six stops in founding order: Chainblock.app, CMOR Group, Keywa, Chante.app,
+                  MyInvestino.ir and Pontemesto, the current position. A side track leads to three open-source field
+                  stations. The route log below the map lists every stop as text.
+                </desc>
+                <defs>
+                  <mask id="draw" maskUnits="userSpaceOnUse" x="0" y="0" width={MAP.w} height={MAP.h}>
+                    <path class="reveal" d={route} pathLength="1"></path>
+                  </mask>
+                </defs>
+
+                <!-- graticule and grid references -->
+                <g aria-hidden="true">
+                  {cols.slice(1).map((_, i) => <line class="grat" x1={(i + 1) * 200} y1="0" x2={(i + 1) * 200} y2={MAP.h} />)}
+                  {rows.slice(1).map((_, i) => <line class="grat" x1="0" y1={(i + 1) * 200} x2={MAP.w} y2={(i + 1) * 200} />)}
+                  {cols.map((c, i) => <text class="ref" x={i * 200 + 100} y="24" text-anchor="middle">{c}</text>)}
+                  {rows.map((r, i) => <text class="ref" x="14" y={i * 200 + 105}>{r}</text>)}
+                </g>
+
+                <!-- names of invented places -->
+                <g aria-hidden="true">
+                  <text class="sea-name" x="640" y="118" text-anchor="middle">Sea of Unmet Need</text>
+                  <text class="sea-name sm" x="545" y="715" text-anchor="middle">Sentiment Sound</text>
+                  <text class="sea-name sm" x="1215" y="705" text-anchor="middle">Payments Strait</text>
+                  <text class="sea-name sm" x="1385" y="950" text-anchor="middle">Open-Source Shoals</text>
+                  <text class="land-name" x="985" y="452" text-anchor="middle">Custody Range</text>
+                </g>
+
+                <!-- title card -->
+                <g aria-hidden="true">
+                  <rect class="card" x="44" y="44" width="372" height="112" stroke-width="2"></rect>
+                  <rect class="card" x="50" y="50" width="360" height="100" stroke-width="0.8" fill="none"></rect>
+                  <text class="card-s" x="68" y="82">CHART OF THE WORK</text>
+                  <text class="card-t" x="68" y="114">Ali Nojoumi, 2018–now</text>
+                  <text class="card-s" x="68" y="137">INVENTED TERRAIN · NOT TO SCALE</text>
+                </g>
+
+                <!-- compass -->
+                <g aria-hidden="true" transform="translate(1508 128)">
+                  <circle r="52" fill="#f4eee0" fill-opacity="0.75" stroke="#1c2b3a" stroke-width="1.5"></circle>
+                  <path d="M0 -46 9 0 0 46 -9 0Z" fill="#1c2b3a"></path>
+                  <path d="M0 -46 9 0H-9Z" fill="#b8402a"></path>
+                  <path d="M-46 0 0 -7 46 0 0 7Z" fill="none" stroke="#1c2b3a" stroke-width="1.5"></path>
+                  <text class="ref" y="-60" text-anchor="middle" style="font-size:17px">N</text>
+                </g>
+
+                <!-- key -->
+                <g aria-hidden="true" transform="translate(44 872)">
+                  <rect class="card" width="330" height="92" stroke-width="1.5"></rect>
+                  <line x1="18" y1="26" x2="62" y2="26" class="route"></line>
+                  <text class="key" x="76" y="31">Route, in founding order</text>
+                  <line x1="18" y1="50" x2="62" y2="50" class="track"></line>
+                  <text class="key" x="76" y="55">Side track to open-source work</text>
+                  <path class="station" d="M40 66 48 80H32Z"></path>
+                  <text class="key" x="76" y="79">Field station</text>
+                </g>
+
+                <!-- side track and stations -->
+                <path class="track" d={track}></path>
+                {
+                  stations.map((s) => (
+                    <a href="#lab" aria-label={`${s.name}, field station. Go to the stations.`}>
+                      <path class="station" d={`M${s.x} ${s.y - 11} ${s.x + 11} ${s.y + 8}H${s.x - 11}Z`} />
+                      <text class="st-name" x={s.x} y={s.y - 20} text-anchor="middle">
+                        {s.name}
+                      </text>
+                    </a>
+                  ))
+                }
+
+                <!-- the route -->
+                <path class="route" d={route} mask="url(#draw)"></path>
+
+                <!-- stops -->
+                {
+                  stops.map((s, i) => {
+                    const up = s.label === 'n';
+                    return (
+                      <g class="stop" style={`--i:${i}`}>
+                        {s.here && <circle class="here" cx={s.x} cy={s.y} r="26" />}
+                        <a href={s.href} aria-label={`Stop ${i + 1}: ${s.name}, ${s.dates.replace('–', ' to ')}. Open its plate.`}>
+                          <circle class="focus" cx={s.x} cy={s.y} r="30" />
+                          {s.major && <circle class="ring" cx={s.x} cy={s.y} r="21" />}
+                          <circle class="dot" cx={s.x} cy={s.y} r="15" />
+                          <text class="num" x={s.x} y={s.y + 4.5} text-anchor="middle">
+                            {i + 1}
+                          </text>
+                          <text class="nm" x={s.x} y={up ? s.y - 54 : s.y + 50} text-anchor="middle">
+                            {s.name}
+                          </text>
+                          <text class="dt" x={s.x} y={up ? s.y - 33 : s.y + 71} text-anchor="middle">
+                            {s.dates}
+                          </text>
+                        </a>
+                        {s.here && (
+                          <text class="here-tag" x={s.x + 40} y={s.y + 5}>
+                            CURRENT POSITION
+                          </text>
+                        )}
+                      </g>
+                    );
+                  })
+                }
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <h3 class="label mt-12">Route log</h3>
+          <ol class="log">
+            {
+              stops.map((s) => (
+                <li>
+                  <a href={s.href}>{s.name}</a>
+                  <span class="label text-[color:var(--color-ink-soft)]">{s.dates.replace('–', ' to ')}</span>
+                  <p class="mt-1 text-[0.97rem] leading-normal">{logLine[s.id]}</p>
+                </li>
+              ))
+            }
+          </ol>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <!-- ============ Plates ============ -->
+      <section class="sec" id="plates" aria-labelledby="plates-h">
+        <div class="wrap">
+          <p class="label label-route">Sheets 2 to 5 · The plates</p>
+          <h2 id="plates-h" class="display">The ground, close up.</h2>
+          <p class="lede">
+            Three ventures in detail. Each plate shows the gap Ali found, the waypoints he walked, and what stood there
+            at the end.
+          </p>
+
+          {
+            plates.map((p) => (
+              <article class="plate" id={`plate-${p.data.id}`}>
+                <div class="plate-head">
+                  <div>
+                    <p class="label label-route">
+                      Plate {p.n} · Grid {p.ref}
+                    </p>
+                    <h3 class="display">{p.data.name}</h3>
+                    <p class="label text-[color:var(--color-ink-soft)]">
+                      {p.data.role} · {p.data.dates}
+                      {p.aka && ` · ${p.aka}`}
+                      {p.note && ` · ${p.note}`}
+                    </p>
+                    {'link' in p.data && (
+                      <p class="mt-2">
+                        <a href={p.data.link.href} rel="noopener" class="label">
+                          {p.data.link.label} ↗
+                        </a>
+                      </p>
+                    )}
+                  </div>
+                  <div class="thumb self-center m-5 aspect-square border border-[color:var(--color-ink)]" style={thumb(p.pos.x, p.pos.y)} role="img" aria-label={`Map detail around ${p.data.name}`} />
+                </div>
+                <div class="plate-body">
+                  <div>
+                    <p class="label">The gap</p>
+                    <p class="gap-text">{p.data.challenge}</p>
+                    <div class="outcome">
+                      <p class="label label-route">▲ What stood there</p>
+                      <p>{p.data.outcome}</p>
+                    </div>
+                    {p.extra && <p class="mt-5 text-[0.97rem] text-[color:var(--color-ink-soft)]">{p.extra}</p>}
+                  </div>
+                  <div>
+                    <p class="label">Waypoints</p>
+                    <ol class="way">
+                      {p.data.steps.map((s) => (
+                        <li>
+                          <strong>{s.title}</strong>
+                          <span>{s.text}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+
+          <article class="plate" id="plate-ventures">
+            <div class="plate-head">
+              <div>
+                <p class="label label-route">Plate IV · Grids A4, D4, F4</p>
+                <h3 class="display">The outposts</h3>
+                <p class="label text-[color:var(--color-ink-soft)]">Three smaller ventures, each founded by Ali</p>
+              </div>
+              <div class="thumb self-center m-5 aspect-square border border-[color:var(--color-ink)]" style={thumb(900, 740, 560)} role="img" aria-label="Map detail around Chante.app and MyInvestino.ir" />
+            </div>
+            <div class="minor">
+              {
+                ventures.map((v) => (
+                  <div>
+                    <h4 class="display text-2xl">{v.name}</h4>
+                    <p class="label mt-1 text-[color:var(--color-ink-soft)]">
+                      {v.role} · {v.dates}
+                    </p>
+                    <p class="mt-3">{v.text}</p>
+                    <p class="mt-2 text-[0.95rem] text-[color:var(--color-ink-soft)]">{v.carry}</p>
+                  </div>
+                ))
+              }
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ Field stations ============ -->
+      <section class="sec lab" id="lab" aria-labelledby="lab-h">
+        <div class="wrap">
+          <p class="label label-route">Sheet 6 · Field stations</p>
+          <h2 id="lab-h" class="display">Off the route, still building.</h2>
+          <p class="lede">
+            Three applied-AI projects that Ali builds himself. Two are open source today. The third is in development.
+          </p>
+          <div class="stations">
+            {
+              Object.values(lab).map((l) => (
+                <article>
+                  <p class="label label-route">
+                    {l.kind}
+                    {'status' in l && ` · ${l.status}`}
+                  </p>
+                  <h3 class="display">{l.name}</h3>
+                  {'aka' in l && <p class="label -mt-1 text-[#c5cfd8]">{l.aka}</p>}
+                  <p class="t">{l.text}</p>
+                  <a href={l.href} rel="noopener">
+                    {l.repo} ↗
+                  </a>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Gazetteer ============ -->
+      <section class="sec" id="fit" aria-labelledby="fit-h">
+        <div class="wrap grid gap-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+          <div>
+            <p class="label label-route">Sheet 7 · The index</p>
+            <h2 id="fit-h" class="display">Find a skill. See where it was used.</h2>
+            <p class="lede">An atlas ends with an index of places. This one lists skills, and each entry points to proof.</p>
+            <div class="pills" role="group" aria-label="Filter the index by skill">
+              <button type="button" data-skill="all" aria-pressed="true">All</button>
+              {skills.map((s) => <button type="button" data-skill={s.id} aria-pressed="false">{s.label}</button>)}
+            </div>
+            <p class="sr-only" aria-live="polite" id="gaz-status"></p>
+            <ul class="gaz" id="gaz">
+              {
+                proofs.map((p) => (
+                  <li data-skills={p.skills.join(' ')}>
+                    <span class="at">{p.at}</span>
+                    <span>{p.text}</span>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <aside class="lg:pt-24" aria-label="Education and languages">
+            <p class="label">Education</p>
+            <dl class="facts mt-3">
+              {
+                education.map((e) => (
+                  <>
+                    <dt>{e.title}</dt>
+                    <dd>
+                      {e.where} · {e.when}
+                    </dd>
+                  </>
+                ))
+              }
+            </dl>
+            <p class="label mt-8">Languages</p>
+            <dl class="facts mt-3">
+              {
+                languages.map((l) => (
+                  <>
+                    <dt>{l.name}</dt>
+                    <dd>{l.level}</dd>
+                  </>
+                ))
+              }
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ============ Home port ============ -->
+      <section class="sec port" id="contact" aria-labelledby="contact-h">
+        <div class="wrap">
+          <p class="label label-route">Home port · {site.location} · 43.65°N 79.38°W</p>
+          <h2 id="contact-h" class="display">Have a need with no clear path? Write to Ali.</h2>
+          <p class="mt-8">
+            <a class="mail" href={`mailto:${site.email}`}>{site.email}</a>
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a class="btn" href={site.linkedin} rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-line" href={site.github} rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="lede mt-8">{site.open}</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap label flex flex-wrap justify-between gap-3 py-6 normal-case tracking-normal">
+        <p>© 2026 Ali Nojoumi</p>
+        <p>The terrain is invented and not to scale. The dates and the facts are real.</p>
+      </div>
+    </footer>
+
+    <script is:inline>
+      (function () {
+        // Draw the route when the chart comes into view.
+        var chart = document.getElementById('the-chart');
+        if (chart && document.documentElement.classList.contains('js')) {
+          new IntersectionObserver(
+            function (entries, io) {
+              if (entries[0].isIntersecting) {
+                chart.classList.add('in');
+                io.disconnect();
+              }
+            },
+            { threshold: 0.15 },
+          ).observe(chart);
+        }
+
+        // Skills filter for the index.
+        var pills = document.querySelectorAll('.pills button');
+        var rows = document.querySelectorAll('#gaz li');
+        var status = document.getElementById('gaz-status');
+        pills.forEach(function (b) {
+          b.addEventListener('click', function () {
+            var id = b.getAttribute('data-skill');
+            var n = 0;
+            pills.forEach(function (o) {
+              o.setAttribute('aria-pressed', o === b ? 'true' : 'false');
+            });
+            rows.forEach(function (r) {
+              var show = id === 'all' || r.getAttribute('data-skills').split(' ').indexOf(id) > -1;
+              r.hidden = !show;
+              if (show) n++;
+            });
+            status.textContent = n + ' entries shown for ' + b.textContent + '.';
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

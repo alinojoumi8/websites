@@ -116,6 +116,32 @@
         "sites/ali-caliber/dist"
       ],
       "port": 4352
+    },
+    {
+      "name": "ali-atlas",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--prefix",
+        "sites/ali-atlas",
+        "--",
+        "--port",
+        "4361"
+      ],
+      "port": 4361
+    },
+    {
+      "name": "ali-atlas-dist",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4362",
+        "--directory",
+        "sites/ali-atlas/dist"
+      ],
+      "port": 4362
     }
   ]
 }
