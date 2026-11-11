@@ -90,6 +90,32 @@
         "sites/ali-modelshop/dist"
       ],
       "port": 4342
+    },
+    {
+      "name": "ali-caliber",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--prefix",
+        "sites/ali-caliber",
+        "--",
+        "--port",
+        "4351"
+      ],
+      "port": 4351
+    },
+    {
+      "name": "ali-caliber-dist",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4352",
+        "--directory",
+        "sites/ali-caliber/dist"
+      ],
+      "port": 4352
     }
   ]
 }

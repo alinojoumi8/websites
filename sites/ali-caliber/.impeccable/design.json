@@ -1,0 +1,945 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-11T00:49:55+00:00",
+  "title": "Design System: Ali Nojoumi Caliber",
+  "extensions": {
+    "colorMeta": {
+      "obsidian": {
+        "role": "neutral",
+        "displayName": "Obsidian",
+        "canonical": "oklch(14.0% 0.012 266)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#25262a",
+          "#43454a",
+          "#63666d",
+          "#868991",
+          "#abaeb5",
+          "#ced1d7",
+          "#eceef3"
+        ]
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Carbon Slate",
+        "canonical": "oklch(19.0% 0.018 260)",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#24272c",
+          "#40454d",
+          "#606671",
+          "#838a94",
+          "#a8aeb9",
+          "#ccd1da",
+          "#ebeff5"
+        ]
+      },
+      "slate-2": {
+        "role": "neutral",
+        "displayName": "Slate 2 (declared as --slate-2; placed as rgb(22 29 40) in plate gradients)",
+        "canonical": "oklch(22.9% 0.024 259)",
+        "tonalRamp": [
+          "#090b0e",
+          "#23272d",
+          "#3f4550",
+          "#5e6774",
+          "#818a98",
+          "#a6afbc",
+          "#cad1dc",
+          "#eaeff7"
+        ]
+      },
+      "slate-3": {
+        "role": "neutral",
+        "displayName": "Slate 3",
+        "canonical": "oklch(26.7% 0.027 260)",
+        "tonalRamp": [
+          "#090b0f",
+          "#22272e",
+          "#3e4551",
+          "#5d6776",
+          "#808a9a",
+          "#a5afbe",
+          "#cad1de",
+          "#e9eff8"
+        ]
+      },
+      "rail": {
+        "role": "neutral",
+        "displayName": "Rail (strokes only)",
+        "canonical": "oklch(39.1% 0.033 257)",
+        "tonalRamp": [
+          "#080b10",
+          "#212730",
+          "#3c4654",
+          "#5a6779",
+          "#7d8a9d",
+          "#a2afc2",
+          "#c8d2e1",
+          "#e7effa"
+        ]
+      },
+      "steel-lo": {
+        "role": "neutral",
+        "displayName": "Steel Low (diagram strokes only)",
+        "canonical": "oklch(55.4% 0.041 257)",
+        "tonalRamp": [
+          "#080b11",
+          "#1f2732",
+          "#3a4657",
+          "#58677e",
+          "#7a8aa2",
+          "#9fafc7",
+          "#c5d2e4",
+          "#e6effd"
+        ]
+      },
+      "steel": {
+        "role": "neutral",
+        "displayName": "Brushed Steel",
+        "canonical": "oklch(71.1% 0.035 257)",
+        "tonalRamp": [
+          "#080b10",
+          "#202730",
+          "#3b4654",
+          "#59677a",
+          "#7c8a9f",
+          "#a1afc3",
+          "#c7d2e2",
+          "#e7effb"
+        ]
+      },
+      "steel-hi": {
+        "role": "neutral",
+        "displayName": "Steel High",
+        "canonical": "oklch(86.9% 0.020 253)",
+        "tonalRamp": [
+          "#090b0e",
+          "#23272c",
+          "#3f464e",
+          "#5e6771",
+          "#818a95",
+          "#a6afba",
+          "#cbd2da",
+          "#eaeff5"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(94.2% 0.009 258)",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#252729",
+          "#434549",
+          "#63666b",
+          "#86898f",
+          "#abaeb3",
+          "#ced1d5",
+          "#eceff2"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "oklch(78.2% 0.026 258)",
+        "tonalRamp": [
+          "#090b0f",
+          "#22272e",
+          "#3e4650",
+          "#5d6775",
+          "#808a99",
+          "#a5afbe",
+          "#cad2dd",
+          "#e9eff8"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Warm Gold",
+        "canonical": "oklch(76.7% 0.139 91)",
+        "tonalRamp": [
+          "#120a00",
+          "#352400",
+          "#5b4000",
+          "#846000",
+          "#a88400",
+          "#cdaa3e",
+          "#e9cf84",
+          "#ffeeb7"
+        ]
+      },
+      "gold-hi": {
+        "role": "primary",
+        "displayName": "Pale Gold",
+        "canonical": "oklch(88.1% 0.117 95)",
+        "tonalRamp": [
+          "#100b00",
+          "#312500",
+          "#554300",
+          "#7b6400",
+          "#a08824",
+          "#c4ad57",
+          "#e2d192",
+          "#fbefc1"
+        ]
+      },
+      "gold-lo": {
+        "role": "primary",
+        "displayName": "Deep Gold (gradient stop; literal, no custom property)",
+        "canonical": "oklch(65.8% 0.124 89)",
+        "tonalRamp": [
+          "#120a00",
+          "#342400",
+          "#5a4100",
+          "#826100",
+          "#a78413",
+          "#cbaa4f",
+          "#e8cf8e",
+          "#ffedbd"
+        ]
+      },
+      "on-gold": {
+        "role": "neutral",
+        "displayName": "On Gold (literal, no custom property)",
+        "canonical": "oklch(15.9% 0.011 268)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#25262a",
+          "#43454a",
+          "#63666d",
+          "#868990",
+          "#abaeb5",
+          "#cfd1d6",
+          "#edeef2"
+        ]
+      },
+      "emerald": {
+        "role": "secondary",
+        "displayName": "Live Emerald",
+        "canonical": "oklch(69.6% 0.149 162)",
+        "tonalRamp": [
+          "#001106",
+          "#003219",
+          "#005830",
+          "#007f4b",
+          "#00a46d",
+          "#44c993",
+          "#8ee7bc",
+          "#c0ffdf"
+        ]
+      },
+      "emerald-hi": {
+        "role": "secondary",
+        "displayName": "Emerald Light",
+        "canonical": "oklch(84.5% 0.130 165)",
+        "tonalRamp": [
+          "#001007",
+          "#00311d",
+          "#005636",
+          "#007c53",
+          "#0ea175",
+          "#56c69b",
+          "#96e5c2",
+          "#c5fee3"
+        ]
+      },
+      "cyan": {
+        "role": "tertiary",
+        "displayName": "Transit Cyan",
+        "canonical": "oklch(75.4% 0.139 233)",
+        "tonalRamp": [
+          "#000d1a",
+          "#002b46",
+          "#004d77",
+          "#0071a7",
+          "#0096cf",
+          "#45bbf2",
+          "#8cddff",
+          "#bef8ff"
+        ]
+      },
+      "cyan-deep": {
+        "role": "tertiary",
+        "displayName": "Deep Cyan (state fill of the transacting agent; literal, no custom property)",
+        "canonical": "oklch(27.3% 0.046 238)",
+        "tonalRamp": [
+          "#060c11",
+          "#1a2832",
+          "#324857",
+          "#4d6a7e",
+          "#708ea2",
+          "#95b2c7",
+          "#bed5e4",
+          "#e0f1fd"
+        ]
+      },
+      "shade": {
+        "role": "neutral",
+        "displayName": "Shade (mask ink and cast shadows; never a surface)",
+        "canonical": "#000",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "highlight": {
+        "role": "neutral",
+        "displayName": "Highlight (white at low alpha: polished edge and reflections; never a surface)",
+        "canonical": "#fff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "print-paper": {
+        "role": "neutral",
+        "displayName": "Print Paper (dossier only)",
+        "canonical": "#fff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "print-desk": {
+        "role": "neutral",
+        "displayName": "Print Desk (dossier screen preview only)",
+        "canonical": "oklch(94.2% 0.007 261)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#252629",
+          "#434548",
+          "#64666a",
+          "#87898e",
+          "#abaeb2",
+          "#cfd1d4",
+          "#edeef1"
+        ]
+      },
+      "print-ink": {
+        "role": "neutral",
+        "displayName": "Print Ink (dossier only)",
+        "canonical": "oklch(19.1% 0.017 264)",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#24262b",
+          "#41454d",
+          "#616670",
+          "#848994",
+          "#a9aeb9",
+          "#cdd1d9",
+          "#ebeff5"
+        ]
+      },
+      "print-ink-2": {
+        "role": "neutral",
+        "displayName": "Print Ink 2 (dossier only)",
+        "canonical": "oklch(32.3% 0.028 259)",
+        "tonalRamp": [
+          "#090b0f",
+          "#22272e",
+          "#3e4551",
+          "#5d6776",
+          "#7f8a9a",
+          "#a4afbf",
+          "#c9d2de",
+          "#e9eff9"
+        ]
+      },
+      "print-ink-3": {
+        "role": "neutral",
+        "displayName": "Print Ink 3 (dossier only)",
+        "canonical": "oklch(44.6% 0.030 258)",
+        "tonalRamp": [
+          "#090b0f",
+          "#21272f",
+          "#3d4652",
+          "#5c6777",
+          "#7e8a9c",
+          "#a3afc0",
+          "#c9d2df",
+          "#e8eff9"
+        ]
+      },
+      "print-line": {
+        "role": "neutral",
+        "displayName": "Print Line (dossier only)",
+        "canonical": "oklch(84.3% 0.016 257)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#24272b",
+          "#41454c",
+          "#60676f",
+          "#838a93",
+          "#a8aeb8",
+          "#ccd1d8",
+          "#ebeff4"
+        ]
+      },
+      "print-gold": {
+        "role": "primary",
+        "displayName": "Print Gold (dossier text only)",
+        "canonical": "oklch(49.9% 0.096 88)",
+        "tonalRamp": [
+          "#100a00",
+          "#312401",
+          "#574203",
+          "#7d6215",
+          "#a2863f",
+          "#c6ab69",
+          "#e4cf9e",
+          "#fdedc9"
+        ]
+      },
+      "print-gold-rule": {
+        "role": "primary",
+        "displayName": "Print Gold Rule (dossier, line only)",
+        "canonical": "oklch(68.3% 0.128 91)",
+        "tonalRamp": [
+          "#110a00",
+          "#342400",
+          "#5a4100",
+          "#826100",
+          "#a68504",
+          "#cbab4b",
+          "#e7cf8b",
+          "#ffeebc"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line (steel at 16 percent)",
+        "canonical": "rgb(148 163 184 / 0.16)",
+        "tonalRamp": [
+          "#080b10",
+          "#202730",
+          "#3b4654",
+          "#59677a",
+          "#7c8a9f",
+          "#a1afc3",
+          "#c7d2e2",
+          "#e7effb"
+        ]
+      },
+      "line-2": {
+        "role": "neutral",
+        "displayName": "Line 2 (steel at 32 percent)",
+        "canonical": "rgb(148 163 184 / 0.32)",
+        "tonalRamp": [
+          "#080b10",
+          "#202730",
+          "#3b4654",
+          "#59677a",
+          "#7c8a9f",
+          "#a1afc3",
+          "#c7d2e2",
+          "#e7effb"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name in the hero. Syne 800 on two lines."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings and the closing heading. Syne 700."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "The name of a case study."
+      },
+      "title-plate": {
+        "displayName": "Plate title",
+        "purpose": "Names on plates. Shown at the venture size; a group note is clamp(1.7rem, 2.8vw, 2.4rem), a lab bench clamp(1.6rem, 2.4vw, 2.1rem), a contact key 1.3rem, the wordmark 1.05rem."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "The one sentence under the name, max 24ch."
+      },
+      "lead-section": {
+        "displayName": "Section lead",
+        "purpose": "The paragraph beside a section heading, in ink-2, max 46ch."
+      },
+      "lead-case": {
+        "displayName": "Case lead",
+        "purpose": "The challenge sentence that opens a case, max 34ch."
+      },
+      "note": {
+        "displayName": "Note",
+        "purpose": "Supporting text one step below body small: hints, the scroll cue, figure scopes, venture role lines, field labels, demo list rows, the footer."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Small buttons and segmented options. Sample rows use the size at regular weight."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraphs, 44ch to 70ch."
+      },
+      "body-sm": {
+        "displayName": "Body small",
+        "purpose": "Row detail, readouts, rail steps, meta lines."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Sentence-case column heads and list terms in steel-hi. Beside or under the thing named, never above a heading."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Inter 600 at 1rem on full-size buttons."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "The four figures in JetBrains Mono, tabular, with a half-size pale gold prefix. The gauge score is 2.2rem."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Log lines, ledger cells and audit rows. 0.78rem to 0.8125rem for the clock, repository links, date windows and key values."
+      }
+    },
+    "shadows": [
+      {
+        "name": "polished-edge",
+        "value": "inset 0 1px 0 rgb(255 255 255 / 0.07)",
+        "purpose": "The one highlight on a plate. 0.07 to 0.08 on near-opaque plates, 0.12 to 0.14 on blurred glass."
+      },
+      {
+        "name": "plate-float",
+        "value": "0 50px 90px -50px #000",
+        "purpose": "Under the figures strip. 0 60px 100px -60px #000 for a stage, -70px spread for a bench, 0 30px 50px -30px #000 for a key."
+      },
+      {
+        "name": "bezel-cast",
+        "value": "drop-shadow(0 20px 26px rgb(0 0 0 / 0.62))",
+        "purpose": "Filter on the steel bezel image."
+      },
+      {
+        "name": "crystal",
+        "value": "inset 0 0 0 1px rgb(255 255 255 / 0.08), inset 0 0 90px rgb(0 0 0 / 0.5)",
+        "purpose": "Rim shade over the portrait, with a 7 percent white reflection at 118deg."
+      },
+      {
+        "name": "recess",
+        "value": "inset 0 2px 5px rgb(0 0 0 / 0.8)",
+        "purpose": "Date window. 0.7 alpha on the switch track."
+      },
+      {
+        "name": "gold-glow",
+        "value": "inset 0 1px 0 rgb(255 255 255 / 0.55), 0 14px 30px -14px rgb(212 175 55 / 0.7)",
+        "purpose": "Gold button at rest."
+      },
+      {
+        "name": "gold-glow-hover",
+        "value": "inset 0 1px 0 rgb(255 255 255 / 0.7), 0 20px 40px -14px rgb(212 175 55 / 0.9)",
+        "purpose": "Gold button on hover."
+      },
+      {
+        "name": "gold-line-glow",
+        "value": "drop-shadow(0 0 5px rgb(212 175 55 / 0.9))",
+        "purpose": "The seconds mark. 0.55 alpha on the leader line; 8px at 0.95 on the payment pulse in the gateway diagram."
+      },
+      {
+        "name": "glass-control",
+        "value": "inset 0 1px 0 rgb(255 255 255 / 0.14), 0 14px 30px -12px #000",
+        "purpose": "The inspect switch riding on the portrait."
+      },
+      {
+        "name": "loupe",
+        "value": "0 0 0 1px rgb(0 0 0 / 0.7), inset 0 0 0 1px rgb(0 0 0 / 0.6), inset 0 0 38px rgb(0 0 0 / 0.35), 0 22px 44px -12px rgb(0 0 0 / 0.8)",
+        "purpose": "The steel loupe ring."
+      },
+      {
+        "name": "hotspot-core",
+        "value": "0 0 0 3px rgb(7 9 14 / 0.7), 0 3px 10px 2px rgb(0 0 0 / 0.55)",
+        "purpose": "The gold core of a hotspot, ringed in obsidian so it holds on the photo."
+      },
+      {
+        "name": "live-pulse",
+        "value": "0 0 0 0 rgb(16 185 129 / 0.7) to 0 0 0 9px rgb(16 185 129 / 0)",
+        "purpose": "The emerald live dot, 2.2s ease-out, infinite."
+      },
+      {
+        "name": "print-preview",
+        "value": "0 10px 40px rgb(0 0 0 / 0.15)",
+        "purpose": "Under the dossier sheet when previewed on screen. It does not print."
+      },
+      {
+        "name": "glass-blur",
+        "value": "backdrop-filter: blur(16px) saturate(1.3)",
+        "purpose": "Scrolled top bar. 14px on the inspect switch, 18px on contact keys, 20px and saturate(1.35) on the figures strip. Only where a picture or the sheen is behind."
+      },
+      {
+        "name": "pointer-light",
+        "value": "radial-gradient(460px circle at var(--gx) var(--gy), rgb(212 175 55 / 0.09), transparent 62%)",
+        "purpose": "Follows a mouse pointer on a stage. 340px at 0.16 on a venture, 240px at 0.22 on a key, 520px cyan at 0.07 on a bench."
+      },
+      {
+        "name": "dial-sheen",
+        "value": "radial-gradient(540px circle at var(--sx) var(--sy), rgb(212 175 55 / 0.11), transparent 66%) over a 104deg steel band at 0.075",
+        "purpose": "The light on the dial grooves. Its position follows the pointer."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The one easing for interface transitions (EASE.out, --ease-out)."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "Line drawing and exits (EASE.inOut)."
+      },
+      {
+        "name": "spring-loupe",
+        "value": "stiffness 420, damping 38, mass 0.5",
+        "purpose": "The loupe follows the pointer."
+      },
+      {
+        "name": "spring-iris",
+        "value": "stiffness 70, damping 19, mass 1",
+        "purpose": "The loupe mask opens to the whole portrait."
+      },
+      {
+        "name": "spring-magnet",
+        "value": "stiffness 220, damping 16, mass 0.5; 0.3 of the pointer offset, 0.18 for contact keys",
+        "purpose": "Magnetic actions. Mouse only."
+      },
+      {
+        "name": "spring-counter",
+        "value": "stiffness 46, damping 17, mass 1",
+        "purpose": "Figures count up once; the final value is always in the HTML."
+      },
+      {
+        "name": "spring-hand",
+        "value": "stiffness 34, damping 11, mass 1",
+        "purpose": "Sub-dial hands."
+      },
+      {
+        "name": "spring-needle",
+        "value": "stiffness 130, damping 11, mass 0.9",
+        "purpose": "The sentiment gauge needle."
+      },
+      {
+        "name": "segmented-thumb",
+        "value": "shared layout spring, stiffness 420, damping 36",
+        "purpose": "The gold thumb of a segmented control."
+      },
+      {
+        "name": "variant-swap",
+        "value": "in: opacity 0, y 14, blur 8px to rest, 0.6s; out: y -10, blur 6px, 0.22s",
+        "purpose": "One view replaces another in the same frame."
+      },
+      {
+        "name": "variant-detail",
+        "value": "height 0 to auto and opacity, 0.5s in, 0.25s out",
+        "purpose": "A row opens to show its detail."
+      },
+      {
+        "name": "variant-log-line",
+        "value": "opacity 0 and x -10 to rest, 0.4s",
+        "purpose": "A new line lands in a log."
+      },
+      {
+        "name": "variant-leader",
+        "value": "pathLength 0 to 1, 0.55s ease-in-out",
+        "purpose": "The gold leader line from a hotspot to its row."
+      },
+      {
+        "name": "scroll-heading",
+        "value": "lines rise 108 percent from a mask, 1.05s, stagger 0.09s, expo.out, once at top 88%",
+        "purpose": "Headings (GSAP SplitText)."
+      },
+      {
+        "name": "scroll-item",
+        "value": "y 28 and autoAlpha 0 to rest, 0.95s, stagger 0.07s, expo.out, at top 92%",
+        "purpose": "Small items below the fold."
+      },
+      {
+        "name": "scroll-draw",
+        "value": "stroke-dashoffset 1 to 0, 1.6s, power2.inOut",
+        "purpose": "SVG strokes and minute-track rules draw as they enter."
+      },
+      {
+        "name": "hero-timeline",
+        "value": "portrait from scale 0.93 and blur 14px over 1.9s; name characters rise 1.15s, stagger 0.04s, from 0.1s; lead lines from 0.55s; actions from 0.85s; track from 0.9s",
+        "purpose": "First-screen entrance."
+      },
+      {
+        "name": "case-progress",
+        "value": "--p 0 to 1, scrub 0.5, top top to bottom bottom; (min-width: 1000px) and (min-height: 700px)",
+        "purpose": "A pinned case lights its strategy rail with the scroll."
+      },
+      {
+        "name": "art-drift",
+        "value": "yPercent 5, scrubbed across the section",
+        "purpose": "Section pictures move slightly against the scroll."
+      },
+      {
+        "name": "seconds-sweep",
+        "value": "60s linear infinite",
+        "purpose": "The gold seconds mark goes once round the bezel track each minute."
+      },
+      {
+        "name": "hotspot-ping",
+        "value": "scale 0.45 to 1.25 and fade, 2.6s, delay 320ms per hotspot",
+        "purpose": "The ring on a resting hotspot."
+      },
+      {
+        "name": "fold",
+        "value": "grid-template-rows 1fr to 0fr, 0.7s; opacity 0.45s",
+        "purpose": "The hero swaps its actions for the leadership stack without moving the name."
+      },
+      {
+        "name": "lenis",
+        "value": "lerp 0.11, anchor offset -64",
+        "purpose": "Smooth scroll, off under reduced motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "No GSAP, Lenis, magnetism or springs; seconds mark, ping and live pulse stop; all content visible and still."
+      },
+      {
+        "name": "failsafe",
+        "value": "4s",
+        "purpose": "If the page script never starts, hidden entrance items are shown."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "small",
+        "value": "640px"
+      },
+      {
+        "name": "one-column",
+        "value": "999px"
+      },
+      {
+        "name": "pinned-cases",
+        "value": "1000px"
+      },
+      {
+        "name": "pinned-cases-min-height",
+        "value": "700px"
+      },
+      {
+        "name": "narrow",
+        "value": "1180px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Gold Button",
+      "kind": "button",
+      "refersTo": "button-gold",
+      "description": "The primary action, one per view. A gold pusher lit from above, with a gold glow that lengthens on hover.",
+      "html": "<div class=\"ds-dial-a\"><a class=\"ds-btn-gold\" href=\"#\">Email Ali <svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" aria-hidden=\"true\"><path d=\"M3 10h13M11 4.5 16.5 10 11 15.5\"/></svg></a></div>",
+      "css": ".ds-dial-a { background: var(--obsidian); padding: 32px; } .ds-btn-gold { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; height: 52px; padding: 0 1.35rem; border-radius: 14px; font: 600 1rem/1 var(--text); text-decoration: none; white-space: nowrap; border: 1px solid transparent; cursor: pointer; transition: background-color 0.25s, border-color 0.25s, color 0.25s, box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), translate 0.35s cubic-bezier(0.16, 1, 0.3, 1); color: #0b0d12; background: linear-gradient(180deg, #f0d77a 0%, #d4af37 46%, #b08d22 100%); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.55), 0 14px 30px -14px rgb(212 175 55 / 0.7); } .ds-btn-gold svg { width: 1.15em; height: 1.15em; flex: none; } .ds-btn-gold:hover { box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.7), 0 20px 40px -14px rgb(212 175 55 / 0.9); } .ds-btn-gold:active { translate: 0 1px; } .ds-btn-gold:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }"
+    },
+    {
+      "name": "Steel Button",
+      "kind": "button",
+      "refersTo": "button-steel",
+      "description": "The secondary action. A slate gradient with a steel outline and one polished top edge.",
+      "html": "<div class=\"ds-dial-b\"><a class=\"ds-btn-steel\" href=\"#\">See the work</a></div>",
+      "css": ".ds-dial-b { background: var(--obsidian); padding: 32px; } .ds-btn-steel { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; height: 52px; padding: 0 1.35rem; border-radius: 14px; font: 600 1rem/1 var(--text); text-decoration: none; white-space: nowrap; border: 1px solid transparent; cursor: pointer; transition: background-color 0.25s, border-color 0.25s, color 0.25s, box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), translate 0.35s cubic-bezier(0.16, 1, 0.3, 1); color: var(--ink); background: linear-gradient(180deg, rgb(30 38 51 / 0.9), rgb(15 20 28 / 0.9)); border-color: var(--line-2); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.08); } .ds-btn-steel:hover { border-color: var(--steel); } .ds-btn-steel:active { translate: 0 1px; } .ds-btn-steel:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }"
+    },
+    {
+      "name": "Emerald Button",
+      "kind": "button",
+      "refersTo": "button-emerald",
+      "description": "Runs the mechanism in the gateway demo. Emerald tint, emerald outline, small size. Not used for navigation.",
+      "html": "<div class=\"ds-dial-c\"><button type=\"button\" class=\"ds-btn-emerald\">Run</button></div>",
+      "css": ".ds-dial-c { background: var(--slate); padding: 32px; } .ds-btn-emerald { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; height: 52px; padding: 0 1.35rem; border-radius: 14px; font: 600 1rem/1 var(--text); text-decoration: none; white-space: nowrap; border: 1px solid transparent; cursor: pointer; transition: background-color 0.25s, border-color 0.25s, color 0.25s, box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), translate 0.35s cubic-bezier(0.16, 1, 0.3, 1); height: 40px; padding: 0 0.95rem; border-radius: 11px; font-size: 0.9rem; color: var(--emerald-hi); background: rgb(16 185 129 / 0.1); border-color: rgb(16 185 129 / 0.6); } .ds-btn-emerald:hover { background: rgb(16 185 129 / 0.2); } .ds-btn-emerald:active { translate: 0 1px; } .ds-btn-emerald:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "custom",
+      "refersTo": "segmented",
+      "description": "A recessed well with a gold thumb under the pressed option. The build slides the thumb on a spring (stiffness 420, damping 36).",
+      "html": "<div class=\"ds-dial-d\"><div class=\"ds-seg\" role=\"group\" aria-label=\"View\"><button type=\"button\" class=\"ds-seg-btn\" aria-pressed=\"true\">Strategy</button><button type=\"button\" class=\"ds-seg-btn\" aria-pressed=\"false\">Architecture</button></div></div>",
+      "css": ".ds-dial-d { background: var(--obsidian); padding: 32px; } .ds-seg { display: inline-flex; padding: 4px; border-radius: 14px; background: rgb(7 9 14 / 0.7); border: 1px solid var(--line-2); } .ds-seg-btn { height: 40px; padding: 0 1rem; border: 0; border-radius: 10px; background: none; font: 600 0.9rem/1 var(--text); color: var(--ink-2); white-space: nowrap; cursor: pointer; transition: color 0.25s; } .ds-seg-btn:hover { color: var(--ink); } .ds-seg-btn[aria-pressed='true'] { color: #0b0d12; background: linear-gradient(180deg, #f0d77a, #d4af37); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.5); } .ds-seg-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }"
+    },
+    {
+      "name": "Top Bar",
+      "kind": "nav",
+      "refersTo": "top-bar",
+      "description": "The fixed bar in its scrolled state: smoked glass, monogram and wordmark, links with a gold line under the section in view, a small gold button.",
+      "html": "<header class=\"ds-bar\"><a class=\"ds-bar-brand\" href=\"#\"><svg viewBox=\"0 0 32 32\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 26 12 6l8 20M7.4 19h9.2\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\"/><path d=\"M12 6l15 20V6\" stroke=\"#d4af37\" stroke-width=\"2.2\" stroke-linecap=\"square\"/></svg><span>Ali Nojoumi</span></a><nav class=\"ds-bar-nav\" aria-label=\"Sections\"><a href=\"#\" aria-current=\"true\">Work</a><a href=\"#\">Lab</a><a href=\"#\">Fit</a><a href=\"#\">Contact</a></nav><a class=\"ds-bar-cta\" href=\"#\">Email Ali</a></header>",
+      "css": ".ds-bar { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0 clamp(1.1rem, 4vw, 3.5rem); background: rgb(7 9 14 / 0.74); backdrop-filter: blur(16px) saturate(1.3); border-bottom: 1px solid var(--line); color: var(--ink); } .ds-bar-brand { display: flex; align-items: center; gap: 0.6rem; font: 700 1.05rem/1 var(--display); color: inherit; text-decoration: none; white-space: nowrap; } .ds-bar-brand svg { width: 30px; height: 30px; color: var(--steel-hi); } .ds-bar-nav { display: flex; gap: 1.9rem; } .ds-bar-nav a { position: relative; padding: 0.6rem 0; font: 400 0.9375rem/1.6 var(--text); color: var(--ink-2); text-decoration: none; transition: color 0.25s; } .ds-bar-nav a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0.3rem; height: 1.5px; background: var(--gold); scale: 0 1; transform-origin: left; transition: scale 0.45s cubic-bezier(0.16, 1, 0.3, 1); } .ds-bar-nav a:hover, .ds-bar-nav a[aria-current] { color: var(--ink); } .ds-bar-nav a[aria-current]::after { scale: 1 1; } .ds-bar-cta { display: inline-flex; align-items: center; height: 40px; padding: 0 0.95rem; border-radius: 11px; font: 600 0.9rem/1 var(--text); color: #0b0d12; text-decoration: none; background: linear-gradient(180deg, #f0d77a 0%, #d4af37 46%, #b08d22 100%); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.55), 0 14px 30px -14px rgb(212 175 55 / 0.7); } .ds-bar a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }"
+    },
+    {
+      "name": "Sub-dial Register",
+      "kind": "custom",
+      "refersTo": "plate",
+      "description": "A figure on the glass strip beside its sub-dial: minute and hour marks, a gold hand, a mono figure with a pale gold prefix, a label and a scope. The build swings the hand and counts the figure on springs.",
+      "html": "<div class=\"ds-dial-e\"><ul class=\"ds-strip\"><li class=\"ds-figure\"><svg class=\"ds-subdial\" viewBox=\"0 0 60 60\" aria-hidden=\"true\"><circle cx=\"30\" cy=\"30\" r=\"27\" class=\"ds-sd-edge\"/><circle cx=\"30\" cy=\"30\" r=\"23\" class=\"ds-sd-min\" pathLength=\"60\" stroke-dasharray=\"0.35 0.65\"/><circle cx=\"30\" cy=\"30\" r=\"23\" class=\"ds-sd-hr\" pathLength=\"60\" stroke-dasharray=\"0.6 4.4\"/><path d=\"M30 35V9\" class=\"ds-sd-hand\" transform=\"rotate(48 30 30)\"/><circle cx=\"30\" cy=\"30\" r=\"2.4\" class=\"ds-sd-pin\"/></svg><div><p class=\"ds-figure-num\"><span>CAD $</span>3M</p><p class=\"ds-figure-label\">Raised for Keywa</p><p class=\"ds-figure-scope\">Co-founder, 2020 to 2024</p></div></li></ul></div>",
+      "css": ".ds-dial-e { padding: 40px 32px 56px; background: radial-gradient(120% 85% at 82% -12%, #151c29 0%, #0a0d14 46%, var(--obsidian) 100%); } .ds-strip { list-style: none; margin: 0; padding: 0; display: grid; border-radius: 24px; background: linear-gradient(180deg, rgb(15 20 28 / 0.6), rgb(7 9 14 / 0.74)); backdrop-filter: blur(20px) saturate(1.35); border: 1px solid rgb(203 213 225 / 0.17); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.12), 0 50px 90px -50px #000; } .ds-figure { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.1rem; align-items: start; padding: 1.9rem 1.5rem 1.8rem; color: var(--ink); font-family: var(--text); } .ds-figure p { margin: 0; } .ds-subdial { width: 62px; height: 62px; } .ds-subdial circle, .ds-subdial path { fill: none; } .ds-sd-edge { stroke: rgb(148 163 184 / 0.35); stroke-width: 1; } .ds-sd-min { stroke: rgb(148 163 184 / 0.55); stroke-width: 2.4; } .ds-sd-hr { stroke: var(--steel-hi); stroke-width: 4.6; } .ds-sd-hand { stroke: var(--gold); stroke-width: 1.7; stroke-linecap: round; } .ds-subdial .ds-sd-pin { fill: var(--gold); } .ds-figure-num { font: 600 clamp(1.55rem, 2.5vw, 2.35rem) / 1 var(--mono); letter-spacing: -0.035em; font-variant-numeric: tabular-nums; white-space: nowrap; } .ds-figure-num span { font-size: 0.5em; letter-spacing: 0; color: var(--gold-hi); margin-right: 0.25em; vertical-align: 0.42em; } .ds-figure .ds-figure-label { margin-top: 0.7rem; font-weight: 500; line-height: 1.35; } .ds-figure .ds-figure-scope { margin-top: 0.25rem; font-size: 0.875rem; color: var(--ink-2); }"
+    },
+    {
+      "name": "Plate with Date Window",
+      "kind": "card",
+      "refersTo": "date-window",
+      "description": "A smoked plate with one polished top edge. The role and a recessed date window sit under the Syne name. The build moves a gold light with the pointer; here it fades in on hover.",
+      "html": "<div class=\"ds-dial-f\"><article class=\"ds-plate\"><h4>Chainblock.app</h4><p class=\"ds-plate-meta\">Founder <span class=\"ds-window\">2018 to 2020</span></p><p class=\"ds-plate-text\">Blockchain platform for digital-asset transactions, smart contracts and decentralized applications.</p></article></div>",
+      "css": ".ds-dial-f { background: var(--obsidian); padding: 32px; } .ds-plate { position: relative; isolation: isolate; overflow: hidden; display: grid; align-content: end; gap: 0.3rem; min-height: 12.5rem; max-width: 30rem; padding: 1.5rem; border-radius: 24px; background: linear-gradient(180deg, rgb(22 29 40 / 0.86), rgb(13 17 24 / 0.9)); border: 1px solid var(--line); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.07); color: var(--ink); font-family: var(--text); transition: border-color 0.35s; } .ds-plate::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(340px circle at 80% 0%, rgb(212 175 55 / 0.16), transparent 65%); opacity: 0; transition: opacity 0.4s; } .ds-plate:hover { border-color: var(--line-2); } .ds-plate:hover::before { opacity: 1; } .ds-plate p { margin: 0; } .ds-plate h4 { margin: 0; font: 700 clamp(1.5rem, 2.2vw, 1.9rem) / 1.1 var(--display); letter-spacing: -0.02em; } .ds-plate .ds-plate-meta { display: flex; align-items: center; gap: 0.6rem; margin: 0.15rem 0 0.35rem; font-size: 0.875rem; color: var(--steel-hi); } .ds-window { padding: 0.3rem 0.6rem; border-radius: 7px; background: var(--obsidian); border: 1px solid var(--line-2); box-shadow: inset 0 2px 5px rgb(0 0 0 / 0.8); font: 600 0.78rem/1.3 var(--mono); font-variant-numeric: tabular-nums; color: var(--ink); } .ds-plate-text { color: var(--ink-2); line-height: 1.6; max-width: 44ch; }"
+    },
+    {
+      "name": "Skill Pill",
+      "kind": "chip",
+      "refersTo": "pill",
+      "description": "A round filter chip. The pressed pill is a flat gold fill.",
+      "html": "<div class=\"ds-dial-g\"><button type=\"button\" class=\"ds-pill\" aria-pressed=\"true\">API and gateway design</button><button type=\"button\" class=\"ds-pill\" aria-pressed=\"false\">Merchant onboarding</button><button type=\"button\" class=\"ds-pill\" aria-pressed=\"false\">Digital-asset custody</button></div>",
+      "css": ".ds-dial-g { background: var(--obsidian); padding: 32px; display: flex; flex-wrap: wrap; gap: 0.5rem; } .ds-pill { min-height: 44px; padding: 0.5rem 1rem; border-radius: 999px; border: 1px solid var(--line-2); background: rgb(15 20 28 / 0.66); font: 500 0.9375rem/1.2 var(--text); color: var(--ink-2); cursor: pointer; transition: color 0.25s, background-color 0.25s, border-color 0.25s; } .ds-pill:hover { color: var(--ink); border-color: var(--steel); } .ds-pill[aria-pressed='true'] { background: var(--gold); border-color: var(--gold); color: #0b0d12; font-weight: 600; } .ds-pill:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }"
+    },
+    {
+      "name": "Contact Key",
+      "kind": "card",
+      "refersTo": "key",
+      "description": "A glass key with a Syne label over a mono value and a gold icon. One key per set is solid gold.",
+      "html": "<div class=\"ds-dial-h\"><a class=\"ds-key ds-key-gold\" href=\"#\"><span class=\"ds-key-label\">Email</span><span class=\"ds-key-value\">alinojoumi8@gmail.com</span><svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" aria-hidden=\"true\"><path d=\"M3 10h13M11 4.5 16.5 10 11 15.5\"/></svg></a><a class=\"ds-key\" href=\"#\"><span class=\"ds-key-label\">GitHub</span><span class=\"ds-key-value\">github.com/alinojoumi8</span><svg viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" aria-hidden=\"true\"><path d=\"M5.5 14.5 15 5M7 5h8v8\"/></svg></a></div>",
+      "css": ".ds-dial-h { padding: 32px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; background: radial-gradient(120% 85% at 82% -12%, #151c29 0%, #0a0d14 46%, var(--obsidian) 100%); } .ds-key { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.25rem 1rem; align-content: end; min-height: 7rem; padding: 1.1rem 1.2rem; border-radius: 18px; text-decoration: none; color: var(--ink); background: linear-gradient(180deg, rgb(22 29 40 / 0.72), rgb(7 9 14 / 0.8)); backdrop-filter: blur(18px) saturate(1.3); border: 1px solid rgb(203 213 225 / 0.2); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.12), 0 30px 50px -30px #000; transition: border-color 0.3s; } .ds-key:hover { border-color: var(--gold); } .ds-key:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; } .ds-key-label { grid-column: 1; font: 700 1.3rem/1.1 var(--display); letter-spacing: -0.02em; } .ds-key-value { grid-column: 1; font: 500 0.78rem/1.4 var(--mono); color: var(--steel-hi); overflow-wrap: anywhere; } .ds-key svg { grid-column: 2; grid-row: 1 / span 2; align-self: end; width: 22px; height: 22px; color: var(--gold); } .ds-key-gold { background: linear-gradient(180deg, #f0d77a 0%, #d4af37 50%, #b08d22 100%); backdrop-filter: none; border-color: #f0d77a; color: #0b0d12; } .ds-key-gold .ds-key-value { color: #2c2305; } .ds-key-gold svg { color: #0b0d12; }"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "A text field in a demo: a recessed obsidian well with a steel outline that turns gold on focus.",
+      "html": "<div class=\"ds-dial-i\"><label class=\"ds-label\" for=\"ds-field\">Headline</label><input class=\"ds-input\" id=\"ds-field\" type=\"text\" value=\"Central bank holds rates\"></div>",
+      "css": ".ds-dial-i { background: var(--slate); padding: 32px; max-width: 26rem; } .ds-label { display: block; margin-bottom: 0.45rem; font: 400 0.875rem/1.6 var(--text); color: var(--steel-hi); } .ds-input { width: 100%; height: 50px; padding: 0 0.9rem; border-radius: 12px; background: rgb(7 9 14 / 0.75); border: 1px solid var(--line-2); color: var(--ink); font: 500 1rem/1 var(--text); caret-color: var(--gold); } .ds-input:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-color: var(--gold); }"
+    },
+    {
+      "name": "Minute-track Rule",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "A section head: Syne heading, a lead in ink-2, and a steel hairline over minute ticks every 12px. The build draws the hairline in from the left.",
+      "html": "<header class=\"ds-head\"><h2>Three products, from need to launch</h2><p>Read the product view, then switch to the system view.</p><span class=\"ds-rule\" aria-hidden=\"true\"></span></header>",
+      "css": ".ds-head { display: grid; grid-template-columns: minmax(0, 13fr) minmax(0, 10fr); gap: 1.5rem clamp(2rem, 5vw, 5rem); align-items: end; padding: 40px 32px; background: var(--obsidian); color: var(--ink); } .ds-head h2 { margin: 0; font: 700 clamp(2.3rem, 5vw, 4.25rem) / 1 var(--display); letter-spacing: -0.03em; text-wrap: balance; } .ds-head p { margin: 0; font: 400 1.125rem/1.6 var(--text); color: var(--ink-2); max-width: 46ch; } .ds-rule { grid-column: 1 / -1; height: 12px; border-top: 1px solid var(--steel); background: repeating-linear-gradient(90deg, var(--line-2) 0 1px, transparent 1px 12px) 0 100% / 100% 6px no-repeat; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Watch at Night",
+    "overview": "The page is a steel sports watch seen in low light. The ground is the dial: near-black obsidian cut with wide horizontal grooves, with a soft sheen that follows the pointer across them. The dial is fixed behind every section and never changes colour. One object on the page is photographed metal: a steel cushion bezel, laid around the portrait as a nine-slice frame, with a minute track and a gold seconds mark running round it. A steel loupe follows the pointer over the portrait and shows the second picture inside its ring.\n\nEverything else borrows the watch's own parts. Panels are smoked-glass plates with one polished top edge. Rules are minute tracks: a hairline with short ticks, and a longer tick every fifth mark. Figures sit beside small sub-dial registers whose gold hand swings to its mark. Dates sit in recessed date windows. Buttons are chronograph pushers. Colour follows a strict reading: gold is the hand and the one part that is active, emerald means live or approved, cyan means data moving through a system. There is no red; a rejected or removed state is shown in pale gold with a dashed line or a written word.\n\nType has three jobs and three faces. Syne sets names and headings, heavy and tight. Inter sets everything that is read. JetBrains Mono sets data only: figures, clocks, log lines, ledger rows, addresses. The page is dark throughout, and it is complete without hover, without scripts and with reduced motion.",
+    "keyCharacteristics": [
+      "One obsidian dial under every section, with horizontal grooves and a pointer sheen.",
+      "One photographed steel bezel, used once, around the portrait.",
+      "Smoked-glass plates with a single polished top edge and a deep, soft shadow below.",
+      "Minute-track ticks as rules, sub-dial registers for figures, date windows for dates.",
+      "Gold for the hand and the active part; emerald for live or approved; cyan for data in transit.",
+      "Syne for names, Inter for reading, JetBrains Mono for data only.",
+      "Sentence case everywhere; no uppercase tracked labels."
+    ],
+    "rules": [
+      {
+        "name": "The One Hand Rule",
+        "body": "Gold marks the one active part of a view: the action, the selected option, the item in focus, the point on a scale. A resting plate, a paragraph or a section ground is never gold. Pale gold text is allowed on one item per group.",
+        "section": "colors"
+      },
+      {
+        "name": "The Signal Rule",
+        "body": "Emerald means live or approved. Cyan means data in transit. Neither is decoration, and neither appears outside an instrument, a diagram or a status.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Palettes Rule",
+        "body": "The `print-*` colours belong to the print dossier and the rest belong to the page. No colour crosses from one surface to the other.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Red Rule",
+        "body": "The build has no red. A rejected or removed state is pale gold with a dashed stroke or a written word, so the state never depends on colour alone.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Dial Rule",
+        "body": "The ground is the obsidian dial in every section. A section changes by what is set on the dial (a plate, a stage, a masked picture), never by a new ground colour or a light section.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Faces Rule",
+        "body": "Syne sets names and headings only. Inter sets every sentence, label and button. JetBrains Mono sets data only: numbers, times, addresses, repository paths and log text. Mono never sets a heading, a label or a paragraph.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Nothing is set in uppercase and no text is letter-spaced wide. Tracking is zero or negative. Hierarchy comes from face, weight, size and the steel ramp.",
+        "section": "typography"
+      },
+      {
+        "name": "The Under, Not Over Rule",
+        "body": "A small line sits under or beside the name it describes (role and dates under a venture, kind under a bench). No small label sits above a heading to name the section.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Any number that changes or lines up in a column uses tabular figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Polished Edge Rule",
+        "body": "A plate has exactly one highlight, a 1px inner line along its top edge. No plate has a highlight on a side or a coloured border at rest.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Straight Down Rule",
+        "body": "Cast shadows fall straight down, are black, and are pulled in by a negative spread close to their offset. No shadow is offset sideways, hard-edged or coloured, except the gold glow under a gold part.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Glass Needs Something Behind It Rule",
+        "body": "Blur a plate only when a picture or the sheen is behind it. Over plain ground a plate is a near-opaque gradient.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the obsidian dial under every section and change sections by what is set on it.",
+      "Do give each view one gold part: the action, the selected option or the item in focus. Put `on-gold` text on a gold fill.",
+      "Do use emerald only for live or approved, and cyan only for data in transit.",
+      "Do build a panel as a plate: a dark gradient, a `line` outline, one 1px polished top edge and a straight-down black shadow with a negative spread.",
+      "Do blur a plate only when a picture or the dial sheen is behind it.",
+      "Do rule with minute ticks (12px apart, a long tick every 60px), put figures beside a sub-dial register and put dates in a date window.",
+      "Do set names and headings in Syne 700 or 800 with tracking of -0.02em to -0.035em, everything read in Inter, and data in JetBrains Mono with tabular figures.",
+      "Do scale corner radius with the part, from 7px for a date window to 28px for a stage, and keep a nested radius smaller than its parent.",
+      "Do mask a picture into the dial with a gradient and lay an obsidian scrim under the text.",
+      "Do show a rejected or removed state in pale gold with a dashed stroke or a written word.",
+      "Do keep all content present with no hover, no script and reduced motion, and read motion timing from `src/lib/motion.ts`.",
+      "Do keep buttons at 52px, standalone controls at 44px or more, and compact controls inside an instrument at 40px."
+    ],
+    "donts": [
+      "Don't introduce a light section, a second ground colour or a coloured section band on the main page. Light paper belongs to the print dossier only.",
+      "Don't use gold for a resting plate, a paragraph or a section ground, or make two unrelated things gold at rest in one view.",
+      "Don't use emerald or cyan as decoration, as a heading colour or as a button for navigation.",
+      "Don't add red. The system has no red.",
+      "Don't set a heading, a label or a paragraph in JetBrains Mono, and don't set data in Syne.",
+      "Don't set text in uppercase or with wide letter-spacing, and don't place a small label above a heading to name the section.",
+      "Don't use a hard, sideways or coloured cast shadow. Gold glow belongs under gold parts only.",
+      "Don't add a second photographed frame. The steel bezel is used once, on the portrait.",
+      "Don't box a picture in a card. Pictures sit behind a section, masked at the edges.",
+      "Don't use `steel-lo` or `rail` for text; they are stroke colours.",
+      "Don't drop text below 0.75rem.",
+      "Don't carry the dial, glass or glow into the print dossier, or the dossier's light palette into the page."
+    ]
+  }
+}

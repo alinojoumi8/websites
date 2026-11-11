@@ -1,0 +1,6 @@
+{
+  "prompt": "A flat, straight front-on orthographic studio photograph of one empty square frame with large smoothly rounded corners: the bezel of a luxury steel sports watch with a cushion-shaped case, with nothing inside it. The frame band is slim and has the same width on all four sides, about one twentieth of the image width. Its flat top face is brushed stainless steel with fine straight satin brushing. A thin mirror-polished chamfer runs along both the inner edge and the outer edge. Soft studio light from the upper right puts a warm gold highlight on the top right corner and leaves the lower left darker. The centre of the frame is completely empty, pure flat black (#000000). The background outside the frame is pure flat black (#000000) with a small even margin. No dial, no hands, no glass, no lugs, no crown, no strap, no screws, no text, no logo, no reflections of objects.",
+  "model": "google/nano-banana-pro via Krea",
+  "createdAt": "2026-11-10",
+  "note": "Black ground and black centre removed by flood fill, then squared, in scripts/images.mjs."
+}

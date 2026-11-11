@@ -1,0 +1,6 @@
+{
+  "prompt": "A minimalist architectural monogram made of the two capital letters A and N fused into one compact geometric mark, machined from brushed titanium with smoked dark glass inlays, crisp bevelled polished chamfers catching a warm gold rim light from the upper right. It looks like the emblem on a luxury watch caseback or a vault door plate. Perfectly centered, straight front-on view, generous empty margin around it, on a pure flat black background (#000000). No other objects, no extra text, no watermark, no border. Studio macro product photography, razor sharp.",
+  "model": "google/nano-banana-pro via Krea",
+  "createdAt": "2026-11-10",
+  "note": "Black ground removed by flood fill in scripts/images.mjs."
+}
