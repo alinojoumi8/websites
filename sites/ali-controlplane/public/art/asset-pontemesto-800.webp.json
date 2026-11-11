@@ -1,0 +1,5 @@
+{
+  "prompt": "Orthographic isometric 3D render, ultra clean, of a global payment routing system built as an architectural scale model. Low matte obsidian-black slabs stand as nodes on a dark obsidian floor (#07090E) etched with a faint fine grid. Thin glowing emerald-green light conduits run in straight lines with right-angle turns from many small merchant slabs on the left, into one tall central gateway block of smoked glass and brushed titanium, then fan out to a row of liquidity vault blocks on the right. Small bright emerald pulses travel along the conduits. A warm gold key light from the upper right puts a thin gold rim on the titanium edges. Deep shadows, large calm areas of dark negative space at the top and bottom of the frame. Precise, minimal, expensive. No text, no numbers, no logos, no people.",
+  "model": "google/nano-banana-pro via Krea",
+  "createdAt": "2026-11-11"
+}

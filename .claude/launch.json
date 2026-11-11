@@ -142,6 +142,32 @@
         "sites/ali-atlas/dist"
       ],
       "port": 4362
+    },
+    {
+      "name": "ali-controlplane",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--prefix",
+        "sites/ali-controlplane",
+        "--",
+        "--port",
+        "4371"
+      ],
+      "port": 4371
+    },
+    {
+      "name": "ali-controlplane-dist",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4372",
+        "--directory",
+        "sites/ali-controlplane/dist"
+      ],
+      "port": 4372
     }
   ]
 }

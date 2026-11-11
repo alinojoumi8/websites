@@ -1,0 +1,77 @@
+---
+import '@fontsource-variable/syne';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/jetbrains-mono';
+import '../styles/global.css';
+import App from '../components/App';
+import { site } from '../lib/content';
+
+const title = 'Ali Nojoumi · Product leader for payments, digital assets and applied AI';
+const description =
+  'Fintech co-founder in Toronto. Payment gateways, platform APIs and organizational crypto custody. More than USD $80 million processed at Pontemesto in 2026.';
+const canonical = Astro.site ? new URL('/', Astro.site).href : undefined;
+const ogImage = Astro.site ? new URL('/og.jpg', Astro.site).href : '/og.jpg';
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  jobTitle: 'Product leader, payments and digital asset platforms',
+  email: `mailto:${site.email}`,
+  address: { '@type': 'PostalAddress', addressLocality: 'Toronto', addressRegion: 'ON', addressCountry: 'CA' },
+  sameAs: [site.linkedin, site.github],
+  knowsLanguage: ['en', 'fa'],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#07090e" />
+    <meta name="color-scheme" content="dark" />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      as="image"
+      href="/art/ali-1312.avif"
+      type="image/avif"
+      imagesrcset="/art/ali-800.avif 800w, /art/ali-1312.avif 1312w"
+      imagesizes="(min-width: 1024px) 62vw, 100vw"
+      fetchpriority="high"
+    />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ali Nojoumi beside the line: I build products when there is a real customer need but no clear path to delivery." />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
+    <script is:inline>
+      // "has-js" means scripts run. "js" also means motion is welcome, so the page
+      // may pin sections and hold counters at zero until they are seen. If the page
+      // script never starts, "failsafe" shows everything after four seconds.
+      (function () {
+        var d = document.documentElement;
+        d.classList.add('has-js');
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        d.classList.add('js');
+        setTimeout(function () {
+          if (!window.__cp) d.classList.add('failsafe');
+        }, 4000);
+      })();
+    </script>
+  </head>
+  <body>
+    <App client:load />
+  </body>
+</html>

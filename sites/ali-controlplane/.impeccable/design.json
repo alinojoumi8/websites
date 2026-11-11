@@ -1,0 +1,630 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-11T00:00:00Z",
+  "title": "Design System: Ali Nojoumi, control plane",
+  "extensions": {
+    "colorMeta": {
+      "gold": {
+        "role": "primary",
+        "displayName": "Key-Light Gold",
+        "canonical": "#d4af37",
+        "tonalRamp": [
+          "#2a2513",
+          "#51451f",
+          "#806c28",
+          "#b9982d",
+          "#d3b450",
+          "#d8c588",
+          "#e4dbbe",
+          "#f5f2eb"
+        ]
+      },
+      "gold-hi": {
+        "role": "primary",
+        "displayName": "Gold Highlight",
+        "canonical": "#ecd27a",
+        "tonalRamp": [
+          "#2c2611",
+          "#55481b",
+          "#877021",
+          "#c49f21",
+          "#ddbb45",
+          "#dfc981",
+          "#e7ddbb",
+          "#f6f3ea"
+        ]
+      },
+      "live": {
+        "role": "secondary",
+        "displayName": "Live Emerald",
+        "canonical": "#10b981",
+        "tonalRamp": [
+          "#102e24",
+          "#175943",
+          "#1b8e68",
+          "#18ce92",
+          "#3ce6ae",
+          "#7be5c2",
+          "#b8eada",
+          "#e9f6f2"
+        ]
+      },
+      "live-hi": {
+        "role": "secondary",
+        "displayName": "Emerald Highlight",
+        "canonical": "#6ee7b7",
+        "tonalRamp": [
+          "#122b21",
+          "#1c543e",
+          "#23855e",
+          "#25c083",
+          "#49daa0",
+          "#83ddb9",
+          "#bce6d5",
+          "#eaf5f1"
+        ]
+      },
+      "data": {
+        "role": "tertiary",
+        "displayName": "Simulation Cyan",
+        "canonical": "#38bdf8",
+        "tonalRamp": [
+          "#0e252f",
+          "#14465c",
+          "#146d94",
+          "#0e9ad8",
+          "#33b6f0",
+          "#76c6ea",
+          "#b5dced",
+          "#e8f3f7"
+        ]
+      },
+      "obsidian": {
+        "role": "neutral",
+        "displayName": "Obsidian",
+        "canonical": "#07090e",
+        "tonalRamp": [
+          "#191c25",
+          "#2b3345",
+          "#3d4a6b",
+          "#4f6397",
+          "#7083b3",
+          "#9ba7c5",
+          "#c7cddb",
+          "#edeff2"
+        ]
+      },
+      "model-floor": {
+        "role": "neutral",
+        "displayName": "Model Floor",
+        "canonical": "#0a0d14",
+        "tonalRamp": [
+          "#191c25",
+          "#2b3345",
+          "#3d4b6b",
+          "#4f6497",
+          "#7084b3",
+          "#9ba8c5",
+          "#c7cddb",
+          "#edeff2"
+        ]
+      },
+      "carbon": {
+        "role": "neutral",
+        "displayName": "Carbon Slate",
+        "canonical": "#0f141c",
+        "tonalRamp": [
+          "#191d24",
+          "#2c3544",
+          "#3f4f69",
+          "#526b94",
+          "#738ab0",
+          "#9dacc3",
+          "#c8cfda",
+          "#edeff2"
+        ]
+      },
+      "carbon-2": {
+        "role": "neutral",
+        "displayName": "Carbon Lift",
+        "canonical": "#161d29",
+        "tonalRamp": [
+          "#191d24",
+          "#2c3544",
+          "#404f69",
+          "#526a93",
+          "#7389b0",
+          "#9dabc3",
+          "#c8cfda",
+          "#edeff2"
+        ]
+      },
+      "steel": {
+        "role": "neutral",
+        "displayName": "Brushed Steel",
+        "canonical": "#94a3b8",
+        "tonalRamp": [
+          "#1b1e22",
+          "#303740",
+          "#465262",
+          "#5d6f89",
+          "#7d8ea6",
+          "#a3aebd",
+          "#cbd0d7",
+          "#eeeff1"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#cbd5e1",
+        "tonalRamp": [
+          "#1a1e23",
+          "#2e3743",
+          "#425267",
+          "#567090",
+          "#768fad",
+          "#9faec1",
+          "#c9d0d9",
+          "#eef0f2"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#e9edf3",
+        "tonalRamp": [
+          "#191e24",
+          "#2d3644",
+          "#405068",
+          "#536c93",
+          "#748baf",
+          "#9eacc2",
+          "#c8cfda",
+          "#edeff2"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Company names on case covers, the Lab cover, and the contact statement."
+      },
+      "hero": {
+        "displayName": "Hero",
+        "purpose": "The one headline sentence; the name inside it is 700 and gold."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Sub-section headings; panel and tab names at 1.3125rem."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "The sentence under a heading, in mist, max 58ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, toggles, chips, row names. Sentence case."
+      },
+      "note": {
+        "displayName": "Note",
+        "purpose": "Scope lines, legends, toy-model notes, in steel."
+      },
+      "metric": {
+        "displayName": "Metric",
+        "purpose": "The four telemetry figures, tabular."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Process ids, states, counts, hashes, ledger rows, clock."
+      }
+    },
+    "shadows": [
+      {
+        "name": "slab-cast",
+        "value": "SVG parallelogram on the floor, fill #000 at 0.36, offset down-left by 0.5 + 0.45 x height",
+        "purpose": "Cast shadow under every isometric slab. Drawn, never a CSS shadow."
+      },
+      {
+        "name": "lens",
+        "value": "0 0 0 1px rgb(7 9 14 / 0.6), inset 0 0 0 1px rgb(7 9 14 / 0.4), inset 0 18px 30px -20px rgb(255 255 255 / 0.55), 0 26px 50px -22px rgb(0 0 0 / 0.85)",
+        "purpose": "The glass lens over the portrait only."
+      },
+      {
+        "name": "packet-ring",
+        "value": "0 0 0 4px rgb(212 175 55 / 0.32)",
+        "purpose": "Gold ring around the white packet on the rail."
+      },
+      {
+        "name": "hotspot-ring",
+        "value": "0 0 0 2px rgb(7 9 14 / 0.75)",
+        "purpose": "Separates a hotspot dot from the photograph."
+      },
+      {
+        "name": "monogram-drop",
+        "value": "drop-shadow(0 34px 34px rgb(58 42 0 / 0.5))",
+        "purpose": "The rendered titanium monogram resting on the gold field (filter)."
+      },
+      {
+        "name": "hero-text",
+        "value": "0 2px 22px rgb(7 9 14 / 0.85)",
+        "purpose": "text-shadow that keeps hero copy legible over the portrait edge."
+      }
+    ],
+    "glass": [
+      {
+        "name": "telemetry-strip",
+        "value": "background rgb(13 18 26 / 0.56); backdrop-filter blur(22px) saturate(1.25)"
+      },
+      {
+        "name": "phone-bar",
+        "value": "background rgb(7 9 14 / 0.82); backdrop-filter blur(14px)"
+      },
+      {
+        "name": "switch",
+        "value": "background rgb(15 20 28 / 0.66); backdrop-filter blur(10px)"
+      },
+      {
+        "name": "hero-tag",
+        "value": "background rgb(7 9 14 / 0.8); backdrop-filter blur(8px)"
+      }
+    ],
+    "lines": [
+      {
+        "name": "line",
+        "value": "rgb(148 163 184 / 0.16)",
+        "purpose": "Dividers and panel borders."
+      },
+      {
+        "name": "line-2",
+        "value": "rgb(148 163 184 / 0.34)",
+        "purpose": "Control borders and heavier rules."
+      },
+      {
+        "name": "floor-grid",
+        "value": "rgb(148 163 184 / 0.04) 1px lines on a 64px grid",
+        "purpose": "The etched page floor."
+      }
+    ],
+    "isoTones": {
+      "stone": {
+        "top": "#18202d",
+        "left": "#0a0e15",
+        "right": "#111924",
+        "rim": "#94a3b8",
+        "rimOpacity": 0.34
+      },
+      "slate": {
+        "top": "#222c3c",
+        "left": "#0d121a",
+        "right": "#18212e",
+        "rim": "#cbd5e1",
+        "rimOpacity": 0.4
+      },
+      "glass": {
+        "top": "#2a3649",
+        "left": "#111a26",
+        "right": "#1d2838",
+        "rim": "#d4af37",
+        "rimOpacity": 0.7
+      },
+      "titanium": {
+        "top": "#7f8da3",
+        "left": "#39424f",
+        "right": "#5d6979",
+        "rim": "#e9edf3",
+        "rimOpacity": 0.7
+      },
+      "live": {
+        "top": "#10b981",
+        "left": "#065f46",
+        "right": "#0b8f66",
+        "rim": "#a7f3d0",
+        "rimOpacity": 0.9
+      },
+      "gold": {
+        "top": "#d4af37",
+        "left": "#6e5a17",
+        "right": "#a88a27",
+        "rim": "#f6e7a8",
+        "rimOpacity": 0.9
+      },
+      "data": {
+        "top": "#38bdf8",
+        "left": "#0c4a6e",
+        "right": "#1583b8",
+        "rim": "#bae6fd",
+        "rimOpacity": 0.9
+      }
+    },
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Page default, exponential ease-out (CSS --ease and ease.out)."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "Closing and leaving: lens close, block hide, packet run."
+      },
+      {
+        "name": "ease-soft",
+        "value": "cubic-bezier(0.33, 1, 0.68, 1)",
+        "purpose": "Defined in the preset file as a softer ease-out."
+      },
+      {
+        "name": "spring-counter",
+        "value": "stiffness 55, damping 17, mass 1",
+        "purpose": "Figures settling on the telemetry strip."
+      },
+      {
+        "name": "spring-magnetic",
+        "value": "stiffness 240, damping 17, mass 0.35",
+        "purpose": "Buttons that lean toward the pointer."
+      },
+      {
+        "name": "spring-lens",
+        "value": "stiffness 320, damping 32, mass 0.6",
+        "purpose": "The lens following the pointer."
+      },
+      {
+        "name": "spring-panel",
+        "value": "stiffness 380, damping 34, mass 0.8",
+        "purpose": "Switch thumb, segmented thumb, slabs changing height or tone."
+      },
+      {
+        "name": "lens-open",
+        "value": "0.95s ease-out",
+        "purpose": "Lens grows over the portrait."
+      },
+      {
+        "name": "lens-close",
+        "value": "0.6s ease-in-out",
+        "purpose": "Lens returns to the shoulder."
+      },
+      {
+        "name": "swap",
+        "value": "0.55s ease-out, 14px rise, 8px blur clear",
+        "purpose": "Headline and process table trade places."
+      },
+      {
+        "name": "packet",
+        "value": "2.6s ease-in-out",
+        "purpose": "A sample payment runs the rails."
+      },
+      {
+        "name": "state",
+        "value": "0.2s to 0.3s",
+        "purpose": "Hover, selection and border changes."
+      },
+      {
+        "name": "telemetry-glint",
+        "value": "7s linear infinite",
+        "purpose": "Emerald light travelling along the top of the strip; removed under reduced motion."
+      },
+      {
+        "name": "hotspot-ping",
+        "value": "2.6s ease-out infinite",
+        "purpose": "Ring pulsing around a hotspot; removed under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "proof-columns",
+        "value": "640px"
+      },
+      {
+        "name": "diagram-labels",
+        "value": "720px"
+      },
+      {
+        "name": "demo-columns",
+        "value": "900px"
+      },
+      {
+        "name": "bento",
+        "value": "960px"
+      },
+      {
+        "name": "rail",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Gold Button",
+      "kind": "button",
+      "refersTo": "button-gold",
+      "description": "The primary action on dark surfaces: emailing him.",
+      "html": "<a class=\"ds-btn ds-btn-gold\" href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"5.5\" width=\"18\" height=\"13\" rx=\"1.5\"/><path d=\"m3.5 7 8.5 6.5L20.5 7\"/></svg>Email Ali</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; height: 48px; padding: 0 1.25rem; border: 1px solid transparent; border-radius: 2px; font-family: var(--font-sans, 'Inter Variable', Inter, system-ui, sans-serif); font-weight: 600; font-size: 0.9375rem; line-height: 1; white-space: nowrap; text-decoration: none; cursor: pointer; transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s cubic-bezier(0.16, 1, 0.3, 1), translate 0.15s; } .ds-btn:active { translate: 0 1px; } .ds-btn:focus-visible { outline: 2px solid var(--color-gold, #d4af37); outline-offset: 3px; } .ds-btn-gold { background: var(--color-gold, #d4af37); color: var(--color-obsidian, #07090e); } .ds-btn-gold:hover { background: var(--color-gold-hi, #ecd27a); }"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action inside demos and workbenches.",
+      "html": "<button type=\"button\" class=\"ds-btn ds-btn-line\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7.5 5.5v13l11-6.5z\"/></svg>Run</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; height: 48px; padding: 0 1.25rem; border: 1px solid transparent; border-radius: 2px; font-family: var(--font-sans, 'Inter Variable', Inter, system-ui, sans-serif); font-weight: 600; font-size: 0.9375rem; line-height: 1; white-space: nowrap; text-decoration: none; cursor: pointer; transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s cubic-bezier(0.16, 1, 0.3, 1), translate 0.15s; } .ds-btn:active { translate: 0 1px; } .ds-btn:focus-visible { outline: 2px solid var(--color-gold, #d4af37); outline-offset: 3px; } .ds-btn-line { height: 40px; padding: 0 0.9rem; background: transparent; border-color: rgb(148 163 184 / 0.34); color: var(--color-ink, #e9edf3); font-size: 0.875rem; } .ds-btn-line:hover { border-color: var(--color-steel, #94a3b8); background: rgb(148 163 184 / 0.1); }"
+    },
+    {
+      "name": "Ink Button (gold field)",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Outline action on the flat gold contact field; the Dark button beside it carries the email address.",
+      "html": "<div class=\"ds-goldfield\"><a class=\"ds-btn ds-btn-dark\" href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"5.5\" width=\"18\" height=\"13\" rx=\"1.5\"/><path d=\"m3.5 7 8.5 6.5L20.5 7\"/></svg>Email address</a><a class=\"ds-btn ds-btn-ink\" href=\"#\">LinkedIn</a></div>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; height: 48px; padding: 0 1.25rem; border: 1px solid transparent; border-radius: 2px; font-family: var(--font-sans, 'Inter Variable', Inter, system-ui, sans-serif); font-weight: 600; font-size: 0.9375rem; line-height: 1; white-space: nowrap; text-decoration: none; cursor: pointer; transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s cubic-bezier(0.16, 1, 0.3, 1), translate 0.15s; } .ds-btn:active { translate: 0 1px; } .ds-btn:focus-visible { outline: 2px solid var(--color-gold, #d4af37); outline-offset: 3px; } .ds-goldfield { display: flex; flex-wrap: wrap; gap: 12px; padding: 28px; background: var(--color-gold, #d4af37); } .ds-goldfield .ds-btn:focus-visible { outline-color: var(--color-obsidian, #07090e); } .ds-btn-dark { height: 64px; padding: 0 1.6rem; background: var(--color-obsidian, #07090e); color: var(--color-ink, #e9edf3); font-size: 1.125rem; } .ds-btn-dark:hover { background: #1b2330; } .ds-btn-ink { border: 1.5px solid var(--color-obsidian, #07090e); color: var(--color-obsidian, #07090e); background: transparent; align-self: center; } .ds-btn-ink:hover { background: var(--color-obsidian, #07090e); color: var(--color-gold-hi, #ecd27a); }"
+    },
+    {
+      "name": "Switch",
+      "kind": "custom",
+      "refersTo": "switch",
+      "description": "The \"Inspect leadership stack\" control; shown in its on state.",
+      "html": "<button type=\"button\" role=\"switch\" aria-checked=\"true\" class=\"ds-switch ds-is-on\"><span class=\"ds-switch-track\"><span class=\"ds-switch-thumb\"></span></span><span>Inspect leadership stack</span></button>",
+      "css": ".ds-switch { display: inline-flex; align-items: center; gap: 0.75rem; height: 48px; padding: 0 1rem 0 0.75rem; border: 1px solid rgb(148 163 184 / 0.34); border-radius: 2px; background: rgb(15 20 28 / 0.66); backdrop-filter: blur(10px); color: var(--color-ink, #e9edf3); font-family: var(--font-sans, 'Inter Variable', Inter, system-ui, sans-serif); font-weight: 600; font-size: 0.9375rem; cursor: pointer; transition: border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-switch:hover { border-color: var(--color-steel, #94a3b8); } .ds-switch:focus-visible { outline: 2px solid var(--color-gold, #d4af37); outline-offset: 3px; } .ds-switch-track { display: block; width: 44px; height: 24px; padding: 2px; border-radius: 12px; background: #2a3444; } .ds-switch-thumb { display: block; width: 20px; height: 20px; border-radius: 50%; background: var(--color-mist, #cbd5e1); } .ds-switch.ds-is-on { border-color: var(--color-gold, #d4af37); } .ds-switch.ds-is-on .ds-switch-track { background: var(--color-gold, #d4af37); } .ds-switch.ds-is-on .ds-switch-thumb { background: var(--color-obsidian, #07090e); translate: 20px 0; }"
+    },
+    {
+      "name": "Segmented Toggle",
+      "kind": "custom",
+      "refersTo": "segmented",
+      "description": "Switches a workbench between its strategy and architecture views.",
+      "html": "<div role=\"group\" aria-label=\"View\" class=\"ds-seg\"><button type=\"button\" aria-pressed=\"false\" class=\"ds-seg-btn\">Product strategy</button><button type=\"button\" aria-pressed=\"true\" class=\"ds-seg-btn ds-is-on\">System architecture</button></div>",
+      "css": ".ds-seg { display: inline-flex; padding: 3px; border: 1px solid rgb(148 163 184 / 0.34); border-radius: 2px; background: var(--color-carbon, #0f141c); } .ds-seg-btn { height: 38px; padding: 0 0.95rem; border: 0; border-radius: 1px; background: none; font-family: var(--font-sans, 'Inter Variable', Inter, system-ui, sans-serif); font-weight: 600; font-size: 0.875rem; color: var(--color-mist, #cbd5e1); cursor: pointer; transition: color 0.25s; } .ds-seg-btn:hover { color: var(--color-ink, #e9edf3); } .ds-seg-btn.ds-is-on { background: var(--color-gold, #d4af37); color: var(--color-obsidian, #07090e); } .ds-seg-btn:focus-visible { outline: 2px solid var(--color-gold, #d4af37); outline-offset: 3px; }"
+    },
+    {
+      "name": "Skill Pill",
+      "kind": "chip",
+      "refersTo": "pill",
+      "description": "Skill filter with a mono count. The only pill shape in the system.",
+      "html": "<div class=\"ds-pills\"><button type=\"button\" class=\"ds-pill ds-is-on\">All skills <span class=\"ds-pill-count\">14</span></button><button type=\"button\" class=\"ds-pill\">API &amp; gateway design <span class=\"ds-pill-count\">3</span></button></div>",
+      "css": ".ds-pills { display: flex; flex-wrap: wrap; gap: 8px; } .ds-pill { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 1.05rem; border: 1px solid rgb(148 163 184 / 0.34); border-radius: 999px; background: none; font-family: var(--font-sans, 'Inter Variable', Inter, system-ui, sans-serif); font-weight: 500; font-size: 0.9375rem; color: var(--color-mist, #cbd5e1); cursor: pointer; transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s, color 0.25s; } .ds-pill:hover { border-color: var(--color-steel, #94a3b8); color: var(--color-ink, #e9edf3); } .ds-pill:focus-visible { outline: 2px solid var(--color-gold, #d4af37); outline-offset: 3px; } .ds-pill.ds-is-on { border-color: var(--color-gold, #d4af37); background: var(--color-gold, #d4af37); color: var(--color-obsidian, #07090e); font-weight: 600; } .ds-pill-count { font-family: var(--font-mono, 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace); font-size: 0.75rem; color: var(--color-steel, #94a3b8); } .ds-pill.ds-is-on .ds-pill-count { color: var(--color-obsidian, #07090e); }"
+    },
+    {
+      "name": "Chip and Citation",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Square chips select a diagram node; cyan citation buttons point at a source.",
+      "html": "<div class=\"ds-chips\"><button type=\"button\" class=\"ds-chip ds-is-on\">Payment gateway</button><button type=\"button\" class=\"ds-chip\">Exchanges</button><button type=\"button\" class=\"ds-cite\">E2</button></div>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; } .ds-chip { min-height: 32px; padding: 5px 0.7rem; border: 1px solid rgb(148 163 184 / 0.34); border-radius: 2px; background: none; font-family: var(--font-sans, 'Inter Variable', Inter, system-ui, sans-serif); font-weight: 500; font-size: 0.8125rem; line-height: 1.3; color: var(--color-mist, #cbd5e1); cursor: pointer; transition: border-color 0.2s, color 0.2s, background-color 0.2s; } .ds-chip:hover { border-color: var(--color-steel, #94a3b8); color: var(--color-ink, #e9edf3); } .ds-chip.ds-is-on { border-color: var(--color-gold, #d4af37); background: var(--color-gold, #d4af37); color: var(--color-obsidian, #07090e); font-weight: 600; } .ds-cite { min-width: 34px; height: 26px; padding: 0 6px; border: 1px solid var(--color-data, #38bdf8); border-radius: 2px; background: none; font-family: var(--font-mono, 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace); font-size: 0.75rem; color: var(--color-data, #38bdf8); cursor: pointer; transition: background-color 0.2s, color 0.2s; } .ds-cite:hover, .ds-cite:focus-visible { background: var(--color-data, #38bdf8); color: var(--color-obsidian, #07090e); } .ds-chip:focus-visible, .ds-cite:focus-visible { outline: 2px solid var(--color-gold, #d4af37); outline-offset: 3px; }"
+    },
+    {
+      "name": "Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "A flat carbon panel with a hairline border; the border turns gold on hover.",
+      "html": "<article class=\"ds-panel\"><h4 class=\"ds-panel-name\">Venture name</h4><p class=\"ds-panel-meta\">Founder, 2020 to 2025</p><p class=\"ds-panel-text\">One sentence on what the venture was and what it shipped.</p></article>",
+      "css": ".ds-panel { max-width: 420px; padding: 20px 22px; border: 1px solid rgb(148 163 184 / 0.16); background: var(--color-carbon, #0f141c); color: var(--color-ink, #e9edf3); font-family: var(--font-sans, 'Inter Variable', Inter, system-ui, sans-serif); transition: border-color 0.3s, background-color 0.3s; } .ds-panel:hover { border-color: var(--color-gold, #d4af37); background: var(--color-carbon-2, #161d29); } .ds-panel-name { margin: 0; font-family: var(--font-display, 'Syne Variable', Syne, system-ui, sans-serif); font-weight: 600; font-size: 1.3125rem; letter-spacing: -0.015em; } .ds-panel-meta { margin: 2px 0 0; font-size: 0.8125rem; color: var(--color-steel, #94a3b8); } .ds-panel-text { margin: 10px 0 0; font-size: 0.9375rem; line-height: 1.5; color: var(--color-mist, #cbd5e1); }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "The single text field, used in the sentiment toy.",
+      "html": "<label class=\"ds-field\"><span>Headline</span><input class=\"ds-input\" type=\"text\" placeholder=\"Type a headline\"></label>",
+      "css": ".ds-field { display: grid; gap: 6px; max-width: 360px; font-family: var(--font-sans, 'Inter Variable', Inter, system-ui, sans-serif); font-weight: 600; font-size: 0.875rem; color: var(--color-ink, #e9edf3); } .ds-input { height: 40px; padding: 0 0.75rem; border: 1px solid rgb(148 163 184 / 0.34); border-radius: 2px; background: var(--color-carbon, #0f141c); font-family: var(--font-sans, 'Inter Variable', Inter, system-ui, sans-serif); font-size: 0.9375rem; color: var(--color-ink, #e9edf3); caret-color: var(--color-gold, #d4af37); } .ds-input::placeholder { color: #8593a8; } .ds-input:focus-visible { outline: 2px solid var(--color-gold, #d4af37); outline-offset: 0; border-color: var(--color-gold, #d4af37); }"
+    },
+    {
+      "name": "Rail",
+      "kind": "nav",
+      "refersTo": "rail",
+      "description": "Desktop navigation: a line with diamond nodes, a gold fill, a travelling packet, and a gold email button.",
+      "html": "<nav class=\"ds-rail\" aria-label=\"Sections\"><span class=\"ds-rail-mark\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 40 40\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 33 15.5 7 20 17.4\" stroke=\"#d4af37\" stroke-width=\"3\" stroke-linecap=\"square\"/><path d=\"M9.6 24h8\" stroke=\"#d4af37\" stroke-width=\"2.4\" stroke-linecap=\"square\"/><path d=\"M20 33V7l16 26V7\" stroke=\"#e9edf3\" stroke-width=\"3\" stroke-linecap=\"square\"/></svg></span><div class=\"ds-rail-track\"><span class=\"ds-rail-line\"></span><span class=\"ds-rail-fill\"></span><span class=\"ds-rail-packet\"></span><a href=\"#\" class=\"ds-rail-node ds-is-past\" style=\"top:0%\"></a><a href=\"#\" class=\"ds-rail-node ds-is-current\" style=\"top:33%\"></a><a href=\"#\" class=\"ds-rail-node\" style=\"top:66%\"></a><a href=\"#\" class=\"ds-rail-node\" style=\"top:100%\"></a></div><a class=\"ds-rail-mail\" href=\"#\" aria-label=\"Email\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"5.5\" width=\"18\" height=\"13\" rx=\"1.5\"/><path d=\"m3.5 7 8.5 6.5L20.5 7\"/></svg></a></nav>",
+      "css": ".ds-rail { display: flex; flex-direction: column; align-items: center; width: 76px; height: 360px; padding: 22px 0 26px; border-right: 1px solid rgb(148 163 184 / 0.16); background: var(--color-obsidian, #07090e); } .ds-rail-mark { display: grid; place-items: center; width: 44px; height: 44px; } .ds-rail-track { position: relative; flex: 1; width: 100%; margin: 28px 0 26px; } .ds-rail-line, .ds-rail-fill { position: absolute; left: 50%; top: 0; width: 1px; margin-left: -0.5px; } .ds-rail-line { bottom: 0; background: rgb(148 163 184 / 0.34); } .ds-rail-fill { height: 45%; background: var(--color-gold, #d4af37); } .ds-rail-packet { position: absolute; left: 50%; top: 45%; z-index: 2; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 4px rgb(212 175 55 / 0.32); } .ds-rail-node { position: absolute; left: 50%; width: 8px; height: 8px; margin: -5px 0 0 -5px; border: 1px solid var(--color-steel, #94a3b8); background: var(--color-obsidian, #07090e); rotate: 45deg; transition: background-color 0.3s, border-color 0.3s, scale 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-rail-node:hover { border-color: var(--color-ink, #e9edf3); } .ds-rail-node:focus-visible { outline: 2px solid var(--color-gold, #d4af37); outline-offset: 3px; } .ds-rail-node.ds-is-past { border-color: var(--color-gold, #d4af37); background: var(--color-gold, #d4af37); } .ds-rail-node.ds-is-current { border-color: var(--color-ink, #e9edf3); scale: 1.5; } .ds-rail-mail { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 2px; background: var(--color-gold, #d4af37); color: var(--color-obsidian, #07090e); transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-rail-mail:hover { background: var(--color-gold-hi, #ecd27a); }"
+    },
+    {
+      "name": "Telemetry Figure",
+      "kind": "custom",
+      "refersTo": "metric",
+      "description": "A mono figure with its label and a steel scope line, on the glass strip.",
+      "html": "<div class=\"ds-figure\"><p class=\"ds-figure-value\"><span class=\"ds-figure-affix\">CAD $</span>3M</p><p class=\"ds-figure-label\">What the number measures</p><p class=\"ds-figure-scope\">Its scope and dates</p></div>",
+      "css": ".ds-figure { display: inline-flex; flex-direction: column; padding: 24px 28px; border-top: 1px solid rgb(148 163 184 / 0.34); background: rgb(13 18 26 / 0.56); backdrop-filter: blur(22px) saturate(1.25); font-family: var(--font-sans, 'Inter Variable', Inter, system-ui, sans-serif); } .ds-figure-value { margin: 0; font-family: var(--font-mono, 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace); font-weight: 600; font-size: 2.5rem; line-height: 1; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; color: var(--color-ink, #e9edf3); white-space: nowrap; } .ds-figure-affix { margin-right: 0.3em; font-size: 0.46em; font-weight: 500; letter-spacing: 0; vertical-align: 0.62em; color: var(--color-gold-hi, #ecd27a); } .ds-figure-label { margin: 10px 0 0; font-size: 0.875rem; line-height: 1.3; color: var(--color-ink, #e9edf3); } .ds-figure-scope { margin: 4px 0 0; font-size: 0.8125rem; line-height: 1.35; color: var(--color-steel, #94a3b8); }"
+    },
+    {
+      "name": "Isometric Slab",
+      "kind": "custom",
+      "refersTo": "model-floor",
+      "description": "The unit of every diagram: a slab on the model floor with a lit rim, a cast shadow, and a light rail. Hover or focus lights the rim.",
+      "html": "<svg class=\"ds-model\" viewBox=\"0 0 300 160\" role=\"img\" aria-label=\"A slab on the model floor with a light rail\"><path d=\"M110 0 300 110 190 160 0 60Z\" fill=\"#0a0d14\"/><g fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M144.64 110 L231.24 160\" stroke=\"#10b981\" stroke-opacity=\"0.28\" stroke-width=\"7\"/><path d=\"M144.64 110 L231.24 160\" stroke=\"#10b981\" stroke-width=\"2\"/></g><g class=\"ds-slab\" tabindex=\"0\"><path d=\"M88.94 56.84 158.22 96.84 88.94 136.84 19.66 96.84Z\" fill=\"#000\" fill-opacity=\"0.36\"/><path d=\"M40.72 50 110 90 110 130 40.72 90Z\" fill=\"#111a26\"/><path d=\"M179.28 50 110 90 110 130 179.28 90Z\" fill=\"#1d2838\"/><path d=\"M110 10 179.28 50 110 90 40.72 50Z\" fill=\"#2a3649\"/><path class=\"ds-slab-rim\" d=\"M110 10 179.28 50 110 90\" fill=\"none\" stroke=\"#d4af37\" stroke-opacity=\"0.7\" stroke-width=\"1\" stroke-linejoin=\"round\"/></g></svg>",
+      "css": ".ds-model { display: block; width: 300px; height: auto; overflow: visible; } .ds-slab { cursor: pointer; outline: none; } .ds-slab path { transition: fill 0.45s cubic-bezier(0.16, 1, 0.3, 1); } .ds-slab:hover .ds-slab-rim, .ds-slab:focus-visible .ds-slab-rim { stroke: #fff; stroke-opacity: 1; stroke-width: 2; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Night Model",
+    "overview": "The page is an architect's scale model of a financial system, seen at night. The floor is obsidian, etched with a fine square grid. One warm gold key light comes from the upper right, the same light that falls on the portraits and on every rendered cover. Systems are drawn as isometric slabs standing on that floor, joined by right-angle rails that carry light. Nothing floats in a card for decoration: a thing on this page is either part of the model, a control that operates it, or a readout from it.\n\nThree devices make the world its own. The isometric model language draws every diagram from one small kit (slab, floor, rail, tag). The rail on the left edge maps the page as a vertical line with diamond nodes, and a white packet rides it with the scroll. The lens is a circle of glass that rests on the portrait and shows a second photograph through it; a switch grows it over the whole portrait. The page is dark from the first pixel to the last section, and then ends on one flat field of gold.\n\nThe density is that of an instrument panel read by an executive: large Syne statements, plain Inter explanation, and small mono readouts where a machine would speak. Surfaces are flat. Depth belongs to the model and to the photographs.",
+    "keyCharacteristics": [
+      "Obsidian floor with a 64px etched grid at 4% steel, behind everything.",
+      "One light direction, upper right, in the photographs, the hero wash, the slab faces and the cast shadows.",
+      "Isometric slabs and right-angle light rails for every diagram, on their own opaque floor.",
+      "A fixed 76px rail with diamond nodes and a travelling packet on desktop; a 60px glass bar on phones.",
+      "A glass lens over the portrait as the signature interaction.",
+      "Four signal colours with fixed meanings: gold, emerald, cyan, steel.",
+      "Square corners (0 on panels, 2px on controls); pills only for the skill filters.",
+      "One flat gold field, used once, for contact."
+    ],
+    "rules": [
+      {
+        "name": "The Four Signals Rule",
+        "body": "Gold is the person and what he does. Emerald is money moving and approval. Cyan is simulation data. Steel is structure. A colour never borrows another's meaning, and none of the three signals is used as decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Gold Field Rule",
+        "body": "Gold floods exactly one surface, the contact section, where the palette inverts to obsidian text and obsidian buttons on flat gold. Everywhere else gold is a mark: a word, a button, a node, a rim.",
+        "section": "colors"
+      },
+      {
+        "name": "The Upper Right Rule",
+        "body": "Light comes from the upper right in every image, wash, slab and shadow. The hero wash is a gold radial at 17% anchored to the top right corner; shadows fall down and to the left.",
+        "section": "colors"
+      },
+      {
+        "name": "The Machine Voice Rule",
+        "body": "JetBrains Mono is for what a machine would print: identifiers, figures, states, counts, hashes, ledger rows, the clock. Headings, sentences and button labels are never mono.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "All interface text is sentence case with no added letter-spacing. Hierarchy comes from face, size and weight. A heading stands alone with its lead; nothing small sits above it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Negative Track Rule",
+        "body": "Syne is always tracked in (-0.015em at title size to -0.04em at display size) and set at a line-height near 1. Inter is never tracked.",
+        "section": "typography"
+      },
+      {
+        "name": "The Rail Rule",
+        "body": "On desktop the page is navigated by the rail and nothing else: a monogram at the top, a 1px line with one diamond node per section, a gold fill and a white packet that follow the scroll, and a gold email button at the foot. There is no top navigation bar on desktop.",
+        "section": "layout"
+      },
+      {
+        "name": "The Drawn Depth Rule",
+        "body": "Panels, buttons and cards carry no box-shadow at rest or on hover. If something needs to look raised, it is drawn as a slab in the model with its cast shadow, or it is glass over a photograph.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Glass Needs A Subject Rule",
+        "body": "A blurred translucent surface is used only where there is an image or moving content behind it to blur. Over the plain floor, a surface is opaque carbon.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Diamond Rule",
+        "body": "A position in a sequence is marked with a 45 degree diamond, never a numbered circle or a bullet.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep the obsidian floor and its 64px grid behind every dark section, and keep the light in the upper right.",
+      "Do draw any new diagram with the kit in `src/lib/iso.ts` and `src/components/ui.tsx`: slabs on an opaque floor, right-angle rails, tags with an obsidian halo.",
+      "Do give each colour its one meaning: gold for the person and his actions, emerald for money moving and approval, cyan for simulation data, steel for structure.",
+      "Do use JetBrains Mono for machine output (ids, figures, states, hashes) and Inter for everything a person says.",
+      "Do keep corners square: 0 on panels, 2px on controls.",
+      "Do mark steps and positions with 45 degree diamonds.",
+      "Do state the scope and date under every figure, in steel, and label every toy model as a toy in a note beside it.",
+      "Do keep a 2px gold focus outline (obsidian on the gold field) on every interactive element, including slabs.",
+      "Do give every motion a reduced-motion state with all content present."
+    ],
+    "donts": [
+      "Don't put a box-shadow on a panel, card or button. Cast shadows belong to slabs, the lens and the monogram.",
+      "Don't use gold as a background anywhere except the contact field, or use emerald or cyan as decoration.",
+      "Don't add a pill anywhere but the skill filters, or round a panel.",
+      "Don't set headings, sentences or button labels in mono, or set interface text in tracked capitals.",
+      "Don't draw a system as flat boxes and arrows, a node graph, or a chart. If it is a system, it is a model on the floor.",
+      "Don't frame the portrait or place it in a card. It stands on the stage and feathers into the floor.",
+      "Don't use glass over the plain floor; blur only where a photograph or moving content sits behind.",
+      "Don't let a spring bounce or a transition ease in slowly. Things settle.",
+      "Don't borrow the sibling steel-watch site's furniture (dials, bezels, tick rings, gauge arcs). This world draws with slabs, rails and a lens; the watch appears only on his wrist in the photographs.",
+      "Don't add a top navigation bar on desktop. The rail is the navigation."
+    ]
+  }
+}

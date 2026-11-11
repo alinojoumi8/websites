@@ -1,0 +1,8 @@
+raw/
+.impeccable/review/
+.impeccable/tmp/
+.impeccable/build/
+.impeccable/mocks/
+.impeccable/hook.cache.json
+.impeccable/hook.pending.json
+.impeccable/config.local.json
